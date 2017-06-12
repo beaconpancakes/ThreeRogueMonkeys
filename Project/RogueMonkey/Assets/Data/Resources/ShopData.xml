@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shop_data>
+  <data_entry breakLvl ="20">
+        <box_prob_list>
+          <box_prob type="S" prob ="0.8"/>
+          <box_prob type="M" prob =".2"/>
+        </box_prob_list>
+      <item_pool>
+        <item id="Ring" minSize ="S"/>
+        <item id="Necklace" minSize ="S"/>
+        <item id="FastSack" minSize ="M"/>
+      </item_pool>  
+</data_entry>
+</shop_data>

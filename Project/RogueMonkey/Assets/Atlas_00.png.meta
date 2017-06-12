@@ -1,0 +1,1588 @@
+fileFormatVersion: 2
+guid: 09e4691d9d569074c8e117e3e5a96a94
+timeCreated: 1494865319
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Atlas_00_0
+    21300002: Atlas_00_1
+    21300004: Atlas_00_2
+    21300006: Atlas_00_3
+    21300008: Atlas_00_4
+    21300010: Atlas_00_5
+    21300012: Atlas_00_6
+    21300014: Atlas_00_7
+    21300016: Atlas_00_8
+    21300018: Atlas_00_9
+    21300020: Atlas_00_10
+    21300022: Atlas_00_11
+    21300024: Atlas_00_12
+    21300026: Atlas_00_13
+    21300028: Atlas_00_14
+    21300030: Atlas_00_15
+    21300032: Atlas_00_16
+    21300034: Atlas_00_17
+    21300036: Atlas_00_18
+    21300038: Atlas_00_19
+    21300040: Atlas_00_20
+    21300042: Atlas_00_21
+    21300044: Atlas_00_22
+    21300046: Atlas_00_23
+    21300048: Atlas_00_24
+    21300050: Atlas_00_25
+    21300052: Atlas_00_26
+    21300054: Atlas_00_27
+    21300056: Atlas_00_28
+    21300058: Atlas_00_29
+    21300060: Atlas_00_30
+    21300062: Atlas_00_31
+    21300064: Atlas_00_32
+    21300066: Atlas_00_33
+    21300068: Atlas_00_34
+    21300070: Atlas_00_35
+    21300072: Atlas_00_36
+    21300074: Atlas_00_37
+    21300076: Atlas_00_38
+    21300078: Atlas_00_39
+    21300080: Atlas_00_40
+    21300082: Atlas_00_41
+    21300084: Atlas_00_42
+    21300086: Atlas_00_43
+    21300088: Atlas_00_44
+    21300090: Atlas_00_45
+    21300092: Atlas_00_46
+    21300094: Atlas_00_47
+    21300096: Atlas_00_48
+    21300098: Atlas_00_49
+    21300100: Atlas_00_50
+    21300102: Atlas_00_51
+    21300104: Atlas_00_52
+    21300106: Atlas_00_53
+    21300108: Atlas_00_54
+    21300110: Atlas_00_55
+    21300112: Atlas_00_56
+    21300114: Atlas_00_57
+    21300116: Atlas_00_58
+    21300118: Atlas_00_59
+    21300120: Atlas_00_60
+    21300122: Atlas_00_61
+    21300124: Atlas_00_62
+    21300126: Atlas_00_63
+    21300128: Atlas_00_64
+    21300130: Atlas_00_65
+    21300132: Atlas_00_66
+    21300134: Atlas_00_67
+    21300136: Atlas_00_68
+    21300138: Atlas_00_69
+    21300140: Atlas_00_70
+    21300142: Atlas_00_71
+    21300144: Atlas_00_72
+    21300146: Atlas_00_73
+    21300148: Atlas_00_74
+    21300150: Atlas_00_75
+    21300152: Atlas_00_76
+    21300154: Atlas_00_77
+    21300156: Atlas_00_78
+    21300158: Atlas_00_79
+    21300160: Atlas_00_80
+    21300162: Atlas_00_81
+    21300164: Atlas_00_82
+    21300166: Atlas_00_83
+    21300168: Atlas_00_84
+    21300170: Atlas_00_85
+    21300172: Atlas_00_86
+    21300174: Atlas_00_87
+    21300176: Atlas_00_88
+    21300178: Atlas_00_89
+    21300180: Atlas_00_90
+    21300182: Atlas_00_91
+    21300184: Atlas_00_92
+    21300186: Atlas_00_93
+    21300188: Atlas_00_94
+    21300190: Atlas_00_95
+    21300192: Atlas_00_96
+    21300194: Atlas_00_97
+    21300196: Atlas_00_98
+    21300198: Atlas_00_99
+    21300200: Atlas_00_100
+    21300202: Atlas_00_101
+    21300204: Atlas_00_102
+    21300206: Atlas_00_103
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: iPhone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: tvOS
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Android
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Tizen
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: WebGL
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Samsung TV
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Atlas_00_0
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 7254
+        width: 632
+        height: 816
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Atlas_00_1
+      rect:
+        serializedVersion: 2
+        x: 674
+        y: 7254
+        width: 636
+        height: 812
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Atlas_00_2
+      rect:
+        serializedVersion: 2
+        x: 1302
+        y: 7246
+        width: 632
+        height: 808
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Atlas_00_3
+      rect:
+        serializedVersion: 2
+        x: 1930
+        y: 7246
+        width: 624
+        height: 820
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Atlas_00_4
+      rect:
+        serializedVersion: 2
+        x: 2570
+        y: 7230
+        width: 644
+        height: 830
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Atlas_00_5
+      rect:
+        serializedVersion: 2
+        x: 3216
+        y: 7239
+        width: 650
+        height: 811
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Atlas_00_6
+      rect:
+        serializedVersion: 2
+        x: 3862
+        y: 7239
+        width: 728
+        height: 851
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Atlas_00_7
+      rect:
+        serializedVersion: 2
+        x: 4590
+        y: 7230
+        width: 748
+        height: 836
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Atlas_00_8
+      rect:
+        serializedVersion: 2
+        x: 5342
+        y: 7230
+        width: 724
+        height: 832
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Atlas_00_9
+      rect:
+        serializedVersion: 2
+        x: 6078
+        y: 7231
+        width: 676
+        height: 911
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Atlas_00_10
+      rect:
+        serializedVersion: 2
+        x: 6758
+        y: 7226
+        width: 1240
+        height: 948
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Atlas_00_11
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6215
+        width: 610
+        height: 825
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Atlas_00_12
+      rect:
+        serializedVersion: 2
+        x: 610
+        y: 6258
+        width: 532
+        height: 764
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Atlas_00_13
+      rect:
+        serializedVersion: 2
+        x: 1138
+        y: 6222
+        width: 416
+        height: 884
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Atlas_00_14
+      rect:
+        serializedVersion: 2
+        x: 1554
+        y: 6238
+        width: 692
+        height: 860
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Atlas_00_15
+      rect:
+        serializedVersion: 2
+        x: 2239
+        y: 6230
+        width: 735
+        height: 899
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Atlas_00_16
+      rect:
+        serializedVersion: 2
+        x: 2970
+        y: 6230
+        width: 560
+        height: 920
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Atlas_00_17
+      rect:
+        serializedVersion: 2
+        x: 3534
+        y: 6224
+        width: 544
+        height: 970
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Atlas_00_18
+      rect:
+        serializedVersion: 2
+        x: 4083
+        y: 6214
+        width: 631
+        height: 896
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Atlas_00_19
+      rect:
+        serializedVersion: 2
+        x: 4718
+        y: 6206
+        width: 770
+        height: 908
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Atlas_00_20
+      rect:
+        serializedVersion: 2
+        x: 5478
+        y: 6214
+        width: 784
+        height: 832
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Atlas_00_21
+      rect:
+        serializedVersion: 2
+        x: 6262
+        y: 6270
+        width: 552
+        height: 932
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Atlas_00_22
+      rect:
+        serializedVersion: 2
+        x: 6814
+        y: 6258
+        width: 476
+        height: 968
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Atlas_00_23
+      rect:
+        serializedVersion: 2
+        x: 7286
+        y: 6218
+        width: 456
+        height: 996
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Atlas_00_24
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 6212
+        width: 48
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Atlas_00_25
+      rect:
+        serializedVersion: 2
+        x: 4912
+        y: 5250
+        width: 554
+        height: 984
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Atlas_00_26
+      rect:
+        serializedVersion: 2
+        x: 6046
+        y: 5254
+        width: 604
+        height: 960
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Atlas_00_27
+      rect:
+        serializedVersion: 2
+        x: 3654
+        y: 5226
+        width: 692
+        height: 983
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Atlas_00_28
+      rect:
+        serializedVersion: 2
+        x: 4346
+        y: 5230
+        width: 564
+        height: 964
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Atlas_00_29
+      rect:
+        serializedVersion: 2
+        x: 4871
+        y: 6176
+        width: 32
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Atlas_00_30
+      rect:
+        serializedVersion: 2
+        x: 5474
+        y: 5262
+        width: 576
+        height: 944
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Atlas_00_31
+      rect:
+        serializedVersion: 2
+        x: 6650
+        y: 5174
+        width: 476
+        height: 1036
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Atlas_00_32
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 5230
+        width: 764
+        height: 835
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Atlas_00_33
+      rect:
+        serializedVersion: 2
+        x: 778
+        y: 5238
+        width: 744
+        height: 880
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Atlas_00_34
+      rect:
+        serializedVersion: 2
+        x: 1514
+        y: 5226
+        width: 722
+        height: 919
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Atlas_00_35
+      rect:
+        serializedVersion: 2
+        x: 2224
+        y: 5215
+        width: 742
+        height: 951
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Atlas_00_36
+      rect:
+        serializedVersion: 2
+        x: 2959
+        y: 5226
+        width: 699
+        height: 944
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Atlas_00_37
+      rect:
+        serializedVersion: 2
+        x: 7122
+        y: 5170
+        width: 468
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Atlas_00_38
+      rect:
+        serializedVersion: 2
+        x: 7606
+        y: 5182
+        width: 572
+        height: 972
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Atlas_00_39
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 4263
+        width: 590
+        height: 927
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Atlas_00_40
+      rect:
+        serializedVersion: 2
+        x: 610
+        y: 4270
+        width: 656
+        height: 867
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Atlas_00_41
+      rect:
+        serializedVersion: 2
+        x: 1262
+        y: 4262
+        width: 696
+        height: 844
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Atlas_00_42
+      rect:
+        serializedVersion: 2
+        x: 1954
+        y: 4262
+        width: 740
+        height: 864
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Atlas_00_43
+      rect:
+        serializedVersion: 2
+        x: 2742
+        y: 4098
+        width: 552
+        height: 1076
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Atlas_00_44
+      rect:
+        serializedVersion: 2
+        x: 3314
+        y: 4086
+        width: 508
+        height: 1060
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Atlas_00_45
+      rect:
+        serializedVersion: 2
+        x: 3842
+        y: 4086
+        width: 472
+        height: 1028
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Atlas_00_46
+      rect:
+        serializedVersion: 2
+        x: 4318
+        y: 4090
+        width: 434
+        height: 1015
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Atlas_00_47
+      rect:
+        serializedVersion: 2
+        x: 4774
+        y: 4102
+        width: 352
+        height: 1024
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Atlas_00_48
+      rect:
+        serializedVersion: 2
+        x: 5126
+        y: 4102
+        width: 336
+        height: 1028
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Atlas_00_49
+      rect:
+        serializedVersion: 2
+        x: 5466
+        y: 4114
+        width: 388
+        height: 1020
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Atlas_00_50
+      rect:
+        serializedVersion: 2
+        x: 5850
+        y: 4082
+        width: 424
+        height: 1068
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Atlas_00_51
+      rect:
+        serializedVersion: 2
+        x: 6274
+        y: 4166
+        width: 552
+        height: 972
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Atlas_00_52
+      rect:
+        serializedVersion: 2
+        x: 6826
+        y: 4162
+        width: 532
+        height: 976
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Atlas_00_53
+      rect:
+        serializedVersion: 2
+        x: 7362
+        y: 4128
+        width: 676
+        height: 1010
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Atlas_00_54
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 3166
+        width: 688
+        height: 964
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Atlas_00_55
+      rect:
+        serializedVersion: 2
+        x: 751
+        y: 3158
+        width: 663
+        height: 980
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Atlas_00_56
+      rect:
+        serializedVersion: 2
+        x: 1406
+        y: 3190
+        width: 668
+        height: 868
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Atlas_00_57
+      rect:
+        serializedVersion: 2
+        x: 2063
+        y: 3198
+        width: 2019
+        height: 868
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Atlas_00_58
+      rect:
+        serializedVersion: 2
+        x: 4078
+        y: 3198
+        width: 888
+        height: 864
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Atlas_00_59
+      rect:
+        serializedVersion: 2
+        x: 4958
+        y: 3194
+        width: 747
+        height: 868
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Atlas_00_60
+      rect:
+        serializedVersion: 2
+        x: 5695
+        y: 3206
+        width: 706
+        height: 868
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Atlas_00_61
+      rect:
+        serializedVersion: 2
+        x: 6402
+        y: 3102
+        width: 664
+        height: 1036
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Atlas_00_62
+      rect:
+        serializedVersion: 2
+        x: 7062
+        y: 3070
+        width: 748
+        height: 1064
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Atlas_00_63
+      rect:
+        serializedVersion: 2
+        x: 7694
+        y: 2230
+        width: 498
+        height: 1024
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Atlas_00_64
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 2191
+        width: 692
+        height: 867
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Atlas_00_65
+      rect:
+        serializedVersion: 2
+        x: 698
+        y: 2176
+        width: 708
+        height: 886
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Atlas_00_66
+      rect:
+        serializedVersion: 2
+        x: 1402
+        y: 2182
+        width: 716
+        height: 876
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Atlas_00_67
+      rect:
+        serializedVersion: 2
+        x: 2126
+        y: 2199
+        width: 820
+        height: 943
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Atlas_00_68
+      rect:
+        serializedVersion: 2
+        x: 2962
+        y: 2223
+        width: 816
+        height: 887
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Atlas_00_69
+      rect:
+        serializedVersion: 2
+        x: 3802
+        y: 2223
+        width: 856
+        height: 898
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Atlas_00_70
+      rect:
+        serializedVersion: 2
+        x: 4658
+        y: 2192
+        width: 736
+        height: 858
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Atlas_00_71
+      rect:
+        serializedVersion: 2
+        x: 5398
+        y: 2182
+        width: 640
+        height: 964
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Atlas_00_72
+      rect:
+        serializedVersion: 2
+        x: 6070
+        y: 2182
+        width: 636
+        height: 904
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Atlas_00_73
+      rect:
+        serializedVersion: 2
+        x: 6714
+        y: 2134
+        width: 624
+        height: 928
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Atlas_00_74
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 1248
+        width: 767
+        height: 882
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Atlas_00_75
+      rect:
+        serializedVersion: 2
+        x: 766
+        y: 1258
+        width: 707
+        height: 924
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Atlas_00_76
+      rect:
+        serializedVersion: 2
+        x: 1470
+        y: 1226
+        width: 636
+        height: 920
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Atlas_00_77
+      rect:
+        serializedVersion: 2
+        x: 2112
+        y: 1254
+        width: 614
+        height: 890
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Atlas_00_78
+      rect:
+        serializedVersion: 2
+        x: 2726
+        y: 1258
+        width: 624
+        height: 924
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Atlas_00_79
+      rect:
+        serializedVersion: 2
+        x: 3342
+        y: 1262
+        width: 632
+        height: 947
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Atlas_00_80
+      rect:
+        serializedVersion: 2
+        x: 3750
+        y: 1251
+        width: 11
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Atlas_00_81
+      rect:
+        serializedVersion: 2
+        x: 3970
+        y: 1258
+        width: 592
+        height: 924
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Atlas_00_82
+      rect:
+        serializedVersion: 2
+        x: 4550
+        y: 1258
+        width: 583
+        height: 884
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Atlas_00_83
+      rect:
+        serializedVersion: 2
+        x: 4911
+        y: 1198
+        width: 76
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Atlas_00_84
+      rect:
+        serializedVersion: 2
+        x: 5146
+        y: 1262
+        width: 612
+        height: 859
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Atlas_00_85
+      rect:
+        serializedVersion: 2
+        x: 5770
+        y: 1226
+        width: 676
+        height: 872
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Atlas_00_86
+      rect:
+        serializedVersion: 2
+        x: 6454
+        y: 1254
+        width: 556
+        height: 854
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Atlas_00_87
+      rect:
+        serializedVersion: 2
+        x: 7018
+        y: 1242
+        width: 568
+        height: 792
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Atlas_00_88
+      rect:
+        serializedVersion: 2
+        x: 7712
+        y: 1070
+        width: 480
+        height: 1060
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Atlas_00_89
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 478
+        width: 678
+        height: 696
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Atlas_00_90
+      rect:
+        serializedVersion: 2
+        x: 674
+        y: 510
+        width: 640
+        height: 724
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Atlas_00_91
+      rect:
+        serializedVersion: 2
+        x: 1310
+        y: 526
+        width: 592
+        height: 676
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Atlas_00_92
+      rect:
+        serializedVersion: 2
+        x: 1898
+        y: 350
+        width: 552
+        height: 882
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Atlas_00_93
+      rect:
+        serializedVersion: 2
+        x: 2455
+        y: 270
+        width: 427
+        height: 956
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Atlas_00_94
+      rect:
+        serializedVersion: 2
+        x: 2902
+        y: 134
+        width: 392
+        height: 1092
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Atlas_00_95
+      rect:
+        serializedVersion: 2
+        x: 3290
+        y: 127
+        width: 380
+        height: 1107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Atlas_00_96
+      rect:
+        serializedVersion: 2
+        x: 3664
+        y: 154
+        width: 358
+        height: 1068
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Atlas_00_97
+      rect:
+        serializedVersion: 2
+        x: 4018
+        y: 222
+        width: 756
+        height: 1000
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Atlas_00_98
+      rect:
+        serializedVersion: 2
+        x: 4770
+        y: 166
+        width: 524
+        height: 1056
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Atlas_00_99
+      rect:
+        serializedVersion: 2
+        x: 5286
+        y: 114
+        width: 576
+        height: 1110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Atlas_00_100
+      rect:
+        serializedVersion: 2
+        x: 5890
+        y: 130
+        width: 920
+        height: 1088
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Atlas_00_101
+      rect:
+        serializedVersion: 2
+        x: 6810
+        y: 226
+        width: 392
+        height: 992
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Atlas_00_102
+      rect:
+        serializedVersion: 2
+        x: 7226
+        y: 0
+        width: 692
+        height: 1070
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Atlas_00_103
+      rect:
+        serializedVersion: 2
+        x: 5887
+        y: 338
+        width: 23
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,68 @@
+﻿Id,Spanish,French,Portuguese,English,German,Chinese,Japanese
+loc_start,Comenzar,Début,Começar,Start,Anfang,開始,開始
+loc_play,Jugar,Jouer,Jogar,Play,Spielen,玩,遊びます
+loc_tutorial,Tutorial,Tutoriel,Tutorial,Tutorial,Tutorial,教程,チュートリアル
+loc_options,Opciones,Options,Opçoes,Options,Optionen,選項,遊びます
+loc_credits,Créditos,Crédits,Créditos,Credits,Kredite,學分,クレジット
+loc_exit,Salir,Sortir,Sair,Exit,Verlassen,放棄,終了する
+loc_sureExit,¿Estás seguro?,Êtes-vous sûr?,Você tem certeza?,Are you sure?,Bist du sicher?,你確定？,本気ですか？
+loc_globVol,Volumen global,Volumen global,Volume global,Master Volume,Master Volumen,主音量,マスターボリューム
+loc_musicVol,Volumen música,Volume musique,Volume música,Music Volume,Musiklautstärke,音樂音量,音楽ボリューム
+loc_sfxVol,Volumen efectos,Volume effets,Volume efeitos,SFX Volume,Effektvolumen,效果音量,エフェクトボリューム
+loc_vibration,Vibración,Vibration,Vibraçao,Vibration,Vibration,振動,振動
+loc_yes,Si,Oui,Sim,Yes,Ja,是,はい
+loc_no,No,Non,Não,No,Nein,沒有,いいえ
+loc_next,Siguiente,Suivant,Seguinte,Next,Folgende,以下,以下
+loc_language,Idioma,Langage,Idioma,Language,Sprache,語言,言語
+loc_spanish,Español,Espagnol,Espanhol,Spanish,Spanisch,西班牙語,スペイン語
+loc_french,Francés,Français,Francé,French,Französisch,法國,フランス語
+loc_portuguese,Portugués,Portugese,Português,Portuguese,Portugiesisch,葡萄牙語,ポルトガル語
+loc_english,Inglés,Anglais,Inglês,English,Englisch,英語,英語
+loc_german,Alemán,Allemand,Alemão,German,Deutsche,德語,ドイツ人
+loc_chinese,Chino,Chinois,Chinês,Chinese,Chinesisch,中文,中国語
+loc_japanese,Japonés,Japonais,Japonês,Japanese,Japanisch,日本,日本語
+loc_return,Volver,Retourner,Voltar,Back,unterstützen,返回,リターン
+loc_stage,Escena,Étape,Etapa,Stage,Szene,階段,ステージ
+loc_StageCom,¡Escena completada!,Ètape terminée!,Etapa concluída!,Stage completed!,Bühne abgeschlossen!,舞台完成！,ステージが完了しました！
+loc_level,Nivel,Niveau,Nivel,Level,Niveau,水平,レベル
+loc_empty,Vaciar,Vider,Esvaziar,Empty,Leeren,清空,空の
+loc_score,Puntuación,Score,Contagem,Score,Ergebnis,比分,スコア
+loc_accuracy,Puntería,Précision,Precisão,Accuracy,Genauigkeit,精密,正確さ
+loc_speedCol,Velocidad de Colector,Vitesse du collecteur,Velocidade do coletor,Collector speed,Kollektorgeschwindigkeit,收集器速度,コレクタ速度
+loc_speedFruitFall,Velocidad de caída,Vitesse de chute des fruits,Velocidade de queda de frutas,Fruit fall speed,Fruchtabfallgeschwindigkeit,果實下降速度,フルーツフォールスピード
+loc_goldChance,Probabilidad de objetos de oro,Chance de spawn d'élément d'or,Possibilidade de spawn do ouro,Gold item spawn chance,Gold Artikel Spawn Chance,金項產卵機會,ゴールドアイテムスポーンチャンス
+loc_sackSize,Tamaño de saco,Taille du sac,Tamanho do saco,Sack size,Sackgröße,袋子大小,袋サイズ
+loc_strikerArea,Area de golpe,Zone de frappe,área rapper,Striker hit area,Stürmer Hit Bereich,護板面積,ラッパーエリア
+loc_strikerSpeed,Velocidad de golpeador,Vitesse du rappeur,Velocidade rapper,Striker speed,Stürmer Geschwindigkeit,說唱速度,ラッパースピード
+loc_equip,Equipar,Équiper,Equipar,Equip,Ausrüsten,裝備,装備
+loc_remove,Quitar,Retirer,Remover,Remove,Entfernen,去掉,除去する
+loc_buy,Comprar,Acheter,Comprar,Buy,Kaufen,購買,購入
+loc_sell,Vender,Vendre,Vender,Sell,Verkaufen,賣,売る
+loc_gameDesign,Diseño de juego,Design du jeu,Design de jogo,Game Design,Spieldesign,遊戲設計,ゲームデザイン
+loc_programming,Programación,Programmation de jeux,Programação de jogos,Game Programmer,Spielprogrammierer,遊戲編程,ゲームプログラマー
+loc_music,Producción musical,Production de musique,Produção musical,Music production,Musikproduktion,音樂製作,音楽制作 / 音楽
+loc_art,Arte,Art,Arte,Art,Kunst,藝術,アート
+loc_producedBy,Un juego producido por Gloomy Cave Entertainment,Un jeu produit par Gloomy Cave Entertainment,Um jogo produzido por Gloomy Cave Entertainment,A game produced by Gloomy Cave Entertainment,Ein Spiel von Gloomy Cave Entertainment produziert,由Gloomy Cave Entertainment製作的遊戲,Gloomy Cave Entertainmentが制作したゲーム
+loc_rank_s,S,S,S,S,S,优秀,S
+loc_rank_a,A,A,A,A,A,很好,A
+loc_rank_b,B,B,B,B,B,良好,B
+loc_rank_c,C,C,C,C,C,中等,C
+loc_rank_d,D,D,D,D,D,及格,D
+loc_rank_e,E,E,E,E,E,不及格,E
+loc_lose,¡Te han pillado!,Vous avez été pris!,Você foi travado!,You got caught!,Sie haben gefangen!,你被抓！,あなたはキャッチされてきました！
+loc_retry,Reintentar,Recommencez,Tente novamente,Retry,Wiederholen,重試,リトライ
+loc_ok,Aceptar,Accepter,Aceitar,Okay,Akzeptieren,好,受け入れます
+loc_shop,Tienda,Boutique,Loja,Shop,Geschäft,店,ショップ
+loc_inventory,Inventario,Inventaire,Iventário,Inventory,Inventar,盤點,在庫
+loc_tut_welcome,¡Bienvenido al tutorial de Rogue Monkeys!,Bienvenue sur le didacticiel de Rogue Monkeys!,Bem-vindo ao tutorial de Rogue Monkeys!,Welcome to Rogue Monkeys tutorial!,Willkommen bei Rogue Monkeys tutorial!,歡迎來到Rogue Monkeys教程！,Rogue Monkeysチュートリアルへようこそ！
+loc_tut_collector,Desliza el pulgar izquierdo sobre el mono Collector para moverlo.,Desliza el pulgar izquierdo sur le monocoque Collector pararolllo.,Desliza el pulgar izquierdo sobre o Collector mono para moverlo.,Slide left finger to move Collector monkey,Schieben Sie den linken Finger, um den XXXX-Affen zu bewegen,滑動左手指移動Collector猴子,左の指をスライドさせてCollectorサルを動かす
+loc_tut_striker,Pulsa sobre el área derecha para mover al mono Striker.,Pulsa sur l'espace droit pour mot de passe en mono XXXX.,Pulsa sobre a área certa para o transporte de mono Striker.,Tap on right area to move Striker monkey,Tippen Sie auf den rechten Bereich, um den Striker-Affen zu bewegen,點擊右側區域移動Striker猴子,右の領域をタップしてStrikerサルを移動する,
+loc_tut_shaker,El mono Shaker hace que llueva fruta. Intenta golpear la fruta antes de que caiga al suelo.,Le singe fait pleuvoir des fruits Shaker. Essayez de frapper le fruit avant qu'il ne touche le sol.,O macaco faz chover Shaker frutas. Tente acertar a fruta antes de atingir o solo.,Shaker monkey make fruit rain. Try to hit the fruit before it falls to the ground.,Shaker Affe machen Fruchtregen. Versuche, die Früchte zu treffen, bevor sie zu Boden fällt.,Collector猴子做水果雨。 試著把水果倒在地上。,Collectorサルは果実の雨を降らせます。 それが地面に落ちる前に果実を打つことを試みなさい。
+loc_tut_alarm1,Si alguna fruta cae al suelo cerca de algún animal dormido, el nivel de alarma aumentará.,Si tous les fruits tombe à terre près d'un animal endormi, le niveau d'alarme augmentera.,Se qualquer fruta cai no chão perto de um animal adormecido, o nível de alarme irá aumentar.,If any fruit falls to the ground, close animals will get warned.,Wenn irgendwelche Früchte auf den Boden fallen, werden enge Tiere gewarnt.,如果任何水果落在地上，緊密的動物會被警告。,果物が地面に落ちると、近い動物は警告を受けます。
+loc_tut_alarm2,Si la barra de alarma llega al máximo, nuestra misión será abortada.,Si la barre d'alarme atteint le maximum, notre mission sera annulée.,Se a barra de alarme atinge o máximo, nossa missão será abortada.,If alarm bar gets full, our mission will get aborted.,Wenn die Alarmleiste voll wird, wird unsere Mission abgebrochen.,如果報警欄充滿，我們的使命將會中止。,アラームバーがいっぱいになると、私たちの使命は打ち切られます。
+loc_tut_run1,Recoge cinco frutas.,Recueillir cinq fruits.,Colete cinco frutas.,Collect five fruits.,Sammle fünf Früchte.,收集五個水果,5つの果物を集める。
+loc_tut_sack,Cuando el saco esté lleno, deberás vaciarlo para seguir cogiendo fruta.,Lorsque le sac est plein, vous devez vider de continuer la cueillette des fruits.,Cuando o saco está cheio, você deve esvaziá-la para continuar colhendo frutas.,When the sack is full, empty it for more fruit.,Wenn der Beutel voll ist, entleeren sie mehr Frucht zu bekommen.,當袋子滿了，空了它更多的水果..,袋がいっぱいになったら、それをもっと多くの果物のために空にしてください。
+loc_tut_run2,Recoge 5 frutas más.,Recueillir cinq fruits.,Colete cinco frutas.,Collect five more fruits.,Sammle fünf weitere Früchte.,再收集五個水果。,5つの果物をさらに集める。
+loc_tut_end,¡Bien hecho!,Bien joué!,Bem feito!,Well done!,Gut gemacht!,做得好！,よくやった！
+loc_popup_ad,¿Desearías ver un anuncio a cambio de oro?,Voulez-vous voir une annonce pour l'or?,Você gostaria de ver um anúncio de ouro?,Would you like to watch an advertisment for gold?,Möchten Sie eine Anzeige für Gold sehen?,你想看一個黃金廣告嗎？,あなたは金の広告を見たいですか？
+loc_gold_full_ad,Ver el anuncio completo da más oro…,Voir l'annonce complète donne plus d'or ...,Ver anúncio completo dá mais ouro ...,View full advertisement gives more gold...,Vollständige Werbung sehen mehr Gold ...,查看完整的廣告給更多的黃金...,完全な広告を見ると、より多くの金を与える...

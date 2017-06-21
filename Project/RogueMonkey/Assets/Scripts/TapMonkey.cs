@@ -68,21 +68,16 @@ public class TapMonkey : MonoBehaviour {
 
             case MONKEY_STATE.HIT_ANIMATION:
                 _frameTimer += Time.deltaTime;
+                _hitTimer += Time.deltaTime;
                 if (_frameTimer >= _gameMgr.FrameTime)
                 {
-                    
-                    ++_frameIndex;
-                    if (_frameIndex >= _hitSpList.Count)
-                    {
-                        _frameIndex = 0;
-                        RecoverToFloor();
-                    }
-                    else
-                    {
-                        _frameTimer = 0f;
-                        _img.sprite = _hitSpList[_frameIndex];
-                    }
+                    _frameTimer = 0f;
+                    _frameIndex = (_frameIndex + 1) % _hitSpList.Count;
+                    _img.sprite = _hitSpList[_frameIndex];
                 }
+                if (_hitTimer >=_hitTime)
+                    RecoverToFloor();
+
                 break;
 
             case MONKEY_STATE.RECOVERING_TO_FLOOR:
@@ -110,6 +105,16 @@ public class TapMonkey : MonoBehaviour {
 
                 transform.position += Vector3.right * _fleeSpeed * Time.deltaTime;
                 break;
+        }
+
+        if (_showingHitFeedback)
+        {
+            _hitFeedbackTimer += Time.deltaTime;
+            if (_hitFeedbackTimer >= _hitFeedbackImgTime)
+            {
+                _showingHitFeedback = false;
+                _hitFeedbackImg.gameObject.SetActive(false);
+            }
         }
 	}
 	#endregion
@@ -159,19 +164,27 @@ public class TapMonkey : MonoBehaviour {
         //transform.position = position;
         _frameTimer = 0f;
         _frameIndex = 0;
+        _hitTimer = 0f;
         _img.sprite = _movSpList[0];
+        _hitFeedbackImg.transform.position = transform.position + _hitOffset;
+        _hitFeedbackImg.transform.localScale = (float)(_currentCollisionRadius / _collisionRadius) * Vector3.one;
+        _hitFeedbackImg.gameObject.SetActive(true);
+        _hitFeedbackTimer = 0f;
+        _showingHitFeedback = true;
 
-        _hit2DArray = Physics2D.CircleCastAll(transform.position, _currentCollisionRadius, Vector2.up, 0f);// LayerMask.NameToLayer("Fruit"));
+        _hit2DArray = Physics2D.CircleCastAll(transform.position, _currentCollisionRadius, Vector2.up, 0f, LayerMask.GetMask("Fruit"));
         Debug.DrawLine(transform.position, transform.position + Vector3.right * _collisionRadius, Color.red);
         //Debug.DrawRay(GameCamera.ScreenToWorldPoint(Input.mousePosition), Vector2.up * 20f, Color.red, 5f);
         foreach (RaycastHit2D hit2D in _hit2DArray)
         {
+            Debug.Log("H I T !");
             if (hit2D != null && hit2D.collider != null)
             {
                 //Set monkey hitting coco on position + throw coco
                 hit2D.collider.GetComponent<Fruit>().Launch();
             }
         }
+        
     }
 
     /// <summary>
@@ -195,6 +208,8 @@ public class TapMonkey : MonoBehaviour {
         _frameTimer = 0f;
         _frameIndex = 0;
         _img.sprite = _idleSpList[0];
+        _hitFeedbackImg.gameObject.SetActive(false);
+        _hitFeedbackTimer = 0f;
     }
 
     /// <summary>
@@ -291,6 +306,8 @@ public class TapMonkey : MonoBehaviour {
     [SerializeField]
     private float _recoverSpeed;
     [SerializeField]
+    private float _hitTime;
+    [SerializeField]
     private float _minArrivalOffset;
     //TODO: precision
     [SerializeField]
@@ -299,6 +316,12 @@ public class TapMonkey : MonoBehaviour {
     private float _accuracy;
     [SerializeField]
     private float _fleeSpeed;
+    [SerializeField]
+    private Image _hitFeedbackImg;
+    [SerializeField]
+    private float _hitFeedbackImgTime;
+    [SerializeField]
+    private Vector3 _hitOffset;//offset from striker center to  hit position
 	#endregion
 
 	#region Private Non-serialized Fields
@@ -311,6 +334,7 @@ public class TapMonkey : MonoBehaviour {
     private Image _img; 
     private int _frameIndex;
     private float _frameTimer;
+    private float _hitTimer;
 
     private float _currentJumpSpeed, _currentRecoverSpeed;
     private float _currentCollisionRadius;
@@ -323,5 +347,8 @@ public class TapMonkey : MonoBehaviour {
     private RaycastHit2D[] _hit2DArray;
 
     private Vector2 _nextPos;
+
+    private float _hitFeedbackTimer;
+    private bool _showingHitFeedback;
 	#endregion
 }

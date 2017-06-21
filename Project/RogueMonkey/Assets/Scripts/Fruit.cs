@@ -129,7 +129,7 @@ public class Fruit : MonoBehaviour {
             switch (_type)
             {
                 case F_TYPE.COCO:
-                    GetFruitLaunchSpeed(GameMgr.Instance.FruitFlyTime);
+                    GetFruitLaunchSpeed(_fTree.CurrentFruitFlyTime);
                     _state = FRUIT_ST.LAUNCHING;
                     AudioController.Play("fruit_1b");
                     break;
@@ -137,13 +137,13 @@ public class Fruit : MonoBehaviour {
                 case F_TYPE.BANANA:
                     if (_maturityLevel == 0)
                     {
-                        GetFruitLaunchSpeed(GameMgr.Instance.FruitFlyTime);
+                        GetFruitLaunchSpeed(_fTree.CurrentFruitFlyTime);
                         _state = FRUIT_ST.LAUNCHING;
                     }
                     else
                     {
                         //keep falling state
-                        GetFruitLaunchSpeed(GameMgr.Instance.FruitFlyTime, false);  
+                        GetFruitLaunchSpeed(_fTree.CurrentFruitFlyTime, false);  
                         //switch sprite
                         _img.sprite = _yellowBanana;
                     }
@@ -151,7 +151,7 @@ public class Fruit : MonoBehaviour {
                     break;
 
                 case F_TYPE.CACAO:
-                    GetFruitLaunchSpeed(GameMgr.Instance.FruitFlyTime);
+                    GetFruitLaunchSpeed(_fTree.CurrentFruitFlyTime);
                     _state = FRUIT_ST.LAUNCHING;
                     AudioController.Play("fruit_1b");
                     break;
@@ -197,19 +197,20 @@ public class Fruit : MonoBehaviour {
 
                 case F_TYPE.GOLD_ITEM:
                     //TODO: Faster speed? Special Sound
-                    GetFruitLaunchSpeed(GameMgr.Instance.FruitFlyTime);
-                    AudioController.Play("item_hit");
+                    GetFruitLaunchSpeed(_fTree.CurrentFruitFlyTime);
+                    AudioController.Play("ding");
                     break;
 
                 case F_TYPE.EQUIPMENT:
                     if (_maturityLevel == 0)
-                        GetFruitLaunchSpeed(GameMgr.Instance.FruitFlyTime);
+                        GetFruitLaunchSpeed(_fTree.CurrentFruitFlyTime);
                     else
                     {
                         //TODO: Function
-                        GetFruitLaunchSpeed(GameMgr.Instance.FruitFlyTime, false);
+                        GetFruitLaunchSpeed(_fTree.CurrentFruitFlyTime, false);
                         --_maturityLevel;
                     }
+                    AudioController.Play("valuable_0");
                     break;
             }
             Debug.Log("Launch!");
@@ -434,9 +435,10 @@ public class Fruit : MonoBehaviour {
         transform.position = position;
         _initPos = initPos;
         //_initSpeed = initSpeed;
-        GetFruitLaunchSpeed(GameMgr.Instance.FruitFlyTime);
+        
         _state = FRUIT_ST.LAUNCHING;
         _fTree = GameMgr.Instance._FruitTree;
+        GetFruitLaunchSpeed(_fTree.CurrentFruitFlyTime);
         _flyingTime = 0f;
         gameObject.SetActive(true);
        
@@ -455,9 +457,10 @@ public class Fruit : MonoBehaviour {
         transform.position = position;
         _initPos = initPos;
         //_initSpeed = initSpeed;
-        GetFruitLaunchSpeed(GameMgr.Instance.FruitFlyTime);
-        _state = FRUIT_ST.WAITING_FOR_LAUNCH;
         _fTree = GameMgr.Instance._FruitTree;
+        GetFruitLaunchSpeed(_fTree.CurrentFruitFlyTime);
+        _state = FRUIT_ST.WAITING_FOR_LAUNCH;
+        
         _virtualGravity = gravity;
         _initSpeed = initSpeed;
         _waitCooldown = delayTime;

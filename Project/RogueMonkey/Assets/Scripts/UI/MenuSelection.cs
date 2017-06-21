@@ -80,9 +80,12 @@ public class MenuSelection : MonoBehaviour {
         if (_currentStageIndex != -1)
             _stageLevelPanelList[_currentStageIndex].SetActive(false);
         _currentStageIndex = index;
+        if (GameMgr.Instance._StageList[_currentStageIndex].State == Stage.STAGE_STATE.UNLOCKED || GameMgr.Instance._StageList[_currentStageIndex].State == Stage.STAGE_STATE.COMPLETED)
+            _currentAvailableStageIndex = _currentStageIndex;
+        _levelListScrollRect.content = _stageLevelPanelList[_currentStageIndex].GetComponent<RectTransform>();
         _stageLevelPanelList[_currentStageIndex].SetActive(true);
         _stageScrollRect.transform.GetChild(2).GetComponent<Text>().text += " " + (_currentStageIndex + 1).ToString();
-        _stageText.text = LocalizationService.Instance.GetTextByKey("loc_stage") + " " + _currentStageIndex.ToString();
+        _stageText.text = LocalizationService.Instance.GetTextByKey("loc_stage") + " " + (_currentStageIndex + 1).ToString();
         UpdateStageButtons();
 
     }
@@ -140,7 +143,7 @@ public class MenuSelection : MonoBehaviour {
         Debug.Log("Play Level");
        // DataMgr.Instance.StageIndex = _currentStageIndex;
         //DataMgr.Instance.LevelIndex = _currentLevelIndex;
-        PlayerPrefs.SetInt("Current_Stage", _currentStageIndex);
+        PlayerPrefs.SetInt("Current_Stage", _currentAvailableStageIndex);
         PlayerPrefs.SetInt("Current_Level", _currentLevelIndex);
         SceneManager.LoadScene("Game");
         GameMgr.Instance.LoadAndStartCurrentLevel();
@@ -153,12 +156,14 @@ public class MenuSelection : MonoBehaviour {
     public void InitSelectionMenu()
     {
         _currentStageIndex = -1;
+        _currentAvailableStageIndex = -1;
         _currentLevelIndex = -1;
         _contentPanelInitPos = _stageScrollRect.content.transform.position;
         SetupLevelList();
         ShowStage(0);
         _playButton.SetActive(false);
         EnableRewardAdsButton(AdsMgr.Instance.RewardAdsReady);
+        _goldText.text = GameMgr.Instance.Gold.ToString("0");
         //TODO: reset stage buttons
 
     }
@@ -215,7 +220,7 @@ public class MenuSelection : MonoBehaviour {
         {
             for (int j = 0; j < _stageList[i].GetLevelList().Count; ++j)
             {
-                switch (_stageList[i].GetLevelList()[j].GetState())
+                switch (_stageList[i].GetLevelList()[j].GetAvState())
                 {
                     case Level.AVAILABILITY_STATE.UNLOCKED:
                         _stageLevelPanelList[i].transform.GetChild(j).GetComponent<Image>().color = Color.white;
@@ -237,6 +242,23 @@ public class MenuSelection : MonoBehaviour {
                         _stageLevelPanelList[i].transform.GetChild(j).GetComponent<Button>().interactable = false;
                         break;
                 }
+                //Enable+ setup or Disable rank miniatures
+                if (_stageList[i].GetLevelList()[j].GetAvState() != Level.AVAILABILITY_STATE.COMPLETED && _stageList[i].GetLevelList()[j].GetAvState() != Level.AVAILABILITY_STATE.FAILED)
+                {
+                    _stageLevelPanelList[i].transform.GetChild(j).GetChild(3).GetChild(0).gameObject.SetActive(false);
+                    _stageLevelPanelList[i].transform.GetChild(j).GetChild(3).GetChild(1).gameObject.SetActive(false);
+                }
+                else
+                {
+                    _stageLevelPanelList[i].transform.GetChild(j).GetChild(3).GetChild(0).GetComponent<Image>().sprite = _rankLetterSpList[(int)_stageList[i].GetLevelList()[j].Rank];
+                    if (_stageList[i].GetLevelList()[j].GetAvState() == Level.AVAILABILITY_STATE.FAILED)
+                        _stageLevelPanelList[i].transform.GetChild(j).GetChild(3).GetChild(1).GetComponent<Image>().sprite = _failStamp;
+                    else
+                        _stageLevelPanelList[i].transform.GetChild(j).GetChild(3).GetChild(1).GetComponent<Image>().sprite = _successStamp;
+                    _stageLevelPanelList[i].transform.GetChild(j).GetChild(3).GetChild(0).gameObject.SetActive(true);
+                    _stageLevelPanelList[i].transform.GetChild(j).GetChild(3).GetChild(1).gameObject.SetActive(true);
+                }
+
                 _stageLevelPanelList[i].transform.GetChild(j).GetChild(1).GetComponentInChildren<Text>().text = _stageList[i].GetLevelList()[j].GetMaxScore().ToString("0");
                 //Set fruit types on miniature
                 _auxfruitTypeList = _stageList[i].GetLevelList()[j].GetFruitTypeSpawnList();
@@ -250,8 +272,12 @@ public class MenuSelection : MonoBehaviour {
                     }
 
                 }
+                
+                //Disable non used fruit iniatures
                 for (int k = _auxLvlMiniFruitListIndex; k < _stageLevelPanelList[i].transform.GetChild(j).GetChild(2).childCount; ++k)
                     _stageLevelPanelList[i].transform.GetChild(j).GetChild(2).GetChild(k).gameObject.SetActive(false);
+
+                
                 //reset iindex for next lvl iteration
                 _auxLvlMiniFruitListIndex = 0;
                 //text
@@ -304,6 +330,8 @@ public class MenuSelection : MonoBehaviour {
     [SerializeField]
     private List<GameObject>_stageMiniList;
     [SerializeField]
+    private ScrollRect _levelListScrollRect;
+    [SerializeField]
     private List<GameObject> _stageLevelPanelList;
     [SerializeField]
     private List<Button> _stageSelectionButtonList;
@@ -329,13 +357,20 @@ public class MenuSelection : MonoBehaviour {
 
     [SerializeField]
     private Button _rewardAdsButton;
+
+    [SerializeField]
+    private Sprite _successStamp, _failStamp;
+    [SerializeField]
+    private List<Sprite> _rankLetterSpList;
+    [SerializeField]
+    private Text _goldText;
 	#endregion
 
 	#region Private Non-serialized Fields
     private AsyncOperation _asyincOp;
     private MENU_STATE _state;
 
-    private int _currentStageIndex;
+    private int _currentStageIndex, _currentAvailableStageIndex;
     private int _currentLevelIndex;
     private Vector2 _contentPanelInitPos;
 

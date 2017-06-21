@@ -107,10 +107,9 @@ public class LevelFinishedScreen : MonoBehaviour {
                     {
                         _state = LF_MENU_STATE.RANK;
                         _timer = 0f;
-
-                        //TODO: Rank animation
-                        _rankLetterImg.sprite = GetRankSpriteLetter();
-                        _rankLetterImg.gameObject.SetActive(true);
+                        //Rank letter + stamp
+                        SetRank();
+                        
                         if (GameMgr.Instance.GetCurrentLevel().CheckForHighScore(_tempScore))
                         {
                             //TODO: new score feedback
@@ -127,8 +126,15 @@ public class LevelFinishedScreen : MonoBehaviour {
                     GameMgr.Instance.AddGold(_tempGold);
                     GameMgr.Instance.SaveProgress();
                     _state = LF_MENU_STATE.FINISHED;
-                    _nextButton.SetActive(true);
-
+                    if (GameMgr.Instance.GetCurrentLevel().GetAvState() != Level.AVAILABILITY_STATE.FAILED)
+                    {
+                        Debug.Log("NExt button enabled because of state: " + GameMgr.Instance.GetCurrentLevel().GetAvState());
+                        _nextButton.SetActive(true);
+                    }
+                    _retryButton.SetActive(true);
+                        
+                    EnableGoldFeedback(GameMgr.Instance.GoldCollected);
+                    EnableItemFeedback(GameMgr.Instance.ItemCollected);
                     EnableIconButtons(true);
                 }
                 break;
@@ -162,6 +168,9 @@ public class LevelFinishedScreen : MonoBehaviour {
             _itemImg.gameObject.SetActive(false);
 
         _goldText.text = "";
+        _rankLetterImg.gameObject.SetActive(false);
+        _rankStampSuccess.gameObject.SetActive(false);
+        _rankStampFail.gameObject.SetActive(false);
 
     }
 
@@ -183,6 +192,9 @@ public class LevelFinishedScreen : MonoBehaviour {
         _goldIcon.SetActive(false);
         _stageFinishedText.gameObject.SetActive(false);
         _nextButton.SetActive(false);
+        _retryButton.SetActive(false);
+        _rankLetterImg.gameObject.SetActive(false);
+        _rankStampSuccess.gameObject.SetActive(false);
         _maxFruitDisplayedIndex = 0;
         _collectedFruitIndex = 0;
         _collectedItemIndex = 0;
@@ -199,7 +211,6 @@ public class LevelFinishedScreen : MonoBehaviour {
 
     public void GoToNextLevel()
     {
-        
         GameMgr.Instance.LoadAndStartNextLevel();
         gameObject.SetActive(false);
     }
@@ -215,30 +226,94 @@ public class LevelFinishedScreen : MonoBehaviour {
     /// <summary>
     /// 
     /// </summary>
-    /// <returns></returns>
-    private Sprite GetRankSpriteLetter()
+    private void SetRank()
     {
-        float currentScoreRatio = (GameMgr.Instance.Score / GameMgr.Instance.GetCurrentLevel().MinRankSuperScore) - GameMgr.Instance.CurrentAlarmLevel * GameMgr.Instance.GetCurrentLevel().PenaltyPerAlarmPt;
+        SetRankSprites();
+        //Rank stamp scale animation
+        _rankStampInitScale = _currentStamp.transform.localScale;
+        _currentStamp.transform.localScale = new Vector3(_rankStampInitScale.x, _rankStampInitScale.y) * 2f;
+        _currentStamp.gameObject.SetActive(true);
+        LeanTween.scale(_currentStamp.gameObject, _rankStampInitScale, _rankShowTime);
+    }
+
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <returns></returns>
+    private void SetRankSprites()
+    {
+        float currentScoreRatio = ( GameMgr.Instance.Score - GameMgr.Instance.CurrentAlarmLevel * GameMgr.Instance.GetCurrentLevel().PenaltyPerAlarmPt)/ GameMgr.Instance.GetCurrentLevel().MinRankSuperScore;
+        Debug.Log("Ratio calculated: " + currentScoreRatio + "score: " + GameMgr.Instance.Score + "CALvl: " + GameMgr.Instance.CurrentAlarmLevel);
+        //TODO: Chinese letters?
         if (currentScoreRatio >= 1f)
-            return _rankLetterSpriteList[0];
+        {
+            _rankLetterImg.sprite = _rankLetterSpriteList[0];
+            _currentStamp = _rankStampSuccess;
+            GameMgr.Instance.GetCurrentLevel().Rank = Level.RANK.S;
+        }
         else if (currentScoreRatio >= _rankARatio)
-            return _rankLetterSpriteList[1];
+        {
+            _rankLetterImg.sprite = _rankLetterSpriteList[1];
+            _currentStamp = _rankStampSuccess;
+            GameMgr.Instance.GetCurrentLevel().Rank = Level.RANK.A;
+        }
         else if (currentScoreRatio >= _rankBRatio)
-            return _rankLetterSpriteList[2];
+        {
+            _rankLetterImg.sprite = _rankLetterSpriteList[2];
+            _currentStamp = _rankStampSuccess;
+            GameMgr.Instance.GetCurrentLevel().Rank = Level.RANK.B;
+        }
         else if (currentScoreRatio >= _rankCRatio)
-            return _rankLetterSpriteList[3];
-        if (currentScoreRatio >= _rankDRatio)
-            return _rankLetterSpriteList[4];
-        if (currentScoreRatio >= _rankERatio)
-            return _rankLetterSpriteList[5];
-        if (currentScoreRatio >= _rankFRatio)
-            return _rankLetterSpriteList[6];
+        {
+            _rankLetterImg.sprite = _rankLetterSpriteList[3];
+            _currentStamp = _rankStampSuccess;
+            GameMgr.Instance.GetCurrentLevel().Rank = Level.RANK.C;
+        }
+        else if (currentScoreRatio >= _rankDRatio)
+        {
+            _rankLetterImg.sprite = _rankLetterSpriteList[4];
+            _currentStamp = _rankStampSuccess;
+            GameMgr.Instance.GetCurrentLevel().Rank = Level.RANK.D;
+        }
+        else if (currentScoreRatio >= _rankERatio)
+        {
+            _rankLetterImg.sprite = _rankLetterSpriteList[5];
+            _currentStamp = _rankStampSuccess;
+            GameMgr.Instance.GetCurrentLevel().Rank = Level.RANK.E;
+        }
+        //if (currentScoreRatio >= _rankFRatio)
+        //return _rankLetterSpriteList[6];
         else
         {
-            Debug.LogError("Error, score < 0");
-            return null;
+            _rankLetterImg.sprite = _rankLetterSpriteList[6];
+            _currentStamp = _rankStampFail;
+            GameMgr.Instance.GetCurrentLevel().Rank = Level.RANK.F;
         }
+        _rankLetterImg.gameObject.SetActive(true);
+        _currentStamp.gameObject.SetActive(true);
         
+    }
+
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="show"></param>
+    private void EnableGoldFeedback(bool show)
+    {
+
+        _goldFeedback.SetActive(show);
+
+    }
+
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="show"></param>
+    private void EnableItemFeedback(bool show)
+    {
+        //_itemFeedback.SetActive(show);
+        _iconButtonList[3].GetComponent<Outline>().enabled = true;
+  
     }
     #endregion
 
@@ -255,7 +330,7 @@ public class LevelFinishedScreen : MonoBehaviour {
     [SerializeField]
     private List<Image> _itemImageList;
     [SerializeField]
-    private Image _rankLetterImg;
+    private Image _rankLetterImg, _rankStampSuccess, _rankStampFail;
     [SerializeField]
     private Text _scoreText;
 
@@ -277,6 +352,8 @@ public class LevelFinishedScreen : MonoBehaviour {
     private Text _goldText;
     [SerializeField]
     private List<Sprite> _rankLetterSpriteList;
+    [SerializeField]
+    private GameObject _goldFeedback, _itemFeedback;
 	#endregion
 
 	#region Private Non-serialized Fields
@@ -292,5 +369,8 @@ public class LevelFinishedScreen : MonoBehaviour {
     private FruitIndex _temp;       //used to go through list
     private int _tempScore;
     private int _tempGold;
+
+    private Vector3 _rankStampInitScale;
+    private Image _currentStamp;
 	#endregion
 }

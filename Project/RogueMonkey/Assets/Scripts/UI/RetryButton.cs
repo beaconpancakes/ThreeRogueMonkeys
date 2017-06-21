@@ -28,11 +28,7 @@ public class RetryButton : MonoBehaviour {
 	#endregion
 
 	#region Public Methods
-    public void Retry()
-    {
-        GameMgr.Instance.StartCurrentLevel();
-        UIHelper.Instance.ShowLoseScreen(false);
-    }
+    
 	#endregion
 
 

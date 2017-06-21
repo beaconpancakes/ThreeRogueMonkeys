@@ -1,0 +1,69 @@
+﻿Id,Spanish,French,Portuguese
+loc_start,Começar
+loc_play,Jogar
+loc_tutorial,Tutorial
+loc_options,Opçoes
+loc_credits,Créditos
+loc_exit,Sair
+loc_sureExit,Você tem certeza?
+loc_globVol,Volume global
+loc_musicVol,Volume música
+loc_sfxVol,Volume efeitos
+loc_vibration,Vibraçao
+loc_yes,Sim
+loc_no,Não
+loc_next,Seguinte
+loc_language,Idioma
+loc_spanish,Espanhol
+loc_french,Francé
+loc_portuguese,Português
+loc_english,Inglês
+loc_german,Alemão
+loc_chinese,Chinês
+loc_japanese,Japonês
+loc_return,Voltar
+loc_stage,Etapa
+loc_StageCom,Etapa concluída!
+loc_level,Nivel
+loc_empty,Esvaziar
+loc_score,Contagem
+loc_accuracy,Precisão
+loc_speedCol,Velocidade do coletor
+loc_speedFruitFall,Velocidade de queda de frutas
+loc_goldChance,Possibilidade de spawn do ouro
+loc_sackSize,Tamanho do saco
+loc_strikerArea,área Striker
+loc_strikerSpeed,Velocidade Striker
+loc_equip,Equipar
+loc_remove,Remover
+loc_buy,Comprar
+loc_sell,Vender
+loc_gameDesign,Design de jogo
+loc_programming,Programação de jogos
+loc_music,Produção musical
+loc_art,Arte
+loc_producedBy,Um jogo produzido por Gloomy Cave Entertainment
+loc_rank_s,S,
+loc_rank_a,A
+loc_rank_b,B
+loc_rank_c,C
+loc_rank_d,D
+loc_rank_e,E
+loc_lose,Você foi travado!
+loc_retry,Tente novamente
+loc_ok,Aceitar
+loc_shop,Loja
+loc_inventory,Iventário
+loc_backToMenu,Menu
+loc_tut_welcome,Bem-vindo ao tutorial de Rogue Monkeys!
+loc_tut_collector,Desliza el pulgar izquierdo sobre o Collector mono para moverlo.
+loc_tut_striker,Pulsa sobre a área certa para o transporte de mono Striker.
+loc_tut_shaker,O macaco faz chover Shaker frutas. Tente acertar a fruta antes de atingir o solo.
+loc_tut_alarm1,"Se qualquer fruta cai no chão perto de um animal adormecido, o nível de alarme irá aumentar."
+loc_tut_alarm2,"Se a barra de alarme atinge o máximo, nossa missão será abortada."
+loc_tut_run1,Colete cinco frutas.
+loc_tut_sack,"Cuando o saco está cheio, você deve esvaziá-la para continuar colhendo frutas."
+loc_tut_run2,Colete cinco frutas.
+loc_tut_end,Bem feito!
+loc_popup_ad,Você gostaria de ver um anúncio de ouro?
+loc_gold_full_ad,Ver anúncio completo dá mais ouro ...

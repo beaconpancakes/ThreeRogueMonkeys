@@ -7,7 +7,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class Sack : MonoBehaviour {
 
 	#region Public Data
@@ -64,6 +64,7 @@ public class Sack : MonoBehaviour {
 
 
                     _tempFruit = _fruitStack.Pop();
+                    _sackFillImg.fillAmount = (float)_fruitStack.Count / _maxCount;
                     _tempFruit.Collect();
                     if (FruitCollectedEvt!=null)
                         FruitCollectedEvt();
@@ -84,12 +85,20 @@ public class Sack : MonoBehaviour {
                     //Reloading finished
                     if (_fruitStack.Count == 0)
                         _state = S_STATE.IDLE;
-                }
-
-                    
-
-                    
+                }  
                 break;
+        }
+        //sack image fill animation
+        if (_fillingSack)
+        {
+            _fillTimer += Time.deltaTime;
+            _sackFillImg.fillAmount = _initFillValue + (_targetFillValue - _initFillValue) * _fillAnimCurve.Evaluate(_fillTimer / _fillTime);
+            //_alarmSbar.value = Mathf.Lerp(_initBarValue, _targetBarValue, _growCurve.Evaluate(_barTimer / _barGrowTime));
+            if (_fillTimer >= _fillTime)
+            {
+                _fillTimer = 0f;
+                _fillingSack = false;
+            }
         }
 	}
 	#endregion
@@ -120,6 +129,8 @@ public class Sack : MonoBehaviour {
         _maxCount = _currentCapacity;
         Debug.Log("Max count is : " + _maxCount);
         _speedLoss = 0f;
+        _sackFillImg.fillAmount = 0f;
+        _fillingSack = false;
     }
 
     /// <summary>
@@ -237,6 +248,10 @@ public class Sack : MonoBehaviour {
         _animatingFruitList.Add(new SackFruit(f, (Vector2)_stackEndPt.position + Vector2.up * (_fruitStack.Count * _fruitStackHeightOffset)));
         if (_state != S_STATE.ANIMATING)
             _state = S_STATE.ANIMATING;
+        _initFillValue = _sackFillImg.fillAmount;
+        _targetFillValue = (float)_fruitStack.Count / _maxCount;
+        _fillingSack = true;
+        
     }
 	#endregion
 
@@ -273,6 +288,13 @@ public class Sack : MonoBehaviour {
 
     [SerializeField]
     private FruitTree _fTree;
+
+    [SerializeField]
+    private Image _sackFillImg;
+    [SerializeField]
+    private float _fillTime;
+    [SerializeField]
+    private AnimationCurve _fillAnimCurve;
 	#endregion
 
 	#region Private Non-serialized Fields
@@ -299,5 +321,9 @@ public class Sack : MonoBehaviour {
     private float _reloadPerFruitTime;
 
     private int _currentCapacity;
+
+    private bool _fillingSack;
+    private float _initFillValue, _targetFillValue;
+    private float _fillTimer;
 	#endregion
 }

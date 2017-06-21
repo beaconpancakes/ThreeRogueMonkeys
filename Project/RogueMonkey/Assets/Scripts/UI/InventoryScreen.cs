@@ -61,7 +61,7 @@ public class InventoryScreen : MonoBehaviour {
             slot.GetComponentInChildren<Text>().text = "";
 
         }
-        //TODO: manage max inventory size (what if one earnt with max items count??
+        
         for (int i = 0; i < _inventoryItems.Count; ++i)
         {
             Debug.Log("Attemting to load: " + _inventoryItems[i].IdName);
@@ -75,6 +75,8 @@ public class InventoryScreen : MonoBehaviour {
             {
                 //Frame FB
 
+                //Disable New label
+                _inventoryItemButtonList[i].transform.GetChild(0).gameObject.SetActive(false);
                 //Set item
                 SetItem(_inventoryItems[i]);
             }
@@ -214,6 +216,10 @@ public class InventoryScreen : MonoBehaviour {
     public void Back()
     {
         gameObject.SetActive(false);
+        //Once "New" mssage is shown, reset New value
+        foreach (EquipmentItem eI in _inventoryItems)
+            eI.New = false;
+        DataMgr.Instance.SaveInventoryItems();
     }
     #endregion
 
@@ -288,7 +294,7 @@ public class InventoryScreen : MonoBehaviour {
             }
             //Format, percent/integer
             if (mtList[i] != EquipmentItem.MOD_TYPE.SACK_SIZE)
-                displayedText += modValueList[i].ToString("0.00") + "%";
+                displayedText += (modValueList[i]*100f).ToString("00") + "%";
             else
                 displayedText += modValueList[i].ToString("0");
 
@@ -537,7 +543,7 @@ public class InventoryScreen : MonoBehaviour {
             }
 
             if (eI.ModTypeList[i] != EquipmentItem.MOD_TYPE.SACK_SIZE)
-                displayedText += eI.ModValueList[i].ToString("0.00") + "%";
+                displayedText += (eI.ModValueList[i]*100f).ToString("00") + "%";
             else
                 displayedText += eI.ModValueList[i].ToString("0");
 

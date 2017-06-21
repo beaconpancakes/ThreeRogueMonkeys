@@ -132,7 +132,7 @@ public class UIHelper : MonoBehaviour {
     {
 
         //_currentAlarmLvl = 0;
-        _alarmText.text = GameMgr.Instance.CurrentAlarmLevel + " / " + GameMgr.Instance.MaxAlarmLevel;
+        _alarmText.text = GameMgr.Instance.CurrentAlarmLevel.ToString("0") + " / " + GameMgr.Instance.MaxAlarmLevel;
         _initBarValue = _targetBarValue;
         _targetBarValue = GameMgr.Instance.CurrentAlarmLevel / GameMgr.Instance.MaxAlarmLevel;
         if (_targetBarValue >= 0.5f)
@@ -165,7 +165,7 @@ public class UIHelper : MonoBehaviour {
             _targetBarValue -= val;
         else
             _alarmSbar.value -= val;
-
+        _alarmText.text = GameMgr.Instance.CurrentAlarmLevel.ToString("0") + " / " + GameMgr.Instance.MaxAlarmLevel; 
         if (glowEnabled && _targetBarValue < 0.5f)
             glowEnabled = false;
         else if (glowEnabled && _targetBarValue < 0.75f)
@@ -204,6 +204,19 @@ public class UIHelper : MonoBehaviour {
     {
         _showLevelTime = show;
         _timeText.gameObject.SetActive(show);
+    }
+
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="fromLoseScreen"></param>
+    public void Retry(bool fromLoseScreen)
+    {
+        GameMgr.Instance.StartCurrentLevel();
+        if (fromLoseScreen)
+            ShowLoseScreen(false);
+        else
+            _lvlFinishedScr.gameObject.SetActive(false);
     }
 	#endregion
 

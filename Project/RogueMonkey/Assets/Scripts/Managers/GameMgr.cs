@@ -155,8 +155,8 @@ public class GameMgr : MonoBehaviour {
                 }
 #endregion
 
-                if (_currentAlarmLvl > 0f)
-                {
+                if (_currentAlarmLvl > 0f && _currentLevel.GetLevelState() == Level.L_STATE.RUN)
+                { 
                     _currentAlarmLvl -= _currentAlarmDepletion * Time.deltaTime;
                     UIHelper.Instance.AlarmDepleted(_currentAlarmDepletion * Time.deltaTime/_maxAlarmLvl);
                 }
@@ -215,6 +215,10 @@ public class GameMgr : MonoBehaviour {
     public void CollectFruit(Fruit fr)
     {
         _stageCollectedFruits.Add(fr);
+        if (fr._Ftype == Fruit.F_TYPE.GOLD_ITEM && !_goldCollected)
+            _goldCollected = true;
+        else if (fr._Ftype == Fruit.F_TYPE.EQUIPMENT && !_itemCollected)
+            _itemCollected = true;
     }
 
     
@@ -328,7 +332,7 @@ public class GameMgr : MonoBehaviour {
             _stageCollectedFruits.Clear();
 
         GetLevelReferences();
-
+        _itemCollected = _goldCollected = false;
         //Reset Monkeys
         _strikerMonkey.transform.position = _currentLevel.GetSceneLayout().GetStrikerStartPos().position;
         _strikerMonkey.Reset();
@@ -374,6 +378,8 @@ public class GameMgr : MonoBehaviour {
         UIHelper.Instance.SetLevelText(_currentLevelIndex);
         _currentAlarmLvl = 0f;
         _currentLevelTime = _currentLevel.LevelTime;
+        _score = 0;
+        UIHelper.Instance.ScoreText.text = _score.ToString("0000");
         UIHelper.Instance.SetAlarmLevel();
         UIHelper.Instance.ResetAlarmUI();
 
@@ -624,7 +630,8 @@ public class GameMgr : MonoBehaviour {
         Vector2 tWorldPosition;
 
         tWorldPosition = _mainCamera.GetComponent<Camera>().ScreenToWorldPoint(t.position);
-        if (tWorldPosition.x > _minLeftFingerRef.position.x && tWorldPosition.x < _maxLeftFingerRef.position.x)
+        if (tWorldPosition.x > _minLeftFingerRef.position.x && tWorldPosition.x < _maxLeftFingerRef.position.x
+            && tWorldPosition.y < Screen.height*0.5f)
             return true;
         return false;
     }
@@ -693,6 +700,9 @@ public class GameMgr : MonoBehaviour {
     public EquipmentItem CollectorSlotB { get { return _collectorSlotB; } set { _collectorSlotB = value; } }
     public EquipmentItem StrikerSlotA { get { return _strikerSlotA; } set { _strikerSlotA = value; } }
     public EquipmentItem StrikerSlotB { get { return _strikerSlotB; } set { _strikerSlotB = value; } }
+
+    public bool GoldCollected { get { return _goldCollected; } set { _goldCollected = value; } }
+    public bool ItemCollected { get { return _itemCollected; } set { _itemCollected = value; } }
 	#endregion
 
 	#region Private Serialized Fields
@@ -726,6 +736,8 @@ public class GameMgr : MonoBehaviour {
     
     [SerializeField]
     private float _frameTime;
+    [SerializeField]
+    private float _maxCollectorAreaHeight;
 
     
 
@@ -791,6 +803,8 @@ public class GameMgr : MonoBehaviour {
     private float _fleeTimer;
 
     private EquipmentItem _shakerSlotA, _shakerSlotB, _collectorSlotA, _collectorSlotB, _strikerSlotA, _strikerSlotB;
+
+    private bool _itemCollected, _goldCollected;
     #endregion
 
 }

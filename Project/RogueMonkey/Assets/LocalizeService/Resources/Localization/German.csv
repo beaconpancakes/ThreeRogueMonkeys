@@ -1,0 +1,71 @@
+﻿Id,German
+loc_start,Anfang
+loc_play,Spielen
+loc_tutorial,Tutorial
+loc_options,Optionen
+loc_credits,Kredite
+loc_exit,verlassen
+loc_sure,Bist du sicher?
+loc_no,Nein
+loc_yes,Ja
+loc_next,Folgende
+loc_globVol,Master Volumen
+loc_musicVol,Musiklautstärke
+loc_sfxVol,Effektvolumen
+loc_vibration,Vibration
+loc_language,Sprache
+loc_spanish,Spanisch
+loc_french,Französisch
+loc_portuguese,Portugiesisch
+loc_english,Englisch
+loc_german,Deutsche
+loc_chinese,Chinesisch
+loc_japanese,Japanisch
+loc_return,Zurückfahren
+loc_stage,Szene
+loc_stageCom,Bühne abgeschlossen!
+loc_level,Niveau
+loc_empty,Leeren
+loc_score,Ergebnis
+loc_accuracy,Genauigkeit
+loc_speedCol,Kollektorgeschwindigkeit
+loc_speedFruitFall,Fruchtabfallgeschwindigkeit
+loc_goldChance,Gold Artikel Spawn Chance
+loc_equipChance,
+loc_sackSize,Sackgröße
+loc_reloadSpeed,Neubildungsrate Sack
+loc_strikerArea,Striker Hit Bereich
+loc_strikerSpeed,Striker Geschwindigkeit
+loc_equip,Ausrüsten
+loc_remove,Entfernen
+loc_buy,kaufen
+loc_sell,verkaufen
+loc_gameDesign,Spieldesign
+loc_programming,Spielprogrammierer
+loc_music,Musikproduktion
+loc_art,Kunst
+loc_producedBy,Ein Spiel von Gloomy Cave Entertainment produziert
+loc_s,S
+loc_a,A
+loc_b,B
+loc_c,C
+loc_d,D
+loc_e,E
+loc_lose,Sie haben gefangen!
+loc_retry,Wiederholen
+loc_ok,Akzeptieren
+loc_shop,Geschäft
+loc_inventory,Inventar
+loc_backToMenu,Menü
+loc_tut_welcome,Willkommen bei Rogue Monkeys tutorial!
+loc_tut_collector,"Schieben Sie den linken Finger, um den Collector-Affen zu bewegen."
+loc_tut_striker,"Tippen Sie auf den rechten Bereich, um den Striker-Affen zu bewegen."
+loc_tut_shaker,"Shaker Affe machen Fruchtregen. Versuche, die Früchte zu treffen, bevor sie zu Boden fällt."
+loc_tut_alarm1,"Wenn irgendwelche Fr�chte auf den Boden fallen, werden enge Tiere gewarnt."
+loc_tut_alarm2,"Wenn die Alarmleiste voll wird, wird unsere Mission abgebrochen."
+loc_tut_run1,Sammle fünf Früchte.
+loc_tut_sack,"Wenn der Beutel voll ist, entleeren sie mehr Frucht zu bekommen."
+loc_tut_run2,Sammle fünf weitere Früchte.
+loc_tut_end,Gut gemacht!
+locl_popup_ad,Möchten Sie eine Anzeige für Gold sehen?
+loc_gold_full_ad,Vollständige Werbung sehen mehr Gold ...

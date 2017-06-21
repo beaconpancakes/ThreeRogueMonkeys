@@ -1,0 +1,69 @@
+﻿Id,Spanish
+loc_start,Comenzar
+loc_play,Jugar
+loc_tutorial,Tutorial
+loc_options,Opciones
+loc_credits,Créditos
+loc_exit,Salir
+loc_sureExit,¿Estás seguro?
+loc_globVol,Volumen global
+loc_musicVol,Volumen música
+loc_sfxVol,Volumen efectos
+loc_vibration,Vibración
+loc_yes,Si
+loc_no,No
+loc_next,Siguiente
+loc_language,Idioma
+loc_spanish,Español
+loc_french,Francés
+loc_portuguese,Portugués
+loc_english,Inglés
+loc_german,Alemán
+loc_chinese,Chino
+loc_japanese,Japonés
+loc_return,Volver
+loc_stage,Escena
+loc_StageCom,¡Escena completada!
+loc_level,Nivel
+loc_empty,Vaciar
+loc_score,Puntuación
+loc_accuracy,Puntería
+loc_speedCol,Velocidad de Colector
+loc_speedFruitFall,Velocidad de caída
+loc_goldChance,Probabilidad de objetos de oro
+loc_sackSize,Tamaño de saco
+loc_strikerArea,Area de golpe
+loc_strikerSpeed,Velocidad de golpeador
+loc_equip,Equipar
+loc_remove,Quitar
+loc_buy,Comprar
+loc_sell,Vender
+loc_gameDesign,Diseño de juego
+loc_programming,Programación
+loc_music,Producción musical
+loc_art,Arte
+loc_producedBy,Un juego producido por Gloomy Cave Entertainment
+loc_rank_s,S
+loc_rank_a,A
+loc_rank_b,B
+loc_rank_c,C
+loc_rank_d,D
+loc_rank_e,E
+loc_lose,¡Te han pillado!
+loc_retry,Reintentar
+loc_ok,Aceptar
+loc_shop,Tienda
+loc_inventory,Inventario
+loc_backToMenu,Menu
+loc_tut_welcome,¡Bienvenido al tutorial de Rogue Monkeys!
+loc_tut_collector,Desliza el pulgar izquierdo sobre el mono Collector para moverlo.
+loc_tut_striker,Pulsa sobre el área derecha para mover al mono Striker.
+loc_tut_shaker,El mono Shaker hace que llueva fruta. Intenta golpear la fruta antes de que caiga al suelo.
+loc_tut_alarm1,"Si alguna fruta cae al suelo cerca de algún animal dormido, el nivel de alarma aumentará."
+loc_tut_alarm2,"Si la barra de alarma llega al máximo, nuestra misión será abortada."
+loc_tut_run1,Recoge cinco frutas.
+loc_tut_sack,"Cuando el saco esté lleno, deberás vaciarlo para seguir cogiendo fruta."
+loc_tut_run2,Recoge 5 frutas más.
+loc_tut_end,¡Bien hecho!
+loc_popup_ad,¿Desearías ver un anuncio a cambio de oro?
+loc_gold_full_ad,Ver el anuncio completo da más oro…

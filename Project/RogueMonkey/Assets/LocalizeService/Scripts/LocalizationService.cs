@@ -3,7 +3,7 @@ using UnityEngine;
 using System.Collections.Generic;
 using System.Linq;
 
-public class LocalizationService : MonoSingleton<LocalizationService>
+public class LocalizationService : MonoBehaviour//MonoSingleton<LocalizationService>
 {
     private const string DefaultLocalizationName = "English";
     public static string LocalizationPath = "Localization/";
@@ -15,7 +15,7 @@ public class LocalizationService : MonoSingleton<LocalizationService>
 
     private static string _localization = "English";
     private Dictionary<string,string> localizationLibrary;
-
+    public static LocalizationService Instance;
     public string Localization
     {
         get { return _localization; }
@@ -31,6 +31,14 @@ public class LocalizationService : MonoSingleton<LocalizationService>
 
 	private void Awake()
     {
+        if (Instance != null)
+        {
+            Destroy(this);
+            return;
+        }
+        Instance = this;
+        DontDestroyOnLoad(gameObject);
+
         Initialize();
     }
 
@@ -38,6 +46,7 @@ public class LocalizationService : MonoSingleton<LocalizationService>
 
     private void Initialize()
     {
+        Debug.Log("Init");
         Localization = GetLocalization();
         localizationLibrary = LoadLocalizeFileHelper();
     }
@@ -107,6 +116,7 @@ public class LocalizationService : MonoSingleton<LocalizationService>
 
     public Dictionary<string, string> LoadLocalizeFileHelper()
     {
+        Debug.Log("File path: " + LocalizationFilePath);
         var languages = Resources.Load(LocalizationFilePath, typeof(TextAsset)) as TextAsset;
         if (languages == null)
         {

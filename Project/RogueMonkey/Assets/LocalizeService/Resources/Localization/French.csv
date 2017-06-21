@@ -1,8 +1,69 @@
-Id,French
-title,Service de Localisation
-text,"Ce forfait est conçu pour montrer la localisation de texte dans vos applications. Interface simple. Texte de localisation situé dans le format de fichier .csv. Fonctionne avec plusieurs types possibles de sortie de texte dans Unity(MeshText et UIText), on a aussi la possibilité d'obtenir la valeur de texte du code."
-shorttext,Ce forfait est conçu pour montrer la localisation de texte...
-autors,Sun Cube
-localization1,Anglaise
-localization2,Russe
-localization3,Français
+﻿Id,French
+loc_start,Début
+loc_play,Jouer
+loc_tutorial,Tutoriel
+loc_options,Options
+loc_credits,Crédits
+loc_exit,Sortir
+loc_sureExit,Êtes-vous sûr?
+loc_globVol,Volumen global
+loc_musicVol,Volume musique
+loc_sfxVol,Volume effets
+loc_vibration,Vibration
+loc_yes,Oui
+loc_no,Non
+loc_next,Suivant
+loc_language,Langage
+loc_spanish,Espagnol
+loc_french,Français
+loc_portuguese,Portugese
+loc_english,Anglais
+loc_german,Allemand
+loc_chinese,Chinois
+loc_japanese,Japonais
+loc_return,Retourner
+loc_stage,Étape
+loc_StageCom,Ètape terminée!
+loc_level,Niveau
+loc_empty,Vider
+loc_score,Score
+loc_accuracyPrécision,
+loc_speedCol,Vitesse du collecteur
+loc_speedFruitFall,Vitesse de chute des fruits
+loc_goldChance,Chance de spawn d'élément d'or
+loc_sackSize,Taille du sac
+loc_strikerArea,Zone de Striker
+loc_strikerSpeed,Vitesse du Striker
+loc_equip,Équiper
+loc_remove,,Retirer
+loc_buy,Acheter
+loc_sell,Vendre
+loc_gameDesign,Design du jeu
+loc_programming,Programmation de jeux
+loc_music,Production de musique
+loc_art,Art
+loc_producedBy,Un jeu produit par Gloomy Cave Entertainment
+loc_rank_s,S
+loc_rank_a,A
+loc_rank_b,B
+loc_rank_c,C
+loc_rank_d,D
+loc_rank_e,E
+loc_lose,Vous avez été pris!
+loc_retry,Recommencez
+loc_ok,Accepter
+loc_shop,Boutique
+loc_inventory,Inventaire
+loc_backToMenu,Menu
+loc_tut_welcome,Bienvenue sur le didacticiel de Rogue Monkeys!
+loc_tut_collector,glisser le pouce gauche sur le singe Collector.
+loc_tut_striker,Faites un clic droit sur la zone pour déplacer le singe Striker.
+loc_tut_shaker,Le singe fait pleuvoir des fruits Shaker. Essayez de frapper le fruit avant qu'il ne touche le sol.
+loc_tut_alarm1,"Si tous les fruits tombe à terre près d'un animal endormi, le niveau d'alarme augmentera."
+loc_tut_alarm2,"Si la barre d'alarme atteint le maximum, notre mission sera annulée."
+loc_tut_run1,Recueillir cinq fruits.
+loc_tut_sack,"Lorsque le sac est plein, vous devez vider de continuer la cueillette des fruits."
+loc_tut_run2,Recueillir cinq fruits.
+loc_tut_end,Bien joué!
+loc_popup_ad,Voulez-vous voir une annonce pour l'or?
+loc_gold_full_ad,Voir l'annonce complète donne plus d'or ...

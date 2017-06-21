@@ -80,7 +80,7 @@ public class MainMenu : MonoBehaviour {
     public void StartGame()
     {
         if (Tutorial.Instance!=null)
-            DestroyImmediate(Tutorial.Instance.gameObject);
+            DestroyImmediate(Tutorial.Instance);
         SceneManager.LoadScene("LevelSelection");
     }
  

@@ -53,10 +53,11 @@ public class Stage : MonoBehaviour {
 
 
 	#region Properties
-
+    public STAGE_STATE State { get { return _state; } set { _state = value; } }
 	#endregion
 
 	#region Private Serialized Fields
+    
     [SerializeField]
     private int _stageIndex;
     [SerializeField]
@@ -66,6 +67,6 @@ public class Stage : MonoBehaviour {
 	#endregion
 
 	#region Private Non-serialized Fields
-
+    private STAGE_STATE _state;
 	#endregion
 }

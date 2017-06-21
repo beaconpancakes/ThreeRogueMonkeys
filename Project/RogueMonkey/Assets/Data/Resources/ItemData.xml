@@ -7,7 +7,7 @@
   </gold_item_type>
   <equipment_item_data>
     <!-- SACKS -->
-    <item id ="FastSack" spriteId ="Ring" value ="5" slotType ="COLLECTOR_A">
+    <item id ="FastSack" spriteId ="FastSack" value ="5" slotType ="COLLECTOR_A">
       <modList>
         <mod modType="RELOAD_SPEED" modVal="0.5"/>
       </modList>
@@ -52,7 +52,7 @@
       </modList>
     </item>
     <!-- COLLECTOR BOOTS -->
-    <item id ="WingedCrocs" spriteId ="Ring" value ="5" slotType ="COLLECTOR_B">
+    <item id ="WingedCrocs" spriteId ="WingedCrocs" value ="5" slotType ="COLLECTOR_B">
     <modList>
       <mod modType ="COLLECTOR_SPEED" modVal ="0.1"/>
     </modList>   

@@ -66,12 +66,13 @@ public class DataMgr : MonoBehaviour {
 	#region Behaviour Methods
     void Awake()
     {
-        if (Instance == null)
-            Instance = this;
-        else if (Instance != this)
-            Destroy(gameObject);
-        else
-            DontDestroyOnLoad(gameObject);
+        if (Instance != null)
+        {
+            Destroy(this);
+            return;
+        }
+        Instance = this;
+        DontDestroyOnLoad(gameObject);
     }
 
     void Start()
@@ -413,7 +414,8 @@ public class DataMgr : MonoBehaviour {
             writer.WriteEndElement();
         }
         writer.WriteEndElement();
-
+        writer.WriteEndDocument();
+        writer.Close();
     }
 
 
@@ -465,14 +467,30 @@ public class DataMgr : MonoBehaviour {
                     if (reader.Name.CompareTo("stage") == 0)
                     {
                         stageIndex =  XmlConvert.ToInt32(reader.GetAttribute("id"));
+                        auxSt = reader.GetAttribute("state");
+                        if (auxSt.CompareTo("completed") == 0)
+                            GameMgr.Instance._StageList[stageIndex].State = Stage.STAGE_STATE.COMPLETED;
+                        else if (auxSt.CompareTo("unlocked") == 0)
+                            GameMgr.Instance._StageList[stageIndex].State = Stage.STAGE_STATE.UNLOCKED;
+                        else if (auxSt.CompareTo("locked") == 0)
+                            GameMgr.Instance._StageList[stageIndex].State = Stage.STAGE_STATE.LOCKED;
+                        else if (auxSt.CompareTo("unavailable") == 0)
+                            GameMgr.Instance._StageList[stageIndex].State = Stage.STAGE_STATE.UNAVAILABLE;
+                        else
+                            Debug.LogError("wrong level state data" + reader.Name);
+                        
                         while (reader != null && reader.Read())
                         {
                             if (reader.IsStartElement() && reader.Name.CompareTo("level") == 0)
                             {
                                 //Debug.Log("Loading lvl " + stageIndex + " / " + reader.GetAttribute("id"));
+                                //Score
                                 GameMgr.Instance._StageList[stageIndex].GetLevelList()[XmlConvert.ToInt32((reader.GetAttribute("id")))].MaxScore = XmlConvert.ToInt32((reader.GetAttribute("score")));
+                                //State
                                 auxSt = reader.GetAttribute("state");
-                                if (auxSt.CompareTo("completed") == 0)
+                                if (auxSt.CompareTo("failed") == 0)
+                                    GameMgr.Instance._StageList[stageIndex].GetLevelList()[XmlConvert.ToInt32((reader.GetAttribute("id")))].AvailabilitySt = Level.AVAILABILITY_STATE.FAILED;
+                                else if (auxSt.CompareTo("completed") == 0)
                                     GameMgr.Instance._StageList[stageIndex].GetLevelList()[XmlConvert.ToInt32((reader.GetAttribute("id")))].AvailabilitySt = Level.AVAILABILITY_STATE.COMPLETED;
                                 else if (auxSt.CompareTo("unlocked") == 0)
                                     GameMgr.Instance._StageList[stageIndex].GetLevelList()[XmlConvert.ToInt32((reader.GetAttribute("id")))].AvailabilitySt = Level.AVAILABILITY_STATE.UNLOCKED;
@@ -482,6 +500,25 @@ public class DataMgr : MonoBehaviour {
                                     GameMgr.Instance._StageList[stageIndex].GetLevelList()[XmlConvert.ToInt32((reader.GetAttribute("id")))].AvailabilitySt = Level.AVAILABILITY_STATE.UNAVAILABLE;
                                 else
                                     Debug.LogError("wrong level state data" + reader.Name);
+
+                                //Rank
+                                auxSt = reader.GetAttribute("rank");
+                                if (auxSt.CompareTo("S") == 0)
+                                    GameMgr.Instance._StageList[stageIndex].GetLevelList()[XmlConvert.ToInt32((reader.GetAttribute("id")))].Rank = Level.RANK.S;
+                                else if (auxSt.CompareTo("A") == 0)
+                                    GameMgr.Instance._StageList[stageIndex].GetLevelList()[XmlConvert.ToInt32((reader.GetAttribute("id")))].Rank = Level.RANK.A;
+                                else if (auxSt.CompareTo("B") == 0)
+                                    GameMgr.Instance._StageList[stageIndex].GetLevelList()[XmlConvert.ToInt32((reader.GetAttribute("id")))].Rank = Level.RANK.B;
+                                else if (auxSt.CompareTo("C") == 0)
+                                    GameMgr.Instance._StageList[stageIndex].GetLevelList()[XmlConvert.ToInt32((reader.GetAttribute("id")))].Rank = Level.RANK.C;
+                                else if (auxSt.CompareTo("D") == 0)
+                                    GameMgr.Instance._StageList[stageIndex].GetLevelList()[XmlConvert.ToInt32((reader.GetAttribute("id")))].Rank = Level.RANK.D;
+                                else if (auxSt.CompareTo("E") == 0)
+                                    GameMgr.Instance._StageList[stageIndex].GetLevelList()[XmlConvert.ToInt32((reader.GetAttribute("id")))].Rank = Level.RANK.E;
+                                else if (auxSt.CompareTo("F") == 0)
+                                    GameMgr.Instance._StageList[stageIndex].GetLevelList()[XmlConvert.ToInt32((reader.GetAttribute("id")))].Rank = Level.RANK.F;
+                                else
+                                    Debug.LogError("wrong level rank data" + reader.Name);
                             }
                             else if (reader.NodeType == XmlNodeType.EndElement && reader.Name.CompareTo("stage")==0)
                                 break;
@@ -555,7 +592,7 @@ public class DataMgr : MonoBehaviour {
         XmlNodeList stages = ((XmlElement)root).GetElementsByTagName("stage");
         Debug.Log("stages: " + stages);
 
-        //go to stage-level adn rewrite attribute data
+        //go to stage-level aand rewrite attribute data
         foreach (XmlAttribute attr in stages[stageIndex].ChildNodes[lvlIndex].Attributes)
         {
             Debug.Log("Score &&& State attr "+attr.Name);
@@ -567,7 +604,41 @@ public class DataMgr : MonoBehaviour {
             }
             //State
             else if (attr.Name.Equals("state"))
-                attr.Value = "completed";
+            {
+                if (GameMgr.Instance._StageList[stageIndex].GetLevelList()[lvlIndex].GetAvState() == Level.AVAILABILITY_STATE.FAILED)
+                    attr.Value = "failed";
+                else
+                    attr.Value = "completed";
+
+            }
+            //Rank
+            else if (attr.Name.Equals("rank"))
+            {
+                switch (GameMgr.Instance._StageList[stageIndex].GetLevelList()[lvlIndex].Rank)
+                {
+                    case Level.RANK.S:
+                        attr.Value = "S";
+                        break;
+                    case Level.RANK.A:
+                        attr.Value = "A";
+                        break;
+                    case Level.RANK.B:
+                        attr.Value = "B";
+                        break;
+                    case Level.RANK.C:
+                        attr.Value = "C";
+                        break;
+                    case Level.RANK.D:
+                        attr.Value = "D";
+                        break;
+                    case Level.RANK.E:
+                        attr.Value = "E";
+                        break;
+                    case Level.RANK.F:
+                        attr.Value = "F";
+                        break;
+                }
+            }
         }
         //unlock next level
         if (lvlIndex < GameMgr.Instance._StageList[stageIndex].GetLevelList().Count - 1)
@@ -582,6 +653,22 @@ public class DataMgr : MonoBehaviour {
         //stage completed
         else if (stageIndex < stages.Count-1)
         {
+            //unlock next stage
+            foreach (XmlAttribute attr in stages[stageIndex+1].Attributes)
+            {
+                if (attr.Name.Equals("state"))
+                        attr.Value = "unlocked";
+            }
+            //switch from unavaiable to unlocked
+            if (stageIndex < stages.Count - 2)
+            {
+                foreach (XmlAttribute attr in stages[stageIndex + 2].Attributes)
+                {
+                    if (attr.Name.Equals("state"))
+                        attr.Value = "locked";
+                }
+            }
+            //unlock levels
             for (int i=0; i< stages[stageIndex+1].ChildNodes.Count; ++i)
             {
                 foreach (XmlAttribute attr in stages[stageIndex+1].ChildNodes[i].Attributes)
@@ -595,6 +682,7 @@ public class DataMgr : MonoBehaviour {
                     }
                 }
             }
+
         }
         doc.Save(Application.persistentDataPath + _levelFileName);
 
@@ -653,9 +741,13 @@ public class DataMgr : MonoBehaviour {
     public void LoadData()
     {
         DataMgr.Instance.Gold = PlayerPrefs.GetInt("Gold");
-        LocalizationService.Instance.Localization = PlayerPrefs.GetString("Lang");
-        if (LocalizationService.Instance.Localization =="")
+        Debug.Log("Loading language..." + PlayerPrefs.GetString("Lang"));
+        //LocalizationService.Instance.Localization = PlayerPrefs.GetString("Lang");
+        if (PlayerPrefs.GetString("Lang") =="")
             LocalizationService.Instance.Localization = "English";
+        else
+            LocalizationService.Instance.Localization = PlayerPrefs.GetString("Lang");
+
         DataMgr.Instance.Vibration = PlayerPrefs.GetInt("Vib");
         LoadItemData();
         LoadInventoryItems();
@@ -667,10 +759,11 @@ public class DataMgr : MonoBehaviour {
     /// </summary>
     public void RemoveData()
     {
+        Debug.Log("Delete");
         if ( File.Exists(Application.persistentDataPath  + _invFileName))
-            File.Delete(_invFileName);
+            File.Delete(Application.persistentDataPath + _invFileName);
         if (File.Exists(Application.persistentDataPath + _levelFileName))
-            File.Delete(_levelFileName);
+            File.Delete(Application.persistentDataPath + _levelFileName);
     }
 
     /// <summary>
@@ -747,9 +840,6 @@ public class DataMgr : MonoBehaviour {
     [SerializeField]
     private TextAsset _levelDataTA;
 
-    //Relative path fro data files
-    [SerializeField]
-    private string _dataRelativePath;   //we get full path with app.persistendatapath + reltivepath + fileNameData
     [SerializeField]
     private string _levelFileName;
     [SerializeField]

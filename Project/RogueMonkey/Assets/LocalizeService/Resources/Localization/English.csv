@@ -1,8 +1,71 @@
 Id,English
-title,Localization\n Service
-text,"This package is designed to show the localization of text in your applications. Simple interface. Text of localization located in the .CSV file format. Works with several possible types of text output in Unity(MeshText and UIText), there is also has the opportunity to get text value of the code."
-shorttext,This package is designed to show the localization of text...
-autors,Sun Cube
-localization1,English
-localization2,Russian
-localization3,French
+loc_start,Start
+loc_play,Play
+loc_tutorial,Tutorial
+loc_options,Options
+loc_credits,Credits
+loc_exit,Quit
+loc_sureExit,Are you sure?
+loc_no,No
+loc_yes,Yes
+loc_next,Next
+loc_globVol,Master volume
+loc_musicVol,Music volume
+loc_sfxVol,SFX volume
+loc_vibration,Vibration
+loc_language,Language
+loc_spanish,Spanish
+loc_french,French
+loc_portuguese,Portuguese
+loc_english,English
+loc_german,German
+loc_chinese,Chinese
+loc_japanese,Japanese
+loc_return,Back
+loc_stage,Stage
+loc_stageCom,Stage completed!
+loc_level,Level
+loc_empty,Empty
+loc_score,Score
+loc_accuracy,Accuracy
+loc_speedCol,Collector speed
+loc_speedFruitFall,Fruit fall speed
+loc_goldChance,Gold item spawn chance
+loc_equipChance,Weareable item spawn chance
+loc_sackSize,Sack size
+loc_reloadSpeed,ack reload speed
+loc_strikerArea,Striker hit area
+loc_strikerSpeed,Striker speed
+loc_equip,Equip
+loc_remove,Remove
+loc_buy,Buy
+loc_sell,Sell
+loc_gameDesign,Game Design
+loc_programming,Game Programmer
+loc_music,Music production
+loc_art,Art
+loc_producedBy,A game produced by Gloomy Cave Entertainment
+loc_s,S
+loc_a,A
+loc_b,B
+loc_c,C
+loc_d,D
+loc_e,E
+loc_lose,You got caught!
+loc_retry,Retry
+loc_ok,Okay
+loc_shop,Shop
+loc_inventory,Inventory
+loc_backToMenu,Menu
+loc_tut_welcome,Welcome to Rogue Monkeys tutorial!
+loc_tut_collector,Slide left finger to move XXXX monkey
+loc_tut_striker,Tap on right area to move Striker monkey
+loc_tut_shaker,Shaker monkey make fruit rain. Try to hit the fruit before it falls to the ground.
+loc_tut_alarm1,"If any fruit falls to the ground, close animals will get warned."
+loc_tut_alarm2,"If alarm bar gets full, our mission will get aborted."
+loc_tut_run1,Collect five fruits.
+loc_tut_sack,"When the sack is full, empty it for more fruit."
+loc_tut_run2,Collect five more fruits.
+loc_tut_end,Well done!
+locl_popup_ad,Would you like to watch an advertisment for gold?
+loc_gold_full_ad,View full advertisement gives more gold...

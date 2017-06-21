@@ -20,8 +20,8 @@ public class Level : MonoBehaviour {
     /// LOCKED : info shwon but cant play
     /// UNAVAILABLE : info hidden
     /// </summary>
-    public enum AVAILABILITY_STATE { UNLOCKED = 0, LOCKED, COMPLETED, UNAVAILABLE }
-
+    public enum AVAILABILITY_STATE { UNLOCKED = 0, LOCKED, COMPLETED, FAILED, UNAVAILABLE }
+    public enum RANK { S = 0, A, B, C, D, E, F }
     public const float _endDelayTime = 2.5f;
     public const float _reloadingSackEndTime = 3f;
 
@@ -184,11 +184,14 @@ public class Level : MonoBehaviour {
     /// 
     /// </summary>
     /// <returns></returns>
-    public AVAILABILITY_STATE GetState()
+    public AVAILABILITY_STATE GetAvState()
     {
         return _availabilitySt;
     }
-
+    public L_STATE GetLevelState()
+    {
+        return _state;
+    }
     /// <summary>
     /// 
     /// </summary>
@@ -235,7 +238,7 @@ public class Level : MonoBehaviour {
         _fruitTree.SetGoldPool(_goldItemPoolType);
         _fruitTree.SetEquipmentPool(_equipmentItemPoolType);
         _fruitTree.SetFruitPool(_fruitPoolType);
-        _fruitTree.SetFruitStats(_fSpawnTime, _fFallSpeed, _goldItemSpawnChance, _equipmentItemSpawnChance);
+        _fruitTree.SetFruitStats(_fSpawnTime, _fFallSpeed, _fFlyTime, _goldItemSpawnChance, _equipmentItemSpawnChance);
         
         _fruitTree.SetIdle();
         GameMgr.Instance._FruitTree = _fruitTree;
@@ -377,6 +380,7 @@ public class Level : MonoBehaviour {
     public float LevelTime { get { return _levelTime; } set { _levelTime = value; } }
     public int MinRankSuperScore { get { return _minRankSuperScore; } set { _minRankSuperScore = value; } }
     public float PenaltyPerAlarmPt { get { return _penaltyPerAlarmPt; } set { _penaltyPerAlarmPt = value; } }
+    public RANK Rank { get { return _rank; } set { _rank = value; } }
 	#endregion
 
 	#region Private Serialized Fields
@@ -397,6 +401,8 @@ public class Level : MonoBehaviour {
     private float _fSpawnTime;
     [SerializeField]
     private float _fFallSpeed;
+    [SerializeField]
+    private float _fFlyTime;    //time to reach highest height
     [SerializeField]
     private List<FruitSpawn> _fruitPoolType;    //defines the fruit types and its chance to be spawned
     [SerializeField]
@@ -426,6 +432,7 @@ public class Level : MonoBehaviour {
 	#endregion
 
 	#region Private Non-serialized Fields
+    private RANK _rank;
     private L_STATE _state, _lastState;
     private SceneLayout _currentSL;
     private Transform _minLeftFingerRef, _maxLeftFingerRef, _minRightFingerRef, _maxRightFingerRef;
@@ -449,5 +456,6 @@ public class Level : MonoBehaviour {
     private List<Guard> _guardList;
     private List<Transform> _auxGuardRightPosList, _auxGuardLeftPosList;
     private int _auxSelectedGuardPosIndex;
+    
 	#endregion
 }

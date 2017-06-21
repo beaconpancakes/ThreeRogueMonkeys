@@ -63,6 +63,7 @@ public class FruitTree : MonoBehaviour {
         _currentFruitFallTime = _fallFruitTime;
         _currentGoldSpawnChance = _goldSpawnChance;
         _currentEquipmentSpawnChance = _equipmentSpawnChance;
+        _currentFruitFlyTime = _fruitFlyTime;
         if (_slotA != null)
             LoadSlotItem(_slotA);
         if (_slotB != null)
@@ -246,10 +247,11 @@ public class FruitTree : MonoBehaviour {
     /// </summary>
     /// <param name="spawnRatio"></param>
     /// <param name="fallSpeed"></param>
-    public void SetFruitStats(float spawnRatio, float fallSpeed, float goldItemProb, float equipmentItemProb)
+    public void SetFruitStats(float spawnRatio, float fallSpeed, float flyTime, float goldItemProb, float equipmentItemProb)
     {
         _currentSpawnTime = spawnRatio;
         _fallFruitTime = fallSpeed;
+        _fruitFlyTime = flyTime;
         _goldSpawnChance = goldItemProb;
         _equipmentSpawnChance = equipmentItemProb;
     }
@@ -584,6 +586,7 @@ public class FruitTree : MonoBehaviour {
     public EquipmentItem SlotA { get { return _slotA; } set { _slotA = value; } }
     public EquipmentItem SlotB { get { return _slotB; } set { _slotB = value; } }
     public float CurrentFallSpeed { get { return _currentFruitFallTime; } set { _currentFruitFallTime = value; } }
+    public float CurrentFruitFlyTime { get { return _currentFruitFlyTime; } set { _currentFruitFlyTime = value; } }
 	#endregion
 
 	#region Private Serialized Fields
@@ -632,7 +635,9 @@ public class FruitTree : MonoBehaviour {
     private int _currentClusterPoolIndex, _currentMultifruitPoolIndex;
 
     private float _fallFruitTime;   //fall speed set by level stats
+private float _fruitFlyTime;
     private float _currentFruitFallTime;   //final speed calculated after applying item mod
+private float _currentFruitFlyTime;
     private float _goldSpawnChance, _equipmentSpawnChance;
     private float _currentGoldSpawnChance, _currentEquipmentSpawnChance;
 

@@ -69,7 +69,7 @@ GameObject:
   - component: {fileID: 4750591559032548}
   - component: {fileID: 114426681680635358}
   m_Layer: 0
-  m_Name: Level_1_7
+  m_Name: Level_1_7_35_10_25_30
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -261,7 +261,7 @@ GameObject:
   - component: {fileID: 4098599699997770}
   - component: {fileID: 114848018559612548}
   m_Layer: 0
-  m_Name: Level_1_1
+  m_Name: Level_1_1_75_25
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -293,7 +293,7 @@ GameObject:
   - component: {fileID: 4772138147802106}
   - component: {fileID: 114215916538310796}
   m_Layer: 0
-  m_Name: Level_1_10
+  m_Name: Level_1_10_25_15_10_25_35
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -341,7 +341,7 @@ GameObject:
   - component: {fileID: 4634956555769502}
   - component: {fileID: 114562846581658302}
   m_Layer: 0
-  m_Name: Level_1_8
+  m_Name: Level_1_8_30_15_5_20_30
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -405,7 +405,7 @@ GameObject:
   - component: {fileID: 4485811861745834}
   - component: {fileID: 114482670377161316}
   m_Layer: 0
-  m_Name: Level_1_4_10pcAndRatio
+  m_Name: Level_1_4_50_25_25
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -485,7 +485,7 @@ GameObject:
   - component: {fileID: 4977382472062002}
   - component: {fileID: 114588958836335724}
   m_Layer: 0
-  m_Name: Level_1_6
+  m_Name: Level_1_6_40_10_25_25
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -549,7 +549,7 @@ GameObject:
   - component: {fileID: 4845075804091766}
   - component: {fileID: 114067945541493196}
   m_Layer: 0
-  m_Name: Level_1_3_2fruits
+  m_Name: Level_1_3_60_20_20
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -661,7 +661,7 @@ GameObject:
   - component: {fileID: 4327066717026644}
   - component: {fileID: 114611718943405504}
   m_Layer: 0
-  m_Name: Level_1_0
+  m_Name: Level_1_0_80_20
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -693,7 +693,7 @@ GameObject:
   - component: {fileID: 4308384512481242}
   - component: {fileID: 114365483524962848}
   m_Layer: 0
-  m_Name: Level_1_11
+  m_Name: Level_1_11_20_15_10_30_25
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -821,7 +821,7 @@ GameObject:
   - component: {fileID: 4957581129671100}
   - component: {fileID: 114138324399591714}
   m_Layer: 0
-  m_Name: Level_1_2_30pc
+  m_Name: Level_1_2_65_20_15
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -997,7 +997,7 @@ GameObject:
   - component: {fileID: 4157940995863856}
   - component: {fileID: 114437156977057028}
   m_Layer: 0
-  m_Name: Level_1_9
+  m_Name: Level_1_9_25_15_5_25_30
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1188,7 +1188,7 @@ GameObject:
   - component: {fileID: 4342238239952304}
   - component: {fileID: 114220502516772896}
   m_Layer: 0
-  m_Name: Level_1_5
+  m_Name: Level_1_5_45_10_20_25
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2609,7 +2609,7 @@ MonoBehaviour:
   _netSize: 0
   _fSpawnTime: 1.6
   _fFallSpeed: 3.3
-  _fFlyTime: 1.5
+  _fFlyTime: 1
   _fruitPoolType:
   - FruitTypeIndex: 0
     SpawnRatio: 1
@@ -2645,24 +2645,28 @@ MonoBehaviour:
   _treeId: Vector-palm-tree-clip-art-palm-trees-clipart-mylocalguide-site
   _netSpriteId: brick-background-clipart-17
   _netSize: 0
-  _fSpawnTime: 1.3
-  _fFallSpeed: 1.8
-  _fFlyTime: 0
+  _fSpawnTime: 0.9
+  _fFallSpeed: 2.5
+  _fFlyTime: 1
   _fruitPoolType:
   - FruitTypeIndex: 0
-    SpawnRatio: 0.75
+    SpawnRatio: 0.6
+  - FruitTypeIndex: 7
+    SpawnRatio: 0.2
   - FruitTypeIndex: 1
-    SpawnRatio: 0.25
-  _goldItemPoolType: []
+    SpawnRatio: 0.2
+  _goldItemPoolType:
+  - Id: Ring
+    SpawnRatio: 1
   _equipmentItemPoolType: []
-  _goldItemSpawnChance: 0
+  _goldItemSpawnChance: 0.025
   _equipmentItemSpawnChance: 0
-  _levelTime: 20
+  _levelTime: 50
   _maxAlarmLvl: 100
-  _missedFruitAlarm: 0
-  _alarmDepletion: 0
-  _guardCount: 0
-  _guardDistribution: 0
+  _missedFruitAlarm: 20
+  _alarmDepletion: 0.7
+  _guardCount: 2
+  _guardDistribution: 2
   _penaltyPerAlarmPt: 0
   _minRankSuperScore: 0
   _maxScore: 0
@@ -2837,21 +2841,27 @@ MonoBehaviour:
   _treeId: Vector-palm-tree-clip-art-palm-trees-clipart-mylocalguide-site
   _netSpriteId: brick-background-clipart-17
   _netSize: 0
-  _fSpawnTime: 1.3
-  _fFallSpeed: 1.8
-  _fFlyTime: 0
+  _fSpawnTime: 0.9
+  _fFallSpeed: 2.6
+  _fFlyTime: 1
   _fruitPoolType:
   - FruitTypeIndex: 0
+    SpawnRatio: 0.65
+  - FruitTypeIndex: 7
+    SpawnRatio: 0.2
+  - FruitTypeIndex: 1
+    SpawnRatio: 0.15
+  _goldItemPoolType:
+  - Id: Ring
     SpawnRatio: 1
-  _goldItemPoolType: []
   _equipmentItemPoolType: []
-  _goldItemSpawnChance: 0
+  _goldItemSpawnChance: 0.025
   _equipmentItemSpawnChance: 0
-  _levelTime: 20
+  _levelTime: 45
   _maxAlarmLvl: 100
-  _missedFruitAlarm: 0
-  _alarmDepletion: 0
-  _guardCount: 0
+  _missedFruitAlarm: 20
+  _alarmDepletion: 0.7
+  _guardCount: 1
   _guardDistribution: 0
   _penaltyPerAlarmPt: 0
   _minRankSuperScore: 0
@@ -2951,7 +2961,7 @@ MonoBehaviour:
   _netSize: 0
   _fSpawnTime: 1.5
   _fFallSpeed: 3.3
-  _fFlyTime: 1.5
+  _fFlyTime: 1
   _fruitPoolType:
   - FruitTypeIndex: 0
     SpawnRatio: 0.7
@@ -3136,7 +3146,7 @@ MonoBehaviour:
   _netSize: 0
   _fSpawnTime: 1.4
   _fFallSpeed: 3.2
-  _fFlyTime: 1.5
+  _fFlyTime: 1
   _fruitPoolType:
   - FruitTypeIndex: 0
     SpawnRatio: 0.65
@@ -3218,26 +3228,32 @@ MonoBehaviour:
   _treeId: Vector-palm-tree-clip-art-palm-trees-clipart-mylocalguide-site
   _netSpriteId: brick-background-clipart-17
   _netSize: 0
-  _fSpawnTime: 1.3
-  _fFallSpeed: 1.7
-  _fFlyTime: 0
+  _fSpawnTime: 0.9
+  _fFallSpeed: 2.1
+  _fFlyTime: 1
   _fruitPoolType:
   - FruitTypeIndex: 0
-    SpawnRatio: 0.5
+    SpawnRatio: 0.25
   - FruitTypeIndex: 1
-    SpawnRatio: 0.35
-  - FruitTypeIndex: 2
     SpawnRatio: 0.15
-  _goldItemPoolType: []
+  - FruitTypeIndex: 2
+    SpawnRatio: 0.1
+  - FruitTypeIndex: 7
+    SpawnRatio: 0.25
+  - FruitTypeIndex: 10
+    SpawnRatio: 0.25
+  _goldItemPoolType:
+  - Id: Ring
+    SpawnRatio: 1
   _equipmentItemPoolType: []
-  _goldItemSpawnChance: 0
+  _goldItemSpawnChance: 0.04
   _equipmentItemSpawnChance: 0
-  _levelTime: 20
+  _levelTime: 55
   _maxAlarmLvl: 100
-  _missedFruitAlarm: 0
-  _alarmDepletion: 0
-  _guardCount: 0
-  _guardDistribution: 0
+  _missedFruitAlarm: 20
+  _alarmDepletion: 0.7
+  _guardCount: 2
+  _guardDistribution: 2
   _penaltyPerAlarmPt: 0
   _minRankSuperScore: 0
   _maxScore: 0
@@ -3298,25 +3314,29 @@ MonoBehaviour:
   _treeId: Vector-palm-tree-clip-art-palm-trees-clipart-mylocalguide-site
   _netSpriteId: brick-background-clipart-17
   _netSize: 0
-  _fSpawnTime: 1.3
-  _fFallSpeed: 1.7
-  _fFlyTime: 0
+  _fSpawnTime: 0.9
+  _fFallSpeed: 2.5
+  _fFlyTime: 1
   _fruitPoolType:
   - FruitTypeIndex: 0
-    SpawnRatio: 0.5
+    SpawnRatio: 0.45
   - FruitTypeIndex: 1
-    SpawnRatio: 0.35
-  - FruitTypeIndex: 2
-    SpawnRatio: 0.15
-  _goldItemPoolType: []
+    SpawnRatio: 0.1
+  - FruitTypeIndex: 7
+    SpawnRatio: 0.2
+  - FruitTypeIndex: 10
+    SpawnRatio: 0.25
+  _goldItemPoolType:
+  - Id: Ring
+    SpawnRatio: 1
   _equipmentItemPoolType: []
-  _goldItemSpawnChance: 0
+  _goldItemSpawnChance: 0.025
   _equipmentItemSpawnChance: 0
-  _levelTime: 20
+  _levelTime: 50
   _maxAlarmLvl: 100
-  _missedFruitAlarm: 0
-  _alarmDepletion: 0
-  _guardCount: 0
+  _missedFruitAlarm: 20
+  _alarmDepletion: 0.7
+  _guardCount: 1
   _guardDistribution: 0
   _penaltyPerAlarmPt: 0
   _minRankSuperScore: 0
@@ -3340,7 +3360,7 @@ MonoBehaviour:
   _netSize: 0
   _fSpawnTime: 1.4
   _fFallSpeed: 3.3
-  _fFlyTime: 1.5
+  _fFlyTime: 1
   _fruitPoolType:
   - FruitTypeIndex: 0
     SpawnRatio: 0.1
@@ -3384,7 +3404,7 @@ MonoBehaviour:
   _netSize: 0
   _fSpawnTime: 2
   _fFallSpeed: 3.5
-  _fFlyTime: 1.5
+  _fFlyTime: 1
   _fruitPoolType:
   - FruitTypeIndex: 0
     SpawnRatio: 1
@@ -3520,7 +3540,7 @@ MonoBehaviour:
   _netSize: 0
   _fSpawnTime: 1.2
   _fFallSpeed: 2.9
-  _fFlyTime: 1.5
+  _fFlyTime: 1
   _fruitPoolType:
   - FruitTypeIndex: 0
     SpawnRatio: 0.5
@@ -3566,26 +3586,32 @@ MonoBehaviour:
   _treeId: Vector-palm-tree-clip-art-palm-trees-clipart-mylocalguide-site
   _netSpriteId: brick-background-clipart-17
   _netSize: 0
-  _fSpawnTime: 1.3
-  _fFallSpeed: 1.7
-  _fFlyTime: 0
+  _fSpawnTime: 0.9
+  _fFallSpeed: 2.1
+  _fFlyTime: 1
   _fruitPoolType:
   - FruitTypeIndex: 0
-    SpawnRatio: 0.5
+    SpawnRatio: 0.2
   - FruitTypeIndex: 1
-    SpawnRatio: 0.35
-  - FruitTypeIndex: 2
     SpawnRatio: 0.15
-  _goldItemPoolType: []
+  - FruitTypeIndex: 2
+    SpawnRatio: 0.1
+  - FruitTypeIndex: 7
+    SpawnRatio: 0.3
+  - FruitTypeIndex: 10
+    SpawnRatio: 0.25
+  _goldItemPoolType:
+  - Id: Ring
+    SpawnRatio: 1
   _equipmentItemPoolType: []
-  _goldItemSpawnChance: 0
+  _goldItemSpawnChance: 0.04
   _equipmentItemSpawnChance: 0
-  _levelTime: 20
+  _levelTime: 55
   _maxAlarmLvl: 100
-  _missedFruitAlarm: 0
-  _alarmDepletion: 0
-  _guardCount: 0
-  _guardDistribution: 0
+  _missedFruitAlarm: 20
+  _alarmDepletion: 0.7
+  _guardCount: 2
+  _guardDistribution: 2
   _penaltyPerAlarmPt: 0
   _minRankSuperScore: 0
   _maxScore: 0
@@ -3648,7 +3674,7 @@ MonoBehaviour:
   _netSize: 0
   _fSpawnTime: 1.3
   _fFallSpeed: 3.1
-  _fFlyTime: 1.5
+  _fFlyTime: 1
   _fruitPoolType:
   - FruitTypeIndex: 0
     SpawnRatio: 0.65
@@ -3692,26 +3718,30 @@ MonoBehaviour:
   _treeId: Vector-palm-tree-clip-art-palm-trees-clipart-mylocalguide-site
   _netSpriteId: brick-background-clipart-17
   _netSize: 0
-  _fSpawnTime: 1.3
-  _fFallSpeed: 1.7
-  _fFlyTime: 0
+  _fSpawnTime: 0.9
+  _fFallSpeed: 2.4
+  _fFlyTime: 1
   _fruitPoolType:
   - FruitTypeIndex: 0
-    SpawnRatio: 0.5
-  - FruitTypeIndex: 1
     SpawnRatio: 0.35
-  - FruitTypeIndex: 2
-    SpawnRatio: 0.15
-  _goldItemPoolType: []
+  - FruitTypeIndex: 1
+    SpawnRatio: 0.1
+  - FruitTypeIndex: 7
+    SpawnRatio: 0.25
+  - FruitTypeIndex: 10
+    SpawnRatio: 0.3
+  _goldItemPoolType:
+  - Id: Ring
+    SpawnRatio: 1
   _equipmentItemPoolType: []
-  _goldItemSpawnChance: 0
+  _goldItemSpawnChance: 0.04
   _equipmentItemSpawnChance: 0
-  _levelTime: 20
+  _levelTime: 50
   _maxAlarmLvl: 100
-  _missedFruitAlarm: 0
-  _alarmDepletion: 0
-  _guardCount: 0
-  _guardDistribution: 0
+  _missedFruitAlarm: 20
+  _alarmDepletion: 0.7
+  _guardCount: 2
+  _guardDistribution: 2
   _penaltyPerAlarmPt: 0
   _minRankSuperScore: 0
   _maxScore: 0
@@ -3734,7 +3764,7 @@ MonoBehaviour:
   _netSize: 0
   _fSpawnTime: 1.1
   _fFallSpeed: 2.7
-  _fFlyTime: 1.5
+  _fFlyTime: 1
   _fruitPoolType:
   - FruitTypeIndex: 0
     SpawnRatio: 0.35
@@ -3754,7 +3784,7 @@ MonoBehaviour:
     SpawnRatio: 0.1
   - Id: WingedCrocs
     SpawnRatio: 0.9
-  _goldItemSpawnChance: 0.1
+  _goldItemSpawnChance: 0.08
   _equipmentItemSpawnChance: 0.02
   _levelTime: 40
   _maxAlarmLvl: 100
@@ -3824,7 +3854,7 @@ MonoBehaviour:
   _netSize: 0
   _fSpawnTime: 1.3
   _fFallSpeed: 3
-  _fFlyTime: 1.5
+  _fFlyTime: 1
   _fruitPoolType:
   - FruitTypeIndex: 0
     SpawnRatio: 0.55
@@ -3868,25 +3898,31 @@ MonoBehaviour:
   _treeId: Vector-palm-tree-clip-art-palm-trees-clipart-mylocalguide-site
   _netSpriteId: brick-background-clipart-17
   _netSize: 0
-  _fSpawnTime: 1.3
-  _fFallSpeed: 1.7
-  _fFlyTime: 0
+  _fSpawnTime: 0.9
+  _fFallSpeed: 2.1
+  _fFlyTime: 1
   _fruitPoolType:
   - FruitTypeIndex: 0
-    SpawnRatio: 0.5
+    SpawnRatio: 0.25
   - FruitTypeIndex: 1
-    SpawnRatio: 0.35
-  - FruitTypeIndex: 2
     SpawnRatio: 0.15
-  _goldItemPoolType: []
+  - FruitTypeIndex: 2
+    SpawnRatio: 0.05
+  - FruitTypeIndex: 7
+    SpawnRatio: 0.25
+  - FruitTypeIndex: 10
+    SpawnRatio: 0.3
+  _goldItemPoolType:
+  - Id: Ring
+    SpawnRatio: 1
   _equipmentItemPoolType: []
-  _goldItemSpawnChance: 0
+  _goldItemSpawnChance: 0.04
   _equipmentItemSpawnChance: 0
-  _levelTime: 20
+  _levelTime: 55
   _maxAlarmLvl: 100
-  _missedFruitAlarm: 0
-  _alarmDepletion: 0
-  _guardCount: 0
+  _missedFruitAlarm: 20
+  _alarmDepletion: 0.7
+  _guardCount: 1
   _guardDistribution: 0
   _penaltyPerAlarmPt: 0
   _minRankSuperScore: 0
@@ -3950,7 +3986,7 @@ MonoBehaviour:
   _netSize: 0
   _fSpawnTime: 1.6
   _fFallSpeed: 3.3
-  _fFlyTime: 1.5
+  _fFlyTime: 1
   _fruitPoolType:
   - FruitTypeIndex: 0
     SpawnRatio: 0.75
@@ -3988,24 +4024,24 @@ MonoBehaviour:
   _treeId: Vector-palm-tree-clip-art-palm-trees-clipart-mylocalguide-site
   _netSpriteId: brick-background-clipart-17
   _netSize: 0
-  _fSpawnTime: 1.3
-  _fFallSpeed: 1.7
-  _fFlyTime: 0
+  _fSpawnTime: 0.9
+  _fFallSpeed: 2.2
+  _fFlyTime: 1
   _fruitPoolType:
   - FruitTypeIndex: 0
     SpawnRatio: 0.5
-  - FruitTypeIndex: 1
+  - FruitTypeIndex: 7
     SpawnRatio: 0.35
-  - FruitTypeIndex: 2
-    SpawnRatio: 0.15
-  _goldItemPoolType: []
+  _goldItemPoolType:
+  - Id: Ring
+    SpawnRatio: 1
   _equipmentItemPoolType: []
-  _goldItemSpawnChance: 0
+  _goldItemSpawnChance: 0.05
   _equipmentItemSpawnChance: 0
   _levelTime: 20
   _maxAlarmLvl: 100
-  _missedFruitAlarm: 0
-  _alarmDepletion: 0
+  _missedFruitAlarm: 20
+  _alarmDepletion: 0.7
   _guardCount: 0
   _guardDistribution: 0
   _penaltyPerAlarmPt: 0
@@ -4057,26 +4093,28 @@ MonoBehaviour:
   _treeId: Vector-palm-tree-clip-art-palm-trees-clipart-mylocalguide-site
   _netSpriteId: brick-background-clipart-17
   _netSize: 0
-  _fSpawnTime: 1.15
-  _fFallSpeed: 1.8
-  _fFlyTime: 0
+  _fSpawnTime: 0.9
+  _fFallSpeed: 2.5
+  _fFlyTime: 1
   _fruitPoolType:
   - FruitTypeIndex: 0
-    SpawnRatio: 0.65
+    SpawnRatio: 0.5
+  - FruitTypeIndex: 7
+    SpawnRatio: 0.25
   - FruitTypeIndex: 1
-    SpawnRatio: 0.35
-  - FruitTypeIndex: 2
-    SpawnRatio: 0.15
-  _goldItemPoolType: []
+    SpawnRatio: 0.25
+  _goldItemPoolType:
+  - Id: Ring
+    SpawnRatio: 1
   _equipmentItemPoolType: []
-  _goldItemSpawnChance: 0
+  _goldItemSpawnChance: 0.025
   _equipmentItemSpawnChance: 0
-  _levelTime: 20
+  _levelTime: 50
   _maxAlarmLvl: 100
-  _missedFruitAlarm: 0
-  _alarmDepletion: 0
-  _guardCount: 0
-  _guardDistribution: 0
+  _missedFruitAlarm: 20
+  _alarmDepletion: 0.7
+  _guardCount: 2
+  _guardDistribution: 2
   _penaltyPerAlarmPt: 0
   _minRankSuperScore: 0
   _maxScore: 0
@@ -4137,25 +4175,31 @@ MonoBehaviour:
   _treeId: Vector-palm-tree-clip-art-palm-trees-clipart-mylocalguide-site
   _netSpriteId: brick-background-clipart-17
   _netSize: 0
-  _fSpawnTime: 1.3
-  _fFallSpeed: 1.7
-  _fFlyTime: 0
+  _fSpawnTime: 0.9
+  _fFallSpeed: 2.4
+  _fFlyTime: 1
   _fruitPoolType:
   - FruitTypeIndex: 0
-    SpawnRatio: 0.5
+    SpawnRatio: 0.3
   - FruitTypeIndex: 1
-    SpawnRatio: 0.35
-  - FruitTypeIndex: 2
     SpawnRatio: 0.15
-  _goldItemPoolType: []
+  - FruitTypeIndex: 2
+    SpawnRatio: 0.05
+  - FruitTypeIndex: 7
+    SpawnRatio: 0.2
+  - FruitTypeIndex: 10
+    SpawnRatio: 0.3
+  _goldItemPoolType:
+  - Id: Ring
+    SpawnRatio: 1
   _equipmentItemPoolType: []
-  _goldItemSpawnChance: 0
+  _goldItemSpawnChance: 0.04
   _equipmentItemSpawnChance: 0
-  _levelTime: 20
+  _levelTime: 55
   _maxAlarmLvl: 100
-  _missedFruitAlarm: 0
-  _alarmDepletion: 0
-  _guardCount: 0
+  _missedFruitAlarm: 20
+  _alarmDepletion: 0.7
+  _guardCount: 1
   _guardDistribution: 0
   _penaltyPerAlarmPt: 0
   _minRankSuperScore: 0
@@ -4177,25 +4221,29 @@ MonoBehaviour:
   _treeId: Vector-palm-tree-clip-art-palm-trees-clipart-mylocalguide-site
   _netSpriteId: brick-background-clipart-17
   _netSize: 0
-  _fSpawnTime: 1.3
-  _fFallSpeed: 1.7
-  _fFlyTime: 0
+  _fSpawnTime: 0.9
+  _fFallSpeed: 2.4
+  _fFlyTime: 1
   _fruitPoolType:
   - FruitTypeIndex: 0
-    SpawnRatio: 0.5
+    SpawnRatio: 0.4
   - FruitTypeIndex: 1
-    SpawnRatio: 0.35
-  - FruitTypeIndex: 2
-    SpawnRatio: 0.15
-  _goldItemPoolType: []
+    SpawnRatio: 0.1
+  - FruitTypeIndex: 7
+    SpawnRatio: 0.25
+  - FruitTypeIndex: 10
+    SpawnRatio: 0.25
+  _goldItemPoolType:
+  - Id: Ring
+    SpawnRatio: 1
   _equipmentItemPoolType: []
-  _goldItemSpawnChance: 0
+  _goldItemSpawnChance: 0.04
   _equipmentItemSpawnChance: 0
-  _levelTime: 20
+  _levelTime: 50
   _maxAlarmLvl: 100
-  _missedFruitAlarm: 0
-  _alarmDepletion: 0
-  _guardCount: 0
+  _missedFruitAlarm: 20
+  _alarmDepletion: 0.7
+  _guardCount: 1
   _guardDistribution: 0
   _penaltyPerAlarmPt: 0
   _minRankSuperScore: 0
@@ -4333,25 +4381,25 @@ MonoBehaviour:
   _treeId: Vector-palm-tree-clip-art-palm-trees-clipart-mylocalguide-site
   _netSpriteId: brick-background-clipart-17
   _netSize: 0
-  _fSpawnTime: 1.5
-  _fFallSpeed: 2
-  _fFlyTime: 0
+  _fSpawnTime: 1
+  _fFallSpeed: 2.7
+  _fFlyTime: 1
   _fruitPoolType:
   - FruitTypeIndex: 0
-    SpawnRatio: 0.5
-  - FruitTypeIndex: 1
-    SpawnRatio: 0.35
-  - FruitTypeIndex: 2
-    SpawnRatio: 0.15
-  _goldItemPoolType: []
+    SpawnRatio: 0.8
+  - FruitTypeIndex: 7
+    SpawnRatio: 0.2
+  _goldItemPoolType:
+  - Id: Ring
+    SpawnRatio: 1
   _equipmentItemPoolType: []
-  _goldItemSpawnChance: 0
+  _goldItemSpawnChance: 0.025
   _equipmentItemSpawnChance: 0
-  _levelTime: 20
+  _levelTime: 45
   _maxAlarmLvl: 100
-  _missedFruitAlarm: 0
-  _alarmDepletion: 0
-  _guardCount: 0
+  _missedFruitAlarm: 20
+  _alarmDepletion: 0.7
+  _guardCount: 1
   _guardDistribution: 0
   _penaltyPerAlarmPt: 0
   _minRankSuperScore: 0
@@ -4375,7 +4423,7 @@ MonoBehaviour:
   _netSize: 0
   _fSpawnTime: 1.2
   _fFallSpeed: 2.9
-  _fFlyTime: 1.5
+  _fFlyTime: 1
   _fruitPoolType:
   - FruitTypeIndex: 0
     SpawnRatio: 0.45
@@ -4463,7 +4511,7 @@ MonoBehaviour:
   _netSize: 0
   _fSpawnTime: 1.1
   _fFallSpeed: 2.8
-  _fFlyTime: 1.5
+  _fFlyTime: 1
   _fruitPoolType:
   - FruitTypeIndex: 0
     SpawnRatio: 0.4
@@ -4483,7 +4531,7 @@ MonoBehaviour:
     SpawnRatio: 0.1
   - Id: WingedCrocs
     SpawnRatio: 0.9
-  _goldItemSpawnChance: 0.1
+  _goldItemSpawnChance: 0.08
   _equipmentItemSpawnChance: 0.02
   _levelTime: 40
   _maxAlarmLvl: 100
@@ -4591,7 +4639,7 @@ MonoBehaviour:
   _netSize: 0
   _fSpawnTime: 1
   _fFallSpeed: 2.6
-  _fFlyTime: 1.5
+  _fFlyTime: 1
   _fruitPoolType:
   - FruitTypeIndex: 0
     SpawnRatio: 0.15
@@ -4611,7 +4659,7 @@ MonoBehaviour:
     SpawnRatio: 0.1
   - Id: WingedCrocs
     SpawnRatio: 0.9
-  _goldItemSpawnChance: 0.1
+  _goldItemSpawnChance: 0.09
   _equipmentItemSpawnChance: 0.025
   _levelTime: 40
   _maxAlarmLvl: 100
@@ -4757,7 +4805,7 @@ MonoBehaviour:
   _netSize: 0
   _fSpawnTime: 1.8
   _fFallSpeed: 3.4
-  _fFlyTime: 1.5
+  _fFlyTime: 1
   _fruitPoolType:
   - FruitTypeIndex: 0
     SpawnRatio: 1
@@ -5062,26 +5110,26 @@ MonoBehaviour:
   _treeId: Vector-palm-tree-clip-art-palm-trees-clipart-mylocalguide-site
   _netSpriteId: brick-background-clipart-17
   _netSize: 0
-  _fSpawnTime: 1.5
-  _fFallSpeed: 2
-  _fFlyTime: 0
+  _fSpawnTime: 0.9
+  _fFallSpeed: 2.6
+  _fFlyTime: 1
   _fruitPoolType:
   - FruitTypeIndex: 0
-    SpawnRatio: 0.5
+    SpawnRatio: 0.75
   - FruitTypeIndex: 7
-    SpawnRatio: 0.35
-  - FruitTypeIndex: 2
-    SpawnRatio: 0.15
-  _goldItemPoolType: []
+    SpawnRatio: 0.25
+  _goldItemPoolType:
+  - Id: Ring
+    SpawnRatio: 1
   _equipmentItemPoolType: []
-  _goldItemSpawnChance: 0
+  _goldItemSpawnChance: 0.025
   _equipmentItemSpawnChance: 0
-  _levelTime: 20
+  _levelTime: 45
   _maxAlarmLvl: 100
-  _missedFruitAlarm: 0
-  _alarmDepletion: 0
-  _guardCount: 0
-  _guardDistribution: 0
+  _missedFruitAlarm: 20
+  _alarmDepletion: 0.7
+  _guardCount: 2
+  _guardDistribution: 2
   _penaltyPerAlarmPt: 0
   _minRankSuperScore: 0
   _maxScore: 0
@@ -5102,24 +5150,24 @@ MonoBehaviour:
   _treeId: Vector-palm-tree-clip-art-palm-trees-clipart-mylocalguide-site
   _netSpriteId: brick-background-clipart-17
   _netSize: 0
-  _fSpawnTime: 1.3
-  _fFallSpeed: 1.7
-  _fFlyTime: 0
+  _fSpawnTime: 0.9
+  _fFallSpeed: 2.2
+  _fFlyTime: 1
   _fruitPoolType:
   - FruitTypeIndex: 0
     SpawnRatio: 0.5
-  - FruitTypeIndex: 1
+  - FruitTypeIndex: 7
     SpawnRatio: 0.35
-  - FruitTypeIndex: 2
-    SpawnRatio: 0.15
-  _goldItemPoolType: []
+  _goldItemPoolType:
+  - Id: Ring
+    SpawnRatio: 1
   _equipmentItemPoolType: []
-  _goldItemSpawnChance: 0
+  _goldItemSpawnChance: 0.05
   _equipmentItemSpawnChance: 0
   _levelTime: 20
   _maxAlarmLvl: 100
-  _missedFruitAlarm: 0
-  _alarmDepletion: 0
+  _missedFruitAlarm: 20
+  _alarmDepletion: 0.7
   _guardCount: 0
   _guardDistribution: 0
   _penaltyPerAlarmPt: 0
@@ -5302,24 +5350,24 @@ MonoBehaviour:
   _treeId: Vector-palm-tree-clip-art-palm-trees-clipart-mylocalguide-site
   _netSpriteId: brick-background-clipart-17
   _netSize: 0
-  _fSpawnTime: 1.3
-  _fFallSpeed: 1.7
-  _fFlyTime: 0
+  _fSpawnTime: 0.9
+  _fFallSpeed: 2.2
+  _fFlyTime: 1
   _fruitPoolType:
   - FruitTypeIndex: 0
     SpawnRatio: 0.5
-  - FruitTypeIndex: 1
+  - FruitTypeIndex: 7
     SpawnRatio: 0.35
-  - FruitTypeIndex: 2
-    SpawnRatio: 0.15
-  _goldItemPoolType: []
+  _goldItemPoolType:
+  - Id: Ring
+    SpawnRatio: 1
   _equipmentItemPoolType: []
-  _goldItemSpawnChance: 0
+  _goldItemSpawnChance: 0.75
   _equipmentItemSpawnChance: 0
   _levelTime: 20
   _maxAlarmLvl: 100
-  _missedFruitAlarm: 0
-  _alarmDepletion: 0
+  _missedFruitAlarm: 20
+  _alarmDepletion: 0.7
   _guardCount: 0
   _guardDistribution: 0
   _penaltyPerAlarmPt: 0
@@ -5344,7 +5392,7 @@ MonoBehaviour:
   _netSize: 0
   _fSpawnTime: 1.3
   _fFallSpeed: 3.1
-  _fFlyTime: 1.5
+  _fFlyTime: 1
   _fruitPoolType:
   - FruitTypeIndex: 0
     SpawnRatio: 0.6

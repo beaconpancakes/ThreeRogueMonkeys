@@ -23,22 +23,40 @@ public class Fruit : MonoBehaviour {
     /// MULTI_SEED = 5
     /// MULTI_UNIT = 6
     /// SPIKY = 7
-    /// GOLD_ITEM = 8
-    /// EQUIPMENT = 9
+    /// COCO_M = 8
+    /// COCO_S = 9
+    /// RIPEN = 10
+    /// SACK_BREAKER = 11
+    /// SACK_BREAKER_LAUNCH = 12
+    /// CHICKEN = 13
+    /// SBREAKER_CLUSTER_DUO = 14
+    /// GUARANA = 15
+    /// BANANA_CLUSTER = 16
+    /// GOLD_ITEM = 17
+    /// EQUIPMENT = 18                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
     /// </summary>
-    public enum F_TYPE { COCO = 0, BANANA, CACAO, CLUSTER_SEED, CLUSTER_UNIT, MULTI_SEED, MULTI_UNIT, SPIKY, GOLD_ITEM, EQUIPMENT }
+    public enum F_TYPE { COCO_L = 0, BANANA, CACAO, CLUSTER_SEED, CLUSTER_UNIT, MULTI_SEED, MULTI_UNIT, SPIKY, COCO_M, COCO_S, RIPEN, SACK_BREAKER, SACK_BREAKER_LAUNCH, CHICKEN, SBREAKER_CLUSTER_DUO, GUARANA, BANANA_CLUSTER, GOLD_ITEM, EQUIPMENT }
     public enum G_TYPE { XS = 0, S, M, L, XL, XXL, RELIC }
+    public enum RIPEN_STATE { LITTLE = 0, MELLOW, STALE}
     public const float _floorCollisionOffset = 5f;  //distance below floor reference to destroy missed fruits
     public const float _multiLaunchDelay = .2f;
+    public const float _spikyAlarmLvl = 15f;
+    public const float _ripenTime_mellow = 1.5f;
+    public const float _ripentTime_stale = 4.5f;
     public const int _multiUnits = 3;
     public const int _clusterUnits = 2;
+    public const float _clusterUnityFlyTimeBonus = 0.2f;
 
     public const int _cocoScore = 5;
     public const int _bananaScore = 10;
     public const int _cacaoScore = 4;
+    public const int _littleRipenScore = 5;
+    public const int _mellowRipenScore = 15;
+    public const int _staleRipenScore = 0;
     public const int _clusterScore = 5;
     public const int _goldItemScore = 20;
     public const int _equipmentItemScore = 35;
+    
 	#endregion
 
 
@@ -70,7 +88,7 @@ public class Fruit : MonoBehaviour {
                                             _initPos.y + _initSpeed.y * _flyingTime + 0.5f * _virtualGravity * _flyingTime * _flyingTime);
                 //Check if floor collision
                 if (transform.position.y <=  GameMgr.Instance.FloorYPos - _floorCollisionOffset)
-                   _fTree.DestroyFruit(this, true);
+                   _fTree.DestroyFruit(this, _type != F_TYPE.SPIKY);
                 break;
 
             case FRUIT_ST.LAUNCHING:
@@ -96,6 +114,35 @@ public class Fruit : MonoBehaviour {
                     //_fTree.DestroyFruit(this);//
                 break;
 
+            case FRUIT_ST.ON_SACK:
+                if (_type == F_TYPE.RIPEN && _ripenSt != RIPEN_STATE.STALE)
+                {
+                    _timer += Time.deltaTime;
+
+                    if (_ripenSt == RIPEN_STATE.LITTLE)
+                    {
+                        if (_timer >= _ripenTime_mellow)
+                        {
+                            _timer = 0f;
+                            _ripenSt = RIPEN_STATE.MELLOW;
+                            _img.sprite = _mellowRipenSp;
+                            _currentScore = _mellowRipenScore;
+                        }
+                        
+                    }
+                    else
+                    {
+                        if (_timer >= _ripentTime_stale)
+                        {
+                            _ripenSt = RIPEN_STATE.STALE;
+                            _img.sprite = _staleRipenSp;
+                            _currentScore = _staleRipenScore;
+                        }
+                    }
+                    
+                }
+                break;
+
             case FRUIT_ST.COLLECTED:
                 _flyingTime += Time.deltaTime;
                 if (_flyingTime >= _collectedAnimTime)
@@ -113,7 +160,10 @@ public class Fruit : MonoBehaviour {
     {
         GetFruitFallSpeed(_fTree.CurrentFallSpeed);
         _state = FRUIT_ST.FALLING_FROM_TREE;
-        LeanTween.rotateZ(gameObject, -540f, GameMgr.Instance.FruitFallTime);
+        if (_type != F_TYPE.SPIKY)
+            LeanTween.rotateZ(gameObject, -540f, _fTree.CurrentFallSpeed/*GameMgr.Instance.FruitFallTime*/);
+        else
+            transform.rotation = Quaternion.Euler(0f, 0f, 180f);
     }
     
     /// <summary>
@@ -128,7 +178,7 @@ public class Fruit : MonoBehaviour {
             --_maturityLevel;
             switch (_type)
             {
-                case F_TYPE.COCO:
+                case F_TYPE.COCO_L: case F_TYPE.COCO_M : case F_TYPE.COCO_S : case F_TYPE.RIPEN:
                     GetFruitLaunchSpeed(_fTree.CurrentFruitFlyTime);
                     _state = FRUIT_ST.LAUNCHING;
                     AudioController.Play("fruit_1b");
@@ -145,7 +195,7 @@ public class Fruit : MonoBehaviour {
                         //keep falling state
                         GetFruitLaunchSpeed(_fTree.CurrentFruitFlyTime, false);  
                         //switch sprite
-                        _img.sprite = _yellowBanana;
+                        _img.sprite = _yellowBananaSp;
                     }
                     AudioController.Play("fruit_1b");
                     break;
@@ -160,7 +210,7 @@ public class Fruit : MonoBehaviour {
                     for (int i = 0; i < _clusterUnits; ++i)
                     {
                         Fruit clusterUnit =_fTree.GetClusterUnit();
-                        clusterUnit.LaunchClusterUnitFruit(transform.position, _initPos);
+                        clusterUnit.LaunchClusterUnitFruit(transform.position, _initPos, i*_clusterUnityFlyTimeBonus);
                         
                         AudioController.Play("fruit_1b");
 
@@ -173,17 +223,16 @@ public class Fruit : MonoBehaviour {
                     //Launch 1st seed and then create others with same speed
                     
                     Fruit multiUnit = _fTree.GetMultiUnit();
-                    multiUnit.LaunchClusterUnitFruit(transform.position, _initPos);
+                    multiUnit.LaunchMultiUnitFruit(transform.position, _initPos, _virtualGravity, _initSpeed,/*_initSpeed,*/ 0f);
                     AudioController.Play("fruit_1b");
                     //Get speed and gravity from frist to apply the same to others
-                    Vector2 unitsSpeed = multiUnit._InitSpeed;
+                    //Vector2 unitsSpeed = multiUnit._InitSpeed;
                     float vGrav = multiUnit._virtualGravity;
+                    Debug.Log("init speeeeeeeeeeeeed: " + _virtualGravity);
                     for (int i = 0; i < _multiUnits - 1; ++i)
                     {
                         multiUnit = _fTree.GetMultiUnit();
-                        multiUnit.LaunchMultiUnitFruit(transform.position, _initPos, vGrav, unitsSpeed, _multiLaunchDelay*(i+1));
-
-                        
+                        multiUnit.LaunchMultiUnitFruit(transform.position, _initPos, vGrav, _initSpeed,/*unitsSpeed,*/ _multiLaunchDelay *(i+1));
 
                     }
                     //Destroy seed
@@ -191,7 +240,9 @@ public class Fruit : MonoBehaviour {
                     break;
 
                 case F_TYPE.SPIKY:
-                    GameMgr.Instance.RaiseAlarm(15f);
+                    GameMgr.Instance._StrikerMonkey.Stun();
+                    if (GameMgr.Instance.RaiseAlarm(_spikyAlarmLvl))
+                        GameMgr.Instance.WakeUpGuards();
                     ThrowOut();
                     break;
 
@@ -228,6 +279,8 @@ public class Fruit : MonoBehaviour {
         //_pTree.DestroyCoconut(this);
         AudioController.Play("fruit_collect");
         _state = FRUIT_ST.ON_SACK;
+        if (_type == F_TYPE.RIPEN)
+            _timer = 0f;
     }
 
     /// <summary>
@@ -272,7 +325,7 @@ public class Fruit : MonoBehaviour {
     {
         _state = FRUIT_ST.DISMISSED;
         _flyingTime = 0f;
-        LeanTween.cancelAll(gameObject);
+        LeanTween.cancel(gameObject);
         LeanTween.move(gameObject, (Vector2)transform.position + _dissmissAnimationOffset, _dissmissAnimationTime);
         LeanTween.rotateZ(gameObject, 1080f, _dissmissAnimationTime);// setOnComplete(() =>
          //{
@@ -295,7 +348,7 @@ public class Fruit : MonoBehaviour {
             _img.sprite = _fruitSpriteList[fruitTypeIndex];
         switch (_type)
         {
-            case F_TYPE.COCO:
+            case F_TYPE.COCO_L:
                 _currentScore = _cocoScore;
                 _maturityLevel = 1;
                 break;
@@ -310,6 +363,16 @@ public class Fruit : MonoBehaviour {
                 _maturityLevel = 1;
                 break;
 
+            case F_TYPE.SPIKY:
+                _currentScore = 0;
+                _maturityLevel = 1;
+                break;
+
+            case F_TYPE.RIPEN:
+                _currentScore = _littleRipenScore;
+                _maturityLevel = 1;
+                _ripenSt = RIPEN_STATE.LITTLE;
+                break;
             /*case F_TYPE.GOLD_ITEM:
                 _currentScore = _baseGold;
                 _maturityLevel = 1;
@@ -350,10 +413,13 @@ public class Fruit : MonoBehaviour {
         //_goldItemType = (G_TYPE)goldTypeIndex;
         if (_img == null)
             _img = GetComponent<Image>();
-        _img.sprite = DataMgr.Instance.GetGameItems().Find((itm) => (itm.IdName.CompareTo(id) == 0))._Sprite;
+        equipmentItemRef = DataMgr.Instance.GetGameItems().Find((itm) => (itm.IdName.CompareTo(id) == 0));
+        Debug.Log("EI::::: id " + id+"///"+ equipmentItemRef);
+        _img.sprite = equipmentItemRef._Sprite;// DataMgr.Instance.GetGameItems().Find((itm) => (itm.IdName.CompareTo(id) == 0))._Sprite;
         _currentScore = _equipmentItemScore;
         _maturityLevel = 3; 
         _type = F_TYPE.EQUIPMENT;
+        
 
     }
 
@@ -363,7 +429,29 @@ public class Fruit : MonoBehaviour {
     /// <returns></returns>
     public Sprite GetFruitSprite()
     {
-        return _img.sprite;
+        Sprite ret = null;
+
+        if (_type == F_TYPE.RIPEN)
+        {
+            switch (_ripenSt)
+            {
+                case RIPEN_STATE.LITTLE:
+                    ret = _img.sprite;
+                    break;
+
+                case RIPEN_STATE.MELLOW:
+                    ret = _mellowRipenSp;
+                    break;
+
+                case RIPEN_STATE.STALE:
+                    ret = _staleRipenSp;
+                    break;
+            }
+        }
+        else
+            ret = _img.sprite;
+
+        return ret;
     }
     /// <summary>
     /// 
@@ -420,7 +508,12 @@ public class Fruit : MonoBehaviour {
         xSpeed = (targetXPos - transform.position.x) / (timeToH + flyTime);
         _initSpeed = new Vector2(xSpeed, ySpeed);
         LeanTween.cancel(gameObject);
-        LeanTween.rotateZ(gameObject, 1080f, timeToH + flyTime);
+        if (_type != F_TYPE.SACK_BREAKER)
+            LeanTween.rotateZ(gameObject, 1080f, timeToH + flyTime);
+        else
+        {
+            LeanTween.rotateZ(gameObject, 135f, timeToH + flyTime);
+        }
 
         _flyingTime = 0f;
     }
@@ -430,7 +523,7 @@ public class Fruit : MonoBehaviour {
     /// </summary>
     /// <param name="position"></param>
     /// <param name="initSpeed"></param>
-    public void LaunchClusterUnitFruit(Vector2 position, Vector2 initPos)
+    public void LaunchClusterUnitFruit(Vector2 position, Vector2 initPos, float flyTimeBonus)
     {
         transform.position = position;
         _initPos = initPos;
@@ -438,7 +531,7 @@ public class Fruit : MonoBehaviour {
         
         _state = FRUIT_ST.LAUNCHING;
         _fTree = GameMgr.Instance._FruitTree;
-        GetFruitLaunchSpeed(_fTree.CurrentFruitFlyTime);
+        GetFruitLaunchSpeed(_fTree.CurrentFruitFlyTime*(1f+flyTimeBonus));
         _flyingTime = 0f;
         gameObject.SetActive(true);
        
@@ -456,13 +549,13 @@ public class Fruit : MonoBehaviour {
     {
         transform.position = position;
         _initPos = initPos;
-        //_initSpeed = initSpeed;
+        _initSpeed = initSpeed;
         _fTree = GameMgr.Instance._FruitTree;
         GetFruitLaunchSpeed(_fTree.CurrentFruitFlyTime);
         _state = FRUIT_ST.WAITING_FOR_LAUNCH;
         
-        _virtualGravity = gravity;
-        _initSpeed = initSpeed;
+        //_virtualGravity = gravity;
+        //_initSpeed = initSpeed;
         _waitCooldown = delayTime;
         _waitingTimer = 0f;
         _flyingTime = 0f;
@@ -552,7 +645,9 @@ public class Fruit : MonoBehaviour {
     public FruitTree FruitTree { get { return _fTree; } set { _fTree = value; } }
     public F_TYPE _Ftype { get { return _type; } private set { _type = value; } }
     public FRUIT_ST _FState { get { return _state; } private set { _state = value; } }
+    public RIPEN_STATE _RState {  get { return _ripenSt; } set { _ripenSt = value; } }
     public Vector2 _InitSpeed { get { return _initSpeed; } set { _initSpeed = value; } }
+    public EquipmentItem EquipmentItem { get { return equipmentItemRef; } set { equipmentItemRef = value; } }
 	#endregion
 
 	#region Private Serialized Fields
@@ -584,12 +679,23 @@ public class Fruit : MonoBehaviour {
     [SerializeField]
     private List<Sprite> _goldSpriteList;
     [SerializeField]
-    private Sprite _yellowBanana;
+    private Sprite _yellowBananaSp;
+    [SerializeField]
+    private Sprite _mellowRipenSp;
+    [SerializeField]
+    private Sprite _staleRipenSp;
+
+    [SerializeField]
+    private Vector2 _throwOutSpeed;
+    [SerializeField]
+    private float _throwOutHeight;
+    [SerializeField]
+    private float _throwOutFallTime;
 	#endregion
 
 	#region Private Non-serialized Fields
     private FRUIT_ST _state, _lastState;
-    
+    private RIPEN_STATE _ripenSt;
 
     private FruitTree _fTree;
     private Vector2 _initSpeed;
@@ -604,13 +710,10 @@ public class Fruit : MonoBehaviour {
     private int _currentScore;
     private int _maturityLevel; //if 0 then goes to left; otherwise it get launched upwards again**
 
-    [SerializeField]
-    private Vector2 _throwOutSpeed;
-    [SerializeField]
-    private float _throwOutHeight;
-    [SerializeField]
-    private float _throwOutFallTime;
+    
 
     private float _collectedAnimTime;
+
+    private EquipmentItem equipmentItemRef;     //reference to attached equipment item if fruit type is Equipment Item
 	#endregion
 }

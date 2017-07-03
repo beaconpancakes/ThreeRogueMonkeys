@@ -355,12 +355,14 @@ public class FruitTree : MonoBehaviour {
     /// </summary>
     public void Stop(bool destroyFlyingFruits = true)
     {
+        //TODO: dont setctive false, destroy properly
         if (destroyFlyingFruits)
         {
             foreach (GameObject go in GameObject.FindGameObjectsWithTag("Fruit"))
             {
                 if (go.GetComponent<Fruit>()._FState == Fruit.FRUIT_ST.FALLING_FROM_TREE)
-                    go.SetActive(false); 
+                    DestroyFruit(go.GetComponent<Fruit>());
+                    //go.SetActive(false); 
             }
         }
         _state = PT_STATE.ENDED;
@@ -403,7 +405,7 @@ public class FruitTree : MonoBehaviour {
     /// 
     /// </summary>
     /// <param name="unit"></param>
-    public void DestroyClusterUnit(Fruit unit)
+    public void DestroyClusterUnit(Fruit unit, bool fruitMissed = false)
     {
         
         int fruitIndex = _clusterFruitPool.FindIndex(((c) => c == unit));
@@ -413,7 +415,8 @@ public class FruitTree : MonoBehaviour {
             _clusterFruitPool[i] = _clusterFruitPool[i + 1];
 
         _clusterFruitPool[_clusterFruitPool.Count - 1] = unit;
-        GameMgr.Instance.FruitMissed(unit.transform.position.x);
+        if (fruitMissed)
+            GameMgr.Instance.FruitMissed(unit.transform.position.x);
         unit.gameObject.SetActive(false);
         --_currentClusterPoolIndex;
 
@@ -423,7 +426,7 @@ public class FruitTree : MonoBehaviour {
     /// 
     /// </summary>
     /// <param name="unit"></param>
-    public void DestroyMultiUnit(Fruit unit)
+    public void DestroyMultiUnit(Fruit unit, bool fruitMissed = false)
     {
         
         int fruitIndex = _multiFruitPool.FindIndex(((c) => c == unit));
@@ -433,7 +436,8 @@ public class FruitTree : MonoBehaviour {
             _multiFruitPool[i] = _multiFruitPool[i + 1];
 
         _multiFruitPool[_multiFruitPool.Count - 1] = unit;
-        GameMgr.Instance.FruitMissed(unit.transform.position.x);
+        if (fruitMissed)
+            GameMgr.Instance.FruitMissed(unit.transform.position.x);
         unit.gameObject.SetActive(false);
         --_currentMultifruitPoolIndex;
         Debug.Log("Index after destroying multi unit::___________________::" + _currentMultifruitPoolIndex);
@@ -449,9 +453,9 @@ public class FruitTree : MonoBehaviour {
         int fruitIndex = -1;
 
         if (fr._Ftype == Fruit.F_TYPE.CLUSTER_UNIT)
-            DestroyClusterUnit(fr);
+            DestroyClusterUnit(fr, fruitMissed);
         else if (fr._Ftype == Fruit.F_TYPE.MULTI_UNIT)
-            DestroyMultiUnit(fr);
+            DestroyMultiUnit(fr, fruitMissed);
         else
         {
             Debug.Log("Attepmting to destroy: "+fr._Ftype);

@@ -3255,6 +3255,7 @@ RectTransform:
   - {fileID: 791563399}
   - {fileID: 1197759844}
   - {fileID: 238716951}
+  - {fileID: 1659109857}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4211,6 +4212,136 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114457535896126332, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _fruitPoolType.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114901115080245432, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _fruitPoolType.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114855134269200652, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _fruitPoolType.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114432364082886632, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114226637818143274, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114406892957974150, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114355925414391174, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114620548547625108, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114428891587727362, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114662088910039566, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114730912360850632, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114611718943405504, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 114848018559612548, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 114138324399591714, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 114067945541493196, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114482670377161316, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114215916538310796, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 114220502516772896, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114562846581658302, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114588958836335724, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114437156977057028, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 114365483524962848, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 114426681680635358, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114901115080245432, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 114457535896126332, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 114855134269200652, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.size
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4413554733702822, guid: 4435ca7e82c7b7544a14eb135dd681c5, type: 2}
       propertyPath: m_LocalPosition.x
       value: 624.4959
@@ -4243,80 +4374,1375 @@ Prefab:
       propertyPath: m_RootOrder
       value: 8
       objectReference: {fileID: 0}
-    - target: {fileID: 114193219845256336, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+    - target: {fileID: 114215916538310796, guid: 4435ca7e82c7b7544a14eb135dd681c5,
         type: 2}
-      propertyPath: _fFlyTime
+      propertyPath: _fruitPoolType.Array.data[2].FruitTypeIndex
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114562846581658302, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _fruitPoolType.Array.data[2].FruitTypeIndex
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114437156977057028, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _fruitPoolType.Array.data[2].FruitTypeIndex
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114365483524962848, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _fruitPoolType.Array.data[2].FruitTypeIndex
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114457535896126332, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _fFallSpeed
+      value: 2.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114457535896126332, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _fruitPoolType.Array.data[0].SpawnRatio
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114457535896126332, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _fruitPoolType.Array.data[1].FruitTypeIndex
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 114240816723671740, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+    - target: {fileID: 114457535896126332, guid: 4435ca7e82c7b7544a14eb135dd681c5,
         type: 2}
-      propertyPath: _fFlyTime
+      propertyPath: _fruitPoolType.Array.data[1].SpawnRatio
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 114457535896126332, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _fruitPoolType.Array.data[2].FruitTypeIndex
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114457535896126332, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _fruitPoolType.Array.data[2].SpawnRatio
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114457535896126332, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _fruitPoolType.Array.data[3].FruitTypeIndex
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 114457535896126332, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _fruitPoolType.Array.data[3].SpawnRatio
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114457535896126332, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _fruitPoolType.Array.data[4].FruitTypeIndex
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 114457535896126332, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _fruitPoolType.Array.data[4].SpawnRatio
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 114457535896126332, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _goldItemSpawnChance
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 114457535896126332, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _levelTime
+      value: 55
+      objectReference: {fileID: 0}
+    - target: {fileID: 114457535896126332, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _guardCount
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114457535896126332, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _guardDistribution
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114901115080245432, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _fFallSpeed
+      value: 2.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114901115080245432, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _fruitPoolType.Array.data[0].SpawnRatio
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114901115080245432, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _fruitPoolType.Array.data[1].FruitTypeIndex
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 114355925414391174, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+    - target: {fileID: 114901115080245432, guid: 4435ca7e82c7b7544a14eb135dd681c5,
         type: 2}
-      propertyPath: _fFlyTime
+      propertyPath: _fruitPoolType.Array.data[1].SpawnRatio
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 114901115080245432, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _fruitPoolType.Array.data[2].FruitTypeIndex
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114901115080245432, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _fruitPoolType.Array.data[2].SpawnRatio
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114901115080245432, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _fruitPoolType.Array.data[3].FruitTypeIndex
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 114901115080245432, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _fruitPoolType.Array.data[3].SpawnRatio
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114901115080245432, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _fruitPoolType.Array.data[4].FruitTypeIndex
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 114901115080245432, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _fruitPoolType.Array.data[4].SpawnRatio
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 114901115080245432, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _goldItemSpawnChance
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 114901115080245432, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _levelTime
+      value: 55
+      objectReference: {fileID: 0}
+    - target: {fileID: 114901115080245432, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _guardCount
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114901115080245432, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _guardDistribution
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114855134269200652, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _fFallSpeed
+      value: 2.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114855134269200652, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _fruitPoolType.Array.data[0].SpawnRatio
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114855134269200652, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _fruitPoolType.Array.data[1].FruitTypeIndex
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 114211427688242200, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+    - target: {fileID: 114855134269200652, guid: 4435ca7e82c7b7544a14eb135dd681c5,
         type: 2}
-      propertyPath: _fFlyTime
-      value: 1
+      propertyPath: _fruitPoolType.Array.data[1].SpawnRatio
+      value: 0.15
       objectReference: {fileID: 0}
-    - target: {fileID: 114054081411573994, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+    - target: {fileID: 114855134269200652, guid: 4435ca7e82c7b7544a14eb135dd681c5,
         type: 2}
-      propertyPath: _fFlyTime
-      value: 1
+      propertyPath: _fruitPoolType.Array.data[2].FruitTypeIndex
+      value: 5
       objectReference: {fileID: 0}
-    - target: {fileID: 114763676675131718, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+    - target: {fileID: 114855134269200652, guid: 4435ca7e82c7b7544a14eb135dd681c5,
         type: 2}
-      propertyPath: _fFlyTime
-      value: 1
+      propertyPath: _fruitPoolType.Array.data[2].SpawnRatio
+      value: 0.1
       objectReference: {fileID: 0}
-    - target: {fileID: 114730912360850632, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+    - target: {fileID: 114855134269200652, guid: 4435ca7e82c7b7544a14eb135dd681c5,
         type: 2}
-      propertyPath: _fFlyTime
-      value: 1
+      propertyPath: _fruitPoolType.Array.data[3].FruitTypeIndex
+      value: 7
       objectReference: {fileID: 0}
-    - target: {fileID: 114447172575180160, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+    - target: {fileID: 114855134269200652, guid: 4435ca7e82c7b7544a14eb135dd681c5,
         type: 2}
-      propertyPath: _fFlyTime
-      value: 1
+      propertyPath: _fruitPoolType.Array.data[3].SpawnRatio
+      value: 0.3
       objectReference: {fileID: 0}
-    - target: {fileID: 114226637818143274, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+    - target: {fileID: 114855134269200652, guid: 4435ca7e82c7b7544a14eb135dd681c5,
         type: 2}
-      propertyPath: _fFlyTime
-      value: 1
+      propertyPath: _fruitPoolType.Array.data[4].FruitTypeIndex
+      value: 10
       objectReference: {fileID: 0}
-    - target: {fileID: 114406892957974150, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+    - target: {fileID: 114855134269200652, guid: 4435ca7e82c7b7544a14eb135dd681c5,
         type: 2}
-      propertyPath: _fFlyTime
-      value: 1
+      propertyPath: _fruitPoolType.Array.data[4].SpawnRatio
+      value: 0.25
       objectReference: {fileID: 0}
-    - target: {fileID: 114905959307205132, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+    - target: {fileID: 114855134269200652, guid: 4435ca7e82c7b7544a14eb135dd681c5,
         type: 2}
-      propertyPath: _fFlyTime
-      value: 1
+      propertyPath: _goldItemSpawnChance
+      value: 0.04
       objectReference: {fileID: 0}
-    - target: {fileID: 114620548547625108, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+    - target: {fileID: 114855134269200652, guid: 4435ca7e82c7b7544a14eb135dd681c5,
         type: 2}
-      propertyPath: _fFlyTime
-      value: 1
+      propertyPath: _levelTime
+      value: 55
       objectReference: {fileID: 0}
-    - target: {fileID: 114428891587727362, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+    - target: {fileID: 114855134269200652, guid: 4435ca7e82c7b7544a14eb135dd681c5,
         type: 2}
-      propertyPath: _fFlyTime
-      value: 1
+      propertyPath: _guardCount
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114855134269200652, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _guardDistribution
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 114432364082886632, guid: 4435ca7e82c7b7544a14eb135dd681c5,
         type: 2}
-      propertyPath: _fFlyTime
-      value: 1
+      propertyPath: _equipmentItemPoolType.Array.data[1].Id
+      value: Jumping Crocs
+      objectReference: {fileID: 0}
+    - target: {fileID: 114432364082886632, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[1].SpawnRatio
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114226637818143274, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[1].Id
+      value: Jumping Crocs
+      objectReference: {fileID: 0}
+    - target: {fileID: 114226637818143274, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[1].SpawnRatio
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114406892957974150, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[1].Id
+      value: Jumping Crocs
+      objectReference: {fileID: 0}
+    - target: {fileID: 114406892957974150, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[1].SpawnRatio
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114432364082886632, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[0].Id
+      value: Quick Sack
+      objectReference: {fileID: 0}
+    - target: {fileID: 114226637818143274, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[0].Id
+      value: Quick Sack
+      objectReference: {fileID: 0}
+    - target: {fileID: 114406892957974150, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[0].Id
+      value: Quick Sack
+      objectReference: {fileID: 0}
+    - target: {fileID: 114432364082886632, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[0].SpawnRatio
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114226637818143274, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[0].SpawnRatio
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114406892957974150, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[0].SpawnRatio
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114211427688242200, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[0].Id
+      value: Quick Sack
+      objectReference: {fileID: 0}
+    - target: {fileID: 114905959307205132, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[0].Id
+      value: Quick Sack
+      objectReference: {fileID: 0}
+    - target: {fileID: 114355925414391174, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[2].Id
+      value: Leather Sack
+      objectReference: {fileID: 0}
+    - target: {fileID: 114355925414391174, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[2].SpawnRatio
+      value: 0.23
+      objectReference: {fileID: 0}
+    - target: {fileID: 114355925414391174, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[1].Id
+      value: Winged Crocs
+      objectReference: {fileID: 0}
+    - target: {fileID: 114355925414391174, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[0].Id
+      value: Quick Sack
+      objectReference: {fileID: 0}
+    - target: {fileID: 114355925414391174, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[0].SpawnRatio
+      value: 0.44
+      objectReference: {fileID: 0}
+    - target: {fileID: 114355925414391174, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[1].SpawnRatio
+      value: 0.33
+      objectReference: {fileID: 0}
+    - target: {fileID: 114620548547625108, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[2].Id
+      value: Leather Sack
+      objectReference: {fileID: 0}
+    - target: {fileID: 114620548547625108, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[2].SpawnRatio
+      value: 0.27
+      objectReference: {fileID: 0}
+    - target: {fileID: 114620548547625108, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[0].Id
+      value: Quick Sack
+      objectReference: {fileID: 0}
+    - target: {fileID: 114620548547625108, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[1].Id
+      value: Winged Crocs
+      objectReference: {fileID: 0}
+    - target: {fileID: 114620548547625108, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[0].SpawnRatio
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114620548547625108, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[1].SpawnRatio
+      value: 0.33
+      objectReference: {fileID: 0}
+    - target: {fileID: 114428891587727362, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[2].Id
+      value: Winged Crocs
+      objectReference: {fileID: 0}
+    - target: {fileID: 114428891587727362, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[2].SpawnRatio
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 114428891587727362, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[3].Id
+      value: Working Glasses
+      objectReference: {fileID: 0}
+    - target: {fileID: 114428891587727362, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[3].SpawnRatio
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 114428891587727362, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[4].Id
+      value: Fitness Gloves
+      objectReference: {fileID: 0}
+    - target: {fileID: 114428891587727362, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[4].SpawnRatio
+      value: 0.15
       objectReference: {fileID: 0}
     - target: {fileID: 114662088910039566, guid: 4435ca7e82c7b7544a14eb135dd681c5,
         type: 2}
-      propertyPath: _fFlyTime
-      value: 1
+      propertyPath: _equipmentItemPoolType.Array.data[2].Id
+      value: Winged Crocs
+      objectReference: {fileID: 0}
+    - target: {fileID: 114662088910039566, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[2].SpawnRatio
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114662088910039566, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[3].Id
+      value: Working Glasses
+      objectReference: {fileID: 0}
+    - target: {fileID: 114662088910039566, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[3].SpawnRatio
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114662088910039566, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[4].Id
+      value: Fitness Gloves
+      objectReference: {fileID: 0}
+    - target: {fileID: 114662088910039566, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[4].SpawnRatio
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114730912360850632, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[2].Id
+      value: Winged Crocs
+      objectReference: {fileID: 0}
+    - target: {fileID: 114730912360850632, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[2].SpawnRatio
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 114730912360850632, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[3].Id
+      value: Working Glasses
+      objectReference: {fileID: 0}
+    - target: {fileID: 114730912360850632, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[3].SpawnRatio
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 114730912360850632, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[4].Id
+      value: Fitness Gloves
+      objectReference: {fileID: 0}
+    - target: {fileID: 114730912360850632, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[4].SpawnRatio
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114428891587727362, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[0].Id
+      value: Jumping Crocs
+      objectReference: {fileID: 0}
+    - target: {fileID: 114662088910039566, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[0].Id
+      value: Jumping Crocs
+      objectReference: {fileID: 0}
+    - target: {fileID: 114730912360850632, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[0].Id
+      value: Jumping Crocs
+      objectReference: {fileID: 0}
+    - target: {fileID: 114428891587727362, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[1].Id
+      value: Leather Sack
+      objectReference: {fileID: 0}
+    - target: {fileID: 114662088910039566, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[1].Id
+      value: Leather Sack
+      objectReference: {fileID: 0}
+    - target: {fileID: 114730912360850632, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[1].Id
+      value: Leather Sack
+      objectReference: {fileID: 0}
+    - target: {fileID: 114428891587727362, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[0].SpawnRatio
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 114730912360850632, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[0].SpawnRatio
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 114662088910039566, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[0].SpawnRatio
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 114428891587727362, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[1].SpawnRatio
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 114662088910039566, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[1].SpawnRatio
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 114730912360850632, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[1].SpawnRatio
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 114611718943405504, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[0].Id
+      value: Leather Sack
+      objectReference: {fileID: 0}
+    - target: {fileID: 114611718943405504, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[0].SpawnRatio
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 114611718943405504, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[1].Id
+      value: Winged Crocs
+      objectReference: {fileID: 0}
+    - target: {fileID: 114611718943405504, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[1].SpawnRatio
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 114611718943405504, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[2].Id
+      value: Working Glasses
+      objectReference: {fileID: 0}
+    - target: {fileID: 114611718943405504, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[2].SpawnRatio
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114611718943405504, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[3].Id
+      value: Fitness Gloves
+      objectReference: {fileID: 0}
+    - target: {fileID: 114611718943405504, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[3].SpawnRatio
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114611718943405504, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[4].Id
+      value: Light Sack
+      objectReference: {fileID: 0}
+    - target: {fileID: 114611718943405504, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[4].SpawnRatio
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 114611718943405504, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[5].Id
+      value: Leather Gloves
+      objectReference: {fileID: 0}
+    - target: {fileID: 114611718943405504, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[5].SpawnRatio
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 114611718943405504, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[6].Id
+      value: Manipulation Gloves
+      objectReference: {fileID: 0}
+    - target: {fileID: 114611718943405504, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[6].SpawnRatio
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 114848018559612548, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[0].Id
+      value: Leather Sack
+      objectReference: {fileID: 0}
+    - target: {fileID: 114848018559612548, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[1].Id
+      value: Winged Crocs
+      objectReference: {fileID: 0}
+    - target: {fileID: 114848018559612548, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[2].Id
+      value: Working Glasses
+      objectReference: {fileID: 0}
+    - target: {fileID: 114848018559612548, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[3].Id
+      value: Fitness Gloves
+      objectReference: {fileID: 0}
+    - target: {fileID: 114848018559612548, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[4].Id
+      value: Light Sack
+      objectReference: {fileID: 0}
+    - target: {fileID: 114848018559612548, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[5].Id
+      value: Leather Gloves
+      objectReference: {fileID: 0}
+    - target: {fileID: 114848018559612548, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[6].Id
+      value: Manipulation Gloves
+      objectReference: {fileID: 0}
+    - target: {fileID: 114848018559612548, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[0].SpawnRatio
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 114848018559612548, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[1].SpawnRatio
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114848018559612548, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[2].SpawnRatio
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114848018559612548, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[3].SpawnRatio
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 114848018559612548, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[4].SpawnRatio
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114848018559612548, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[5].SpawnRatio
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114848018559612548, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[6].SpawnRatio
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114138324399591714, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[0].SpawnRatio
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 114138324399591714, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[0].Id
+      value: Winged Crocs
+      objectReference: {fileID: 0}
+    - target: {fileID: 114138324399591714, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[1].Id
+      value: Working Glasses
+      objectReference: {fileID: 0}
+    - target: {fileID: 114138324399591714, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[2].Id
+      value: Fitness Gloves
+      objectReference: {fileID: 0}
+    - target: {fileID: 114138324399591714, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[3].Id
+      value: LightSack
+      objectReference: {fileID: 0}
+    - target: {fileID: 114138324399591714, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[4].Id
+      value: Leather Gloves
+      objectReference: {fileID: 0}
+    - target: {fileID: 114138324399591714, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[5].Id
+      value: Manipulation Gloves
+      objectReference: {fileID: 0}
+    - target: {fileID: 114138324399591714, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[1].SpawnRatio
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 114138324399591714, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[2].SpawnRatio
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114138324399591714, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[3].SpawnRatio
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 114138324399591714, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[4].SpawnRatio
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114138324399591714, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[5].SpawnRatio
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 114067945541493196, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[0].Id
+      value: Winged Crocs
+      objectReference: {fileID: 0}
+    - target: {fileID: 114482670377161316, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[0].Id
+      value: Winged Crocs
+      objectReference: {fileID: 0}
+    - target: {fileID: 114067945541493196, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[0].SpawnRatio
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 114482670377161316, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[0].SpawnRatio
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 114067945541493196, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[1].Id
+      value: Working Glasses
+      objectReference: {fileID: 0}
+    - target: {fileID: 114482670377161316, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[1].Id
+      value: Working Glasses
+      objectReference: {fileID: 0}
+    - target: {fileID: 114067945541493196, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[2].Id
+      value: Light Sack
+      objectReference: {fileID: 0}
+    - target: {fileID: 114482670377161316, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[2].Id
+      value: Light Sack
+      objectReference: {fileID: 0}
+    - target: {fileID: 114067945541493196, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[3].Id
+      value: Leather Gloves
+      objectReference: {fileID: 0}
+    - target: {fileID: 114482670377161316, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[3].Id
+      value: Leather Gloves
+      objectReference: {fileID: 0}
+    - target: {fileID: 114067945541493196, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[4].Id
+      value: Manipulation Gloves
+      objectReference: {fileID: 0}
+    - target: {fileID: 114482670377161316, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[4].Id
+      value: Manipulation Gloves
+      objectReference: {fileID: 0}
+    - target: {fileID: 114067945541493196, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[1].SpawnRatio
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114482670377161316, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[1].SpawnRatio
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114067945541493196, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[2].SpawnRatio
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 114482670377161316, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[2].SpawnRatio
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 114067945541493196, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[3].SpawnRatio
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 114482670377161316, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[3].SpawnRatio
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 114067945541493196, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[4].SpawnRatio
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 114482670377161316, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[4].SpawnRatio
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 114215916538310796, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[0].Id
+      value: Light Sack
+      objectReference: {fileID: 0}
+    - target: {fileID: 114220502516772896, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[0].Id
+      value: Light Sack
+      objectReference: {fileID: 0}
+    - target: {fileID: 114562846581658302, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[0].Id
+      value: Light Sack
+      objectReference: {fileID: 0}
+    - target: {fileID: 114588958836335724, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[0].Id
+      value: Light Sack
+      objectReference: {fileID: 0}
+    - target: {fileID: 114437156977057028, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[0].Id
+      value: Light Sack
+      objectReference: {fileID: 0}
+    - target: {fileID: 114365483524962848, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[0].Id
+      value: Light Sack
+      objectReference: {fileID: 0}
+    - target: {fileID: 114426681680635358, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[0].Id
+      value: Light Sack
+      objectReference: {fileID: 0}
+    - target: {fileID: 114215916538310796, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[1].Id
+      value: Leather Gloves
+      objectReference: {fileID: 0}
+    - target: {fileID: 114220502516772896, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[1].Id
+      value: Leather Gloves
+      objectReference: {fileID: 0}
+    - target: {fileID: 114562846581658302, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[1].Id
+      value: Leather Gloves
+      objectReference: {fileID: 0}
+    - target: {fileID: 114588958836335724, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[1].Id
+      value: Leather Gloves
+      objectReference: {fileID: 0}
+    - target: {fileID: 114437156977057028, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[1].Id
+      value: Leather Gloves
+      objectReference: {fileID: 0}
+    - target: {fileID: 114365483524962848, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[1].Id
+      value: Leather Gloves
+      objectReference: {fileID: 0}
+    - target: {fileID: 114426681680635358, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[1].Id
+      value: Leather Gloves
+      objectReference: {fileID: 0}
+    - target: {fileID: 114215916538310796, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[2].Id
+      value: Winged Boots
+      objectReference: {fileID: 0}
+    - target: {fileID: 114220502516772896, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[2].Id
+      value: Winged Boots
+      objectReference: {fileID: 0}
+    - target: {fileID: 114562846581658302, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[2].Id
+      value: Winged Boots
+      objectReference: {fileID: 0}
+    - target: {fileID: 114588958836335724, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[2].Id
+      value: Winged Boots
+      objectReference: {fileID: 0}
+    - target: {fileID: 114437156977057028, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[2].Id
+      value: Winged Boots
+      objectReference: {fileID: 0}
+    - target: {fileID: 114365483524962848, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[2].Id
+      value: Winged Boots
+      objectReference: {fileID: 0}
+    - target: {fileID: 114426681680635358, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[2].Id
+      value: Winged Boots
+      objectReference: {fileID: 0}
+    - target: {fileID: 114215916538310796, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[3].Id
+      value: Shinny Glasses
+      objectReference: {fileID: 0}
+    - target: {fileID: 114220502516772896, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[3].Id
+      value: Shinny Glasses
+      objectReference: {fileID: 0}
+    - target: {fileID: 114562846581658302, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[3].Id
+      value: Shinny Glasses
+      objectReference: {fileID: 0}
+    - target: {fileID: 114588958836335724, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[3].Id
+      value: Shinny Glasses
+      objectReference: {fileID: 0}
+    - target: {fileID: 114365483524962848, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[3].Id
+      value: Shinny Glasses
+      objectReference: {fileID: 0}
+    - target: {fileID: 114437156977057028, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[3].Id
+      value: Shinny Glasses
+      objectReference: {fileID: 0}
+    - target: {fileID: 114426681680635358, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[3].Id
+      value: Shinny Glasses
+      objectReference: {fileID: 0}
+    - target: {fileID: 114215916538310796, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[4].Id
+      value: ManipulationGloves
+      objectReference: {fileID: 0}
+    - target: {fileID: 114220502516772896, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[4].Id
+      value: ManipulationGloves
+      objectReference: {fileID: 0}
+    - target: {fileID: 114562846581658302, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[4].Id
+      value: ManipulationGloves
+      objectReference: {fileID: 0}
+    - target: {fileID: 114588958836335724, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[4].Id
+      value: ManipulationGloves
+      objectReference: {fileID: 0}
+    - target: {fileID: 114437156977057028, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[4].Id
+      value: ManipulationGloves
+      objectReference: {fileID: 0}
+    - target: {fileID: 114365483524962848, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[4].Id
+      value: ManipulationGloves
+      objectReference: {fileID: 0}
+    - target: {fileID: 114426681680635358, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[4].Id
+      value: ManipulationGloves
+      objectReference: {fileID: 0}
+    - target: {fileID: 114215916538310796, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[0].SpawnRatio
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114220502516772896, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[0].SpawnRatio
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114562846581658302, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[0].SpawnRatio
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114588958836335724, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[0].SpawnRatio
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114437156977057028, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[0].SpawnRatio
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114365483524962848, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[0].SpawnRatio
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114426681680635358, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[0].SpawnRatio
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114215916538310796, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[1].SpawnRatio
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114220502516772896, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[1].SpawnRatio
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114562846581658302, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[1].SpawnRatio
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114588958836335724, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[1].SpawnRatio
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114437156977057028, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[1].SpawnRatio
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 114365483524962848, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[1].SpawnRatio
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 114426681680635358, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[1].SpawnRatio
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114215916538310796, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[2].SpawnRatio
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114220502516772896, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[2].SpawnRatio
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114562846581658302, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[2].SpawnRatio
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114588958836335724, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[2].SpawnRatio
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114437156977057028, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[2].SpawnRatio
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114365483524962848, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[2].SpawnRatio
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114426681680635358, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[2].SpawnRatio
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114215916538310796, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[3].SpawnRatio
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114220502516772896, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[3].SpawnRatio
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114562846581658302, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[3].SpawnRatio
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114588958836335724, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[3].SpawnRatio
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114437156977057028, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[3].SpawnRatio
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114365483524962848, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[3].SpawnRatio
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114426681680635358, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[3].SpawnRatio
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114215916538310796, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[4].SpawnRatio
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114220502516772896, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[4].SpawnRatio
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114562846581658302, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[4].SpawnRatio
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114588958836335724, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[4].SpawnRatio
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114437156977057028, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[4].SpawnRatio
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114365483524962848, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[4].SpawnRatio
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114426681680635358, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[4].SpawnRatio
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114215916538310796, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[5].Id
+      value: Silk Gloves
+      objectReference: {fileID: 0}
+    - target: {fileID: 114215916538310796, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[5].SpawnRatio
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114437156977057028, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[5].Id
+      value: Silk Gloves
+      objectReference: {fileID: 0}
+    - target: {fileID: 114437156977057028, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[5].SpawnRatio
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 114365483524962848, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[5].Id
+      value: Silk Gloves
+      objectReference: {fileID: 0}
+    - target: {fileID: 114365483524962848, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[5].SpawnRatio
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 114901115080245432, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[0].Id
+      value: Winged Boots
+      objectReference: {fileID: 0}
+    - target: {fileID: 114457535896126332, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[0].Id
+      value: Winged Boots
+      objectReference: {fileID: 0}
+    - target: {fileID: 114855134269200652, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[0].Id
+      value: Winged Boots
+      objectReference: {fileID: 0}
+    - target: {fileID: 114901115080245432, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[1].Id
+      value: Shinny Glasses
+      objectReference: {fileID: 0}
+    - target: {fileID: 114457535896126332, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[1].Id
+      value: Shinny Glasses
+      objectReference: {fileID: 0}
+    - target: {fileID: 114855134269200652, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[1].Id
+      value: Shinny Glasses
+      objectReference: {fileID: 0}
+    - target: {fileID: 114901115080245432, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[2].Id
+      value: Manipulation Gloves
+      objectReference: {fileID: 0}
+    - target: {fileID: 114457535896126332, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[2].Id
+      value: Manipulation Gloves
+      objectReference: {fileID: 0}
+    - target: {fileID: 114855134269200652, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[2].Id
+      value: Manipulation Gloves
+      objectReference: {fileID: 0}
+    - target: {fileID: 114901115080245432, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[3].Id
+      value: Silk Gloves
+      objectReference: {fileID: 0}
+    - target: {fileID: 114457535896126332, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[3].Id
+      value: Silk Gloves
+      objectReference: {fileID: 0}
+    - target: {fileID: 114855134269200652, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[3].Id
+      value: Silk Gloves
+      objectReference: {fileID: 0}
+    - target: {fileID: 114901115080245432, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[4].Id
+      value: Wool Gloves
+      objectReference: {fileID: 0}
+    - target: {fileID: 114457535896126332, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[4].Id
+      value: Wool Gloves
+      objectReference: {fileID: 0}
+    - target: {fileID: 114855134269200652, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[4].Id
+      value: Wool Gloves
+      objectReference: {fileID: 0}
+    - target: {fileID: 114901115080245432, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[4].SpawnRatio
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 114457535896126332, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[4].SpawnRatio
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 114855134269200652, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[4].SpawnRatio
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 114901115080245432, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[5].Id
+      value: Jumping Boots
+      objectReference: {fileID: 0}
+    - target: {fileID: 114457535896126332, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[5].Id
+      value: Jumping Boots
+      objectReference: {fileID: 0}
+    - target: {fileID: 114855134269200652, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[5].Id
+      value: Jumping Boots
+      objectReference: {fileID: 0}
+    - target: {fileID: 114901115080245432, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[0].SpawnRatio
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114457535896126332, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[0].SpawnRatio
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114855134269200652, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[0].SpawnRatio
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114901115080245432, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[1].SpawnRatio
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114457535896126332, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[1].SpawnRatio
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114855134269200652, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[1].SpawnRatio
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114901115080245432, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[2].SpawnRatio
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 114457535896126332, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[2].SpawnRatio
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 114855134269200652, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[2].SpawnRatio
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 114901115080245432, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[3].SpawnRatio
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114457535896126332, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[3].SpawnRatio
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114855134269200652, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[3].SpawnRatio
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114901115080245432, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[5].SpawnRatio
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 114457535896126332, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[5].SpawnRatio
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 114855134269200652, guid: 4435ca7e82c7b7544a14eb135dd681c5,
+        type: 2}
+      propertyPath: _equipmentItemPoolType.Array.data[5].SpawnRatio
+      value: 0.15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4435ca7e82c7b7544a14eb135dd681c5, type: 2}
@@ -4543,7 +5969,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -6035,6 +7461,80 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1603429653}
+--- !u!1 &1625753778
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1625753779}
+  - component: {fileID: 1625753781}
+  - component: {fileID: 1625753780}
+  m_Layer: 5
+  m_Name: Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1625753779
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1625753778}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1659109857}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1625753780
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1625753778}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 20
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 2
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Unlock Lvls
+--- !u!222 &1625753781
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1625753778}
 --- !u!1 &1632200364
 GameObject:
   m_ObjectHideFlags: 0
@@ -6132,6 +7632,128 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -11}
   m_SizeDelta: {x: 321, y: 62}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1659109856
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1659109857}
+  - component: {fileID: 1659109860}
+  - component: {fileID: 1659109859}
+  - component: {fileID: 1659109858}
+  m_Layer: 5
+  m_Name: UNLOCK_DATA
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1659109857
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1659109856}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1625753779}
+  m_Father: {fileID: 841873542}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -582, y: -28.5}
+  m_SizeDelta: {x: 64, y: 57}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1659109858
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1659109856}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1659109859}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1702467276}
+        m_MethodName: UnlockLevelData
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!114 &1659109859
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1659109856}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!222 &1659109860
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1659109856}
 --- !u!1 &1693161148
 GameObject:
   m_ObjectHideFlags: 0
@@ -6688,7 +8310,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\xC1lvaro Monz\xF3n Sierra"
+  m_Text: Beatriz Alonso Carvajales
 --- !u!222 &1849166770
 CanvasRenderer:
   m_ObjectHideFlags: 0

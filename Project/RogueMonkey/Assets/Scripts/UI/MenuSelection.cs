@@ -213,11 +213,18 @@ public class MenuSelection : MonoBehaviour {
     /// </summary>
     private void SetupLevelList()
     {
+        int enabledIndex = 1;
+
         Debug.Log("________________________________Setup Level List");
         _stageList = GameMgr.Instance._StageList;
+        if (GameMgr.Instance.GetCurrentLevel() != null)
+            enabledIndex = GameMgr.Instance.LevelIndex;
+        else
+            enabledIndex = 0;
 
         for (int i = 0; i < _stageList.Count; ++i)
         {
+            _stageLevelPanelList[i].SetActive(i == enabledIndex);
             for (int j = 0; j < _stageList[i].GetLevelList().Count; ++j)
             {
                 switch (_stageList[i].GetLevelList()[j].GetAvState())
@@ -245,8 +252,9 @@ public class MenuSelection : MonoBehaviour {
                 //Enable+ setup or Disable rank miniatures
                 if (_stageList[i].GetLevelList()[j].GetAvState() != Level.AVAILABILITY_STATE.COMPLETED && _stageList[i].GetLevelList()[j].GetAvState() != Level.AVAILABILITY_STATE.FAILED)
                 {
-                    _stageLevelPanelList[i].transform.GetChild(j).GetChild(3).GetChild(0).gameObject.SetActive(false);
-                    _stageLevelPanelList[i].transform.GetChild(j).GetChild(3).GetChild(1).gameObject.SetActive(false);
+                    _stageLevelPanelList[i].transform.GetChild(j).GetChild(3)./*GetChild(0).*/gameObject.SetActive(false);
+                    //_stageLevelPanelList[i].transform.GetChild(j).GetChild(3).GetChild(1).gameObject.SetActive(false);
+
                 }
                 else
                 {
@@ -259,23 +267,34 @@ public class MenuSelection : MonoBehaviour {
                     _stageLevelPanelList[i].transform.GetChild(j).GetChild(3).GetChild(1).gameObject.SetActive(true);
                 }
 
-                _stageLevelPanelList[i].transform.GetChild(j).GetChild(1).GetComponentInChildren<Text>().text = _stageList[i].GetLevelList()[j].GetMaxScore().ToString("0");
-                //Set fruit types on miniature
-                _auxfruitTypeList = _stageList[i].GetLevelList()[j].GetFruitTypeSpawnList();
-                for (int k = 0; k < _auxfruitTypeList.Count; ++k)
+                //Setup fruit miniatures
+                if (_stageList[i].GetLevelList()[j].GetAvState() == Level.AVAILABILITY_STATE.UNAVAILABLE)
                 {
-                    if (_auxfruitTypeList[k].FruitTypeIndex != (int)Fruit.F_TYPE.GOLD_ITEM)
+                    //Disable fruits root
+                    _stageLevelPanelList[i].transform.GetChild(j).GetChild(2).gameObject.SetActive(false);
+                }
+                else
+                {
+                    //Set fruit types on miniature
+                    _auxfruitTypeList = _stageList[i].GetLevelList()[j].GetFruitTypeSpawnList();
+                    for (int k = 0; k < _auxfruitTypeList.Count; ++k)
                     {
-                        _stageLevelPanelList[i].transform.GetChild(j).GetChild(2).GetChild(_auxLvlMiniFruitListIndex).GetComponent<Image>().sprite = _spriteFruitList[(int)_auxfruitTypeList[k].FruitTypeIndex];
-                        _stageLevelPanelList[i].transform.GetChild(j).GetChild(2).GetChild(_auxLvlMiniFruitListIndex).gameObject.SetActive(true);
-                        ++_auxLvlMiniFruitListIndex;
+                        if (_auxfruitTypeList[k].FruitTypeIndex != (int)Fruit.F_TYPE.GOLD_ITEM)
+                        {
+                            _stageLevelPanelList[i].transform.GetChild(j).GetChild(2).GetChild(_auxLvlMiniFruitListIndex).GetComponent<Image>().sprite = _spriteFruitList[(int)_auxfruitTypeList[k].FruitTypeIndex];
+                            _stageLevelPanelList[i].transform.GetChild(j).GetChild(2).GetChild(_auxLvlMiniFruitListIndex).gameObject.SetActive(true);
+                            ++_auxLvlMiniFruitListIndex;
+                        }
+
                     }
 
+                    //Disable non used fruit iniatures
+                    for (int k = _auxLvlMiniFruitListIndex; k < _stageLevelPanelList[i].transform.GetChild(j).GetChild(2).childCount; ++k)
+                        _stageLevelPanelList[i].transform.GetChild(j).GetChild(2).GetChild(k).gameObject.SetActive(false);
                 }
+
+                _stageLevelPanelList[i].transform.GetChild(j).GetChild(1).GetComponentInChildren<Text>().text = _stageList[i].GetLevelList()[j].GetMaxScore().ToString("0");
                 
-                //Disable non used fruit iniatures
-                for (int k = _auxLvlMiniFruitListIndex; k < _stageLevelPanelList[i].transform.GetChild(j).GetChild(2).childCount; ++k)
-                    _stageLevelPanelList[i].transform.GetChild(j).GetChild(2).GetChild(k).gameObject.SetActive(false);
 
                 
                 //reset iindex for next lvl iteration

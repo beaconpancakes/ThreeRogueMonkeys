@@ -11,7 +11,7 @@ using UnityEngine.UI;
 public class TapMonkey : MonoBehaviour {
 
 	#region Public Data
-    public enum MONKEY_STATE { IDLE = 0, MOVING_TO_POS, HIT_ANIMATION, RECOVERING_TO_FLOOR, FLEE }
+    public enum MONKEY_STATE { IDLE = 0, MOVING_TO_POS, HIT_ANIMATION, RECOVERING_TO_FLOOR, FLEE, STUN }
 	#endregion
 
 
@@ -104,6 +104,19 @@ public class TapMonkey : MonoBehaviour {
                 }
 
                 transform.position += Vector3.right * _fleeSpeed * Time.deltaTime;
+                break;
+
+            case MONKEY_STATE.STUN:
+                _frameTimer += Time.deltaTime;
+                _stunTimer += Time.deltaTime;
+                if (_frameTimer >= _gameMgr.FrameTime)
+                {
+                    _frameTimer = 0f;
+                    _frameIndex = (_frameIndex + 1) % _stunSpList.Count;
+                    _img.sprite = _stunSpList[_frameIndex];
+                }
+                if (_stunTimer >= _stunTime)
+                    RecoverToFloor();
                 break;
         }
 
@@ -220,6 +233,17 @@ public class TapMonkey : MonoBehaviour {
     {
         return _currentAccuracy;
     }
+
+    /// <summary>
+    /// 
+    /// </summary>
+    public void Stun()
+    {
+        _state = MONKEY_STATE.STUN;
+        _frameIndex = 0;
+        _frameTimer = 0f;
+        _stunTimer = 0f;
+    }
 	#endregion
 
 
@@ -300,6 +324,8 @@ public class TapMonkey : MonoBehaviour {
     [SerializeField]
     private List<Sprite> _fleeSpList;
     [SerializeField]
+    private List<Sprite> _stunSpList;
+    [SerializeField]
     private float _recoveringGravity;
     [SerializeField]
     private float _jumpSpeed;
@@ -307,6 +333,8 @@ public class TapMonkey : MonoBehaviour {
     private float _recoverSpeed;
     [SerializeField]
     private float _hitTime;
+    [SerializeField]
+    private float _stunTime;
     [SerializeField]
     private float _minArrivalOffset;
     //TODO: precision
@@ -335,6 +363,7 @@ public class TapMonkey : MonoBehaviour {
     private int _frameIndex;
     private float _frameTimer;
     private float _hitTimer;
+    private float _stunTimer;
 
     private float _currentJumpSpeed, _currentRecoverSpeed;
     private float _currentCollisionRadius;

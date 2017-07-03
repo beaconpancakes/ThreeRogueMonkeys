@@ -93,16 +93,32 @@ public class Guard : MonoBehaviour {
         }
     }
 
+    /// <summary>
+    /// 
+    /// </summary>
     public void SetupGuard()
     {
         _state = GUARD_STATE.IDLE;
         _timer = 0f;
         _frameTimer = 0f;
     }
-	#endregion
+
+    /// <summary>
+    /// 
+    /// </summary>
+    public void WakeUp()
+    {
+        if (_state != GUARD_STATE.WAKING_UP)
+        {
+            _state = GUARD_STATE.WAKING_UP;
+            _frameTimer = 0f;
+            _currentFrameIndex = 0;
+        }
+    }
+    #endregion
 
 
-	#region Private Methods
+    #region Private Methods
     private void Alarm()
     {
         ShowAlarmFeedback();
@@ -115,12 +131,7 @@ public class Guard : MonoBehaviour {
 
     }
 
-    private void WakeUp()
-    {
-        _state = GUARD_STATE.WAKING_UP;
-        _frameTimer = 0f;
-        _currentFrameIndex = 0;
-    }
+    
 	#endregion
 
 

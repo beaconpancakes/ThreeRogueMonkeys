@@ -137,7 +137,13 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 9b8c6a046bbe34e489f8b5116192738d, type: 3}
   - {fileID: 21300000, guid: 499736f70f879034287f0996f8290fee, type: 3}
   - {fileID: 21300000, guid: 493dee687d998ab4989da97c8772016a, type: 3}
-  - {fileID: 21300000, guid: d6ed339e0df01e441a2b9939d60e0c9b, type: 3}
+  - {fileID: 21300000, guid: 481f009e490092e44bcb4da42da5f0a4, type: 3}
+  - {fileID: 21300000, guid: ab3110436b8923b42a54a03a38cd8a91, type: 3}
+  - {fileID: 21300000, guid: ab3110436b8923b42a54a03a38cd8a91, type: 3}
+  - {fileID: 21300000, guid: 378423890eabe3d45908719bca828f25, type: 3}
+  - {fileID: 21300000, guid: e405734a7d3de8542ba951454f6a5e78, type: 3}
+  - {fileID: 21300000, guid: dce6e71d11021c344bd5841804190d79, type: 3}
+  - {fileID: 21300000, guid: a4f8fb9aa67e2974c95571142312fd05, type: 3}
   _goldSpriteList:
   - {fileID: 21300000, guid: febc3876d5ed87b4bb9a8c123708948d, type: 3}
   - {fileID: 21300000, guid: d6ed339e0df01e441a2b9939d60e0c9b, type: 3}
@@ -145,7 +151,9 @@ MonoBehaviour:
   - {fileID: 21300000, guid: d6ed339e0df01e441a2b9939d60e0c9b, type: 3}
   - {fileID: 21300000, guid: d6ed339e0df01e441a2b9939d60e0c9b, type: 3}
   - {fileID: 21300000, guid: d6ed339e0df01e441a2b9939d60e0c9b, type: 3}
-  _yellowBanana: {fileID: 21300000, guid: 9b8c6a046bbe34e489f8b5116192738d, type: 3}
+  _yellowBananaSp: {fileID: 21300000, guid: 9b8c6a046bbe34e489f8b5116192738d, type: 3}
+  _mellowRipenSp: {fileID: 21300000, guid: 71204a5729c19994bb5afe52f729eae4, type: 3}
+  _staleRipenSp: {fileID: 21300000, guid: 9c3b6941625ab154186ff1664df06708, type: 3}
   _throwOutSpeed: {x: 800, y: 500}
   _throwOutHeight: 50
   _throwOutFallTime: 0.5

@@ -2,226 +2,241 @@
 <item_data>
   <gold_item_type>
     <item id ="Ring" spriteId ="Ring" value ="5"/>
-    <item id ="Necklace" spriteId ="Necklace" value ="10"/>
-    <item id ="Earrings" spriteId ="Earrings" value ="15"/>
+    <item id ="Earrings" spriteId ="Necklace" value ="10"/>
+    <item id ="Necklace" spriteId ="Earrings" value ="15"/>
+    <item id ="Gold Nugget" spriteId ="Nugget" value ="15"/>
+    <item id ="Bling Bling" spriteId ="Earrings" value ="15"/>
+    <item id ="Golden Egg" spriteId ="Earrings" value ="15"/>
+    <item id ="Medallion" spriteId ="Medallion" value ="15"/>
+    <item id ="Pocket Watch" spriteId ="PocketWatch" value ="15"/>
+    <item id ="Maneki-neko" spriteId ="Maneki-neo" value ="15"/>
+    <item id ="Lingot" spriteId ="Lingot" value ="15"/>
+    <item id ="Chalice" spriteId ="Chalice" value ="15"/>
+    <item id ="Ankh" spriteId ="Anhk" value ="15"/>
   </gold_item_type>
   <equipment_item_data>
     <!-- SACKS -->
-    <item id ="FastSack" spriteId ="FastSack" value ="5" slotType ="COLLECTOR_A">
+    <item id ="Quick Sack" spriteId ="FastSack" value ="35" slotType ="COLLECTOR_A">
       <modList>
-        <mod modType="RELOAD_SPEED" modVal="0.5"/>
-      </modList>
-      </item>
-    <item id ="QuickSack" spriteId ="Ring" value ="5" slotType ="COLLECTOR_A">
-      <modList>
-        <mod modType ="SACK_SIZE" modVal ="0.1"/>
+        <mod modType ="RELOAD_SPEED" modVal ="0.25"/>
       </modList>
     </item>
-    <item id ="LargeSack" spriteId ="Ring" value ="5" slotType ="COLLECTOR_A">
+    <item id ="Leather Sack" spriteId ="FastSack" value ="50" slotType ="COLLECTOR_A">
       <modList>
-        <mod modType="SACK_SIZE" modVal="3"/>
+        <mod modType="SACK_SIZE" modVal="2"/>
       </modList>
     </item>
-    <item id ="LightSack" spriteId ="Ring" value ="5" slotType ="COLLECTOR_A">
+    <item id ="Light Sack" spriteId ="FastSack" value ="5" slotType ="COLLECTOR_A">
       <modList>
         <mod modType="RELOAD_SPEED" modVal="0.3"/>
+        <mod modType="COLLECTOR_SPEED" modVal="0.25"/>
       </modList>
     </item>
-    <item id ="SantaSack" spriteId ="Ring" value ="5" slotType ="COLLECTOR_A">
+    <item id ="Santa Sack" spriteId ="FastSack" value ="5" slotType ="COLLECTOR_A">
       <modList>
         <mod modType="SACK_SIZE" modVal="5"/>
+        <mod modType="RELOAD_SPEED" modVal="0.25"/>
+      </modList>
+    </item>
+    <item id ="Mage Sack" spriteId ="FastSack" value ="5" slotType ="COLLECTOR_A">
+      <modList>
+        <mod modType="SACK_SIZE" modVal="6"/>
         <mod modType="RELOAD_SPEED" modVal="-0.1"/>
       </modList>
     </item>
-    <item id ="MageSack" spriteId ="Ring" value ="5" slotType ="COLLECTOR_A">
-      <modList>
-        <mod modType="SACK_SIZE" modVal="4"/>
-        <mod modType="RELOAD_SPEED" modVal="0.1"/>
-      </modList>
-    </item>
-    <item id ="LightningSack" spriteId ="Ring" value ="5" slotType ="COLLECTOR_A">
+    <item id ="Lightning Sack" spriteId ="FastSack" value ="5" slotType ="COLLECTOR_A">
       <modList>
         <mod modType="SACK_SIZE" modVal="-1"/>
-        <mod modType="RELOAD_SPEED" modVal="3"/> 
+        <mod modType="RELOAD_SPEED" modVal="5"/> 
       </modList>
     </item>
-      <item id ="KevlarSack" spriteId ="Ring" value ="5" slotType ="COLLECTOR_A">
+      <item id ="Kevlar Sack" spriteId ="FastSack" value ="5" slotType ="COLLECTOR_A">
       <modList>
-        <mod modType="SACK_SIZE" modVal="1"/>
-        <mod modType="RELOAD_SPEED" modVal="0.2"/>
+        <mod modType="SACK_SIZE" modVal="2"/>
+        <mod modType="RELOAD_SPEED" modVal="0.5"/>
       </modList>
     </item>
     <!-- COLLECTOR BOOTS -->
-    <item id ="WingedCrocs" spriteId ="WingedCrocs" value ="5" slotType ="COLLECTOR_B">
+    <item id ="Winged Crocs" spriteId ="WingedCrocs" value ="5" slotType ="COLLECTOR_B">
     <modList>
-      <mod modType ="COLLECTOR_SPEED" modVal ="0.1"/>
+      <mod modType ="COLLECTOR_SPEED" modVal ="0.25"/>
     </modList>   
     </item>
-    <item id ="WingedBoots" spriteId ="Ring" value ="5" slotType ="COLLECTOR_B">
-    <modList>
-      <mod modType ="COLLECTOR_SPEED" modVal ="0.2"/>
-    </modList>   
-    </item>
-    <item id ="WingedSports" spriteId ="Ring" value ="5" slotType ="COLLECTOR_B">
-    <modList>
-      <mod modType ="COLLECTOR_SPEED" modVal ="0.3"/>
-    </modList>   
-    </item>
-    <item id ="WingedRollers" spriteId ="Ring" value ="5" slotType ="COLLECTOR_B">
+    <item id ="Winged Boots" spriteId ="WingedCrocs" value ="5" slotType ="COLLECTOR_B">
     <modList>
       <mod modType ="COLLECTOR_SPEED" modVal ="0.5"/>
+    </modList>   
+    </item>
+    <item id ="Winged Sports" spriteId ="WingedCrocs" value ="5" slotType ="COLLECTOR_B">
+    <modList>
+      <mod modType ="COLLECTOR_SPEED" modVal ="0.75"/>
+    </modList>   
+    </item>
+    <item id ="Winged Rollers" spriteId ="WingedCrocs" value ="5" slotType ="COLLECTOR_B">
+    <modList>
+      <mod modType ="COLLECTOR_SPEED" modVal ="1.25"/>
     </modList>  
     </item>
-    <!-- STRIKER GLOVES -->
-    <item id ="BigGloves" spriteId ="Red_Gloves" value ="5" slotType ="STRIKER_A" >
+    <item id ="Winged Rockets" spriteId ="WingedCrocs" value ="5" slotType ="COLLECTOR_B">
       <modList>
-        <mod modType ="STRIKER_HIT_SIZE" modVal ="3"/>
+        <mod modType ="COLLECTOR_SPEED" modVal ="3"/>
       </modList>
     </item>
-    <item id ="BigGlovesT2" spriteId ="Red_Gloves" value ="5" slotType ="STRIKER_A" >
-      <modList>
-        <mod modType ="STRIKER_HIT_SIZE" modVal ="0.5"/>
-      </modList>
-    </item>
-      <item id ="BigGlovesT3" spriteId ="Red_Gloves" value ="5" slotType ="STRIKER_A" >
+      <!-- STRIKER GLOVES -->
+    <item id ="Leather Gloves" spriteId ="Red_Gloves" value ="5" slotType ="STRIKER_A" >
       <modList>
         <mod modType ="STRIKER_HIT_SIZE" modVal ="0.5"/>
       </modList>
     </item>
-      <item id ="PrecisionGloves" spriteId ="Red_Gloves" value ="5" slotType ="STRIKER_A" >
+    <item id ="Wool Gloves" spriteId ="Red_Gloves" value ="5" slotType ="STRIKER_A" >
       <modList>
-        <mod modType ="STRIKER_HIT_SIZE" modVal ="0.5"/>
+        <mod modType ="STRIKER_HIT_SIZE" modVal ="0.75"/>
       </modList>
     </item>
-      <item id ="PrecisionGlovesT2" spriteId ="Red_Gloves" value ="5" slotType ="STRIKER_A" >
-      <modList>
-        <mod modType ="STRIKER_HIT_SIZE" modVal ="0.5"/>
-      </modList>
-    </item>
-    <item id ="PrecisionGlovesT3" spriteId ="Red_Gloves" value ="5" slotType ="STRIKER_A" >
-      <modList>
-        <mod modType ="STRIKER_HIT_SIZE" modVal ="0.5"/>
-      </modList>
-    </item>
-    <item id ="BalancedT1" spriteId ="Red_Gloves" value ="5" slotType ="STRIKER_A" >
-      <modList>
-        <mod modType ="STRIKER_HIT_SIZE" modVal ="0.5"/>
-        <mod modType ="ACCURACY" modVal ="0.5"/>
-      </modList>
-    </item>
-    <item id ="Imprecise" spriteId ="Red_Gloves" value ="5" slotType ="STRIKER_A" >
+      <item id ="Gorilla Gloves" spriteId ="Red_Gloves" value ="5" slotType ="STRIKER_A" >
       <modList>
         <mod modType ="STRIKER_HIT_SIZE" modVal ="1"/>
-        <mod modType ="ACCURACY" modVal ="-0.3"/>
       </modList>
     </item>
-    <item id ="TheSpecialist" spriteId ="Red_Gloves" value ="5" slotType ="STRIKER_A" >
+      <item id ="Fitness Gloves" spriteId ="Red_Gloves" value ="5" slotType ="STRIKER_A" >
       <modList>
-        <mod modType ="STRIKER_HIT_SIZE" modVal ="-0.3"/>
-        <mod modType ="ACCURACY" modVal ="2"/>
+        <mod modType ="ACCURACY" modVal ="0.1"/>
       </modList>
     </item>
-    <item id ="BionicGloves" spriteId ="Red_Gloves" value ="5" slotType ="STRIKER_A" >
+      <item id ="Silk Gloves" spriteId ="Red_Gloves" value ="5" slotType ="STRIKER_A" >
+      <modList>
+        <mod modType ="ACCURACY" modVal ="0.2"/>
+      </modList>
+    </item>
+    <item id ="Baseball Gloves" spriteId ="Red_Gloves" value ="5" slotType ="STRIKER_A" >
+      <modList>
+        <mod modType ="ACCURACY" modVal ="0.35"/>
+      </modList>
+    </item>
+    <item id ="Kevlar Gloves" spriteId ="Red_Gloves" value ="5" slotType ="STRIKER_A" >
+      <modList>
+        <mod modType ="STRIKER_HIT_SIZE" modVal ="0.3"/>
+        <mod modType ="ACCURACY" modVal ="0.05"/>
+      </modList>
+    </item>
+    <item id ="Foam Gloves" spriteId ="Red_Gloves" value ="5" slotType ="STRIKER_A" >
+      <modList>
+        <mod modType ="STRIKER_HIT_SIZE" modVal ="1.5"/>
+        <mod modType ="ACCURACY" modVal ="-0.2"/>
+      </modList>
+    </item>
+    <item id ="Finger Case" spriteId ="Red_Gloves" value ="5" slotType ="STRIKER_A" >
+      <modList>
+        <mod modType ="STRIKER_HIT_SIZE" modVal ="-0.25"/>
+        <mod modType ="ACCURACY" modVal ="0.75"/>
+      </modList>
+    </item>
+    <item id ="Mech Gloves" spriteId ="Red_Gloves" value ="5" slotType ="STRIKER_A" >
       <modList>
         <mod modType ="STRIKER_HIT_SIZE" modVal ="1"/>
-        <mod modType ="ACCURACY" modVal ="1"/>
-        <mod modType ="STRIKER_SPEED" modVal ="-.2"/>
+        <mod modType ="ACCURACY" modVal ="0.1"/>
+        <mod modType ="STRIKER_SPEED" modVal ="-0.5"/>
       </modList>
     </item>
     <!-- STRIKER BOOTS -->
-    <item id ="JumpingCrocs" spriteId ="Ring" value ="5" slotType ="STRIKER_B">
+    <item id ="Jumping Crocs" spriteId ="Shoes" value ="5" slotType ="STRIKER_B">
       <modList>
-        <mod modType ="STRIKER_SPEED" modVal ="0.5"/>
+        <mod modType ="STRIKER_SPEED" modVal ="0.25"/>
       </modList>
     </item>
-    <item id ="JumpingBoots" spriteId ="Ring" value ="5" slotType ="STRIKER_B">
+    <item id ="Jumping Boots" spriteId ="Shoes" value ="5" slotType ="STRIKER_B">
       <modList>
-        <mod modType ="STRIKER_SPEED" modVal ="0.5"/>
+        <mod modType ="STRIKER_SPEED" modVal ="0.75"/>
       </modList>
     </item>
-    <item id ="AirCameraCrocs" spriteId ="Ring" value ="5" slotType ="STRIKER_B">
+    <item id ="Air Camera Crocs" spriteId ="Shoes" value ="5" slotType ="STRIKER_B">
       <modList>
-        <mod modType ="STRIKER_SPEED" modVal ="0.5"/>
+        <mod modType ="STRIKER_SPEED" modVal ="1.5"/>
       </modList>
     </item>
-    <item id ="FeatherCrocs" spriteId ="Ring" value ="5" slotType ="STRIKER_B">
+    <item id ="Fairy Boots" spriteId ="Shoes" value ="5" slotType ="STRIKER_B">
       <modList>
-        <mod modType ="STRIKER_SPEED" modVal ="0.5"/>
+        <mod modType ="STRIKER_SPEED" modVal ="2"/>
+      </modList>
+    </item>
+    <item id ="Teleport Boots*" spriteId ="Shoes" value ="5" slotType ="STRIKER_B">
+      <modList>
+        <mod modType ="STRIKER_SPEED" modVal ="5"/>
       </modList>
     </item>
     <!-- SHAKER GLASSES -->
-    <item id ="WorkingGlasses" spriteId ="Ring" value ="5" slotType ="SHAKER_A" >
+    <item id ="Working Glasses" spriteId ="Glasses" value ="5" slotType ="SHAKER_A" >
       <modList>
         <mod modType ="GOLD_FIND_PROB" modVal ="0.2"/>
       </modList>
     </item>
-    <item id ="ShinyGlasees" spriteId ="Ring" value ="5" slotType ="SHAKER_A" >
+    <item id ="Shiny Glasees" spriteId ="Glasses" value ="5" slotType ="SHAKER_A" >
       <modList>
         <mod modType ="GOLD_FIND_PROB" modVal ="0.35"/>
       </modList>
     </item>
-    <item id ="FortuneGlasses" spriteId ="Ring" value ="5" slotType ="SHAKER_A" >
+    <item id ="Fortune Glasses" spriteId ="Glasses" value ="5" slotType ="SHAKER_A" >
       <modList>
         <mod modType ="GOLD_FIND_PROB" modVal ="0.5"/>
         <mod modType ="ITEM_FIND_PROB" modVal ="0.05"/>
       </modList>
     </item>
-    <item id ="LuckyGlasses" spriteId ="Ring" value ="5" slotType ="SHAKER_A" >
+    <item id ="Lucky Glasses" spriteId ="Glasses" value ="5" slotType ="SHAKER_A" >
       <modList>
         <mod modType ="ITEM_FIND_PROB" modVal ="0.1"/>
       </modList>
     </item>
-    <item id ="GnomeGlasses" spriteId ="Ring" value ="5" slotType ="SHAKER_A" >
+    <item id ="Gnome Glasses*" spriteId ="Glasses" value ="5" slotType ="SHAKER_A" >
       <modList>
         <mod modType ="GOLD_FIND_PROB" modVal ="0.75"/>
       </modList>
     </item>
-    <item id ="MidasSight" spriteId ="Ring" value ="5" slotType ="SHAKER_A" >
+    <item id ="Midas' Sight" spriteId ="Glasses" value ="5" slotType ="SHAKER_A" >
       <modList>
         <mod modType ="GOLD_FIND_PROB" modVal ="1"/>
         <mod modType ="ITEM_FIND_PROB" modVal ="-0.05"/>
       </modList>
     </item>
-    <item id ="ScavengerGlasses" spriteId ="Ring" value ="5" slotType ="SHAKER_A" >
+    <item id ="Scavenger Glasses" spriteId ="Glasses" value ="5" slotType ="SHAKER_A" >
       <modList>
         <mod modType ="GOLD_FIND_PROB" modVal ="-0.5"/>
         <mod modType ="ITEM_FIND_PROB" modVal ="0.25"/>
       </modList>
     </item>
-    <item id ="Sunglasses" spriteId ="Ring" value ="5" slotType ="SHAKER_A" >
+    <item id ="Sunglasses" spriteId ="Glasses" value ="5" slotType ="SHAKER_A" >
       <modList>
         <mod modType ="GOLD_FIND_PROB" modVal ="0.15"/>
         <mod modType ="ITEM_FIND_PROB" modVal ="0.05"/>
       </modList>
     </item>
-    <item id ="WealthGlasses" spriteId ="Ring" value ="5" slotType ="SHAKER_A" >
+    <item id ="Wealth Glasses" spriteId ="Glasses" value ="5" slotType ="SHAKER_A" >
       <modList>
-        <mod modType ="GOLD_FIND_PROB" modVal ="0.5"/>
-        <mod modType ="ITEM_FIND_PROB" modVal ="0.05"/>
+        <mod modType ="GOLD_FIND_PROB" modVal ="0.3"/>
+        <mod modType ="ITEM_FIND_PROB" modVal ="0.1"/>
       </modList>
     </item>
-    <item id ="FutureGlasses" spriteId ="Ring" value ="5" slotType ="SHAKER_A" >
+    <item id ="Future Glasses" spriteId ="Glasses" value ="5" slotType ="SHAKER_A" >
       <modList>
         <mod modType ="GOLD_FIND_PROB" modVal ="0.2"/>
         <mod modType ="ITEM_FIND_PROB" modVal ="0.2"/>
       </modList>
     </item>
     <!-- SHAKER GLOVES -->
-    <item id ="ManipulationGloves" spriteId ="Ring" value ="5" slotType ="SHAKER_B">
+    <item id ="Manipulation Gloves" spriteId ="Tools" value ="5" slotType ="SHAKER_B">
       <modList>
         <mod modType ="FALL_SPEED" modVal ="0.05"/>
       </modList>
     </item>
-    <item id ="ManipulationGlovesT2" spriteId ="Ring" value ="5" slotType ="SHAKER_B">
+    <item id ="Prune Scissors" spriteId ="Tools" value ="5" slotType ="SHAKER_B">
       <modList>
         <mod modType ="FALL_SPEED" modVal ="0.1"/>
       </modList>
     </item>
-    <item id ="ManipulationGlovesT3" spriteId ="Ring" value ="5" slotType ="SHAKER_B">
+    <item id ="Thief's Toolset" spriteId ="Tools" value ="5" slotType ="SHAKER_B">
       <modList>
         <mod modType ="FALL_SPEED" modVal ="0.15"/>
       </modList>
-    </item><item id ="PrecisionTools" spriteId ="Ring" value ="5" slotType ="SHAKER_B">
+    </item><item id ="Laser Tools" spriteId ="Tools" value ="5" slotType ="SHAKER_B">
       <modList>
         <mod modType ="FALL_SPEED" modVal ="0.25"/>
       </modList>

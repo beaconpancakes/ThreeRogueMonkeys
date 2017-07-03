@@ -468,8 +468,6 @@ public class GameMgr : MonoBehaviour {
         else
         {
             //Vibration feedback
-        }
-        {
             if (DataMgr.Instance.Vibration == 1)
                 Vibration.Vibrate(_missFruitVibrationTime);
         }
@@ -481,9 +479,21 @@ public class GameMgr : MonoBehaviour {
     /// </summary>
     public void GuardWokenUp()
     {
-        _collectorMonkey.Flee();
-        _strikerMonkey.Flee();
-        _gameState = GAME_STATE.WAITING_MONKEYS_FLEE;
+        if (_gameState != GAME_STATE.WAITING_MONKEYS_FLEE)
+        {
+            _collectorMonkey.Flee();
+            _strikerMonkey.Flee();
+            _gameState = GAME_STATE.WAITING_MONKEYS_FLEE;
+        }
+    }
+
+    /// <summary>
+    /// 
+    /// </summary>
+    public void WakeUpGuards()
+    {
+        foreach (Guard g in _guardPool)
+            g.WakeUp();
     }
 
     /// <summary>
@@ -498,15 +508,22 @@ public class GameMgr : MonoBehaviour {
         Debug.Log("LOSE_______________________________________LOSE");
     }
 
+    /// <summary>
+    /// 
+    /// </summary>
     public void WaitForGuardWakeUp()
     {
         _gameState = GAME_STATE.WAITING_FOR_GUARD;
     }
 
+    /// <summary>
+    /// 
+    /// </summary>
     public void WaitForMonkeysFlee()
     {
         _gameState = GAME_STATE.WAITING_MONKEYS_FLEE;
     }
+
     /// <summary>
     /// Check if any guard get alarmed without repetition
     /// </summary>

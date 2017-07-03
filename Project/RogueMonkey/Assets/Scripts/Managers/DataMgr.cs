@@ -98,7 +98,7 @@ public class DataMgr : MonoBehaviour {
         string slotTypeS, modTypeS;
         string auxId, auxSpriteId;
         int auxValue = -1, auxCount = -1;
-        GoldItem auxGoldItm = null;
+        //GoldItem auxGoldItm = null;
         EquipmentItem auxEquipItm = null;
         List<EquipmentItem.MOD_TYPE> auxMtList = new List<EquipmentItem.MOD_TYPE>();
         List<float> auxModValList = new List<float>();
@@ -109,7 +109,7 @@ public class DataMgr : MonoBehaviour {
        // doc.LoadXml(_textDoc.text);
 
         if (_gameItemList == null)
-            _gameItemList = new List<ShopItem>();
+            _gameItemList = new List<EquipmentItem>();
         else
             _gameItemList.Clear();
 
@@ -131,10 +131,10 @@ public class DataMgr : MonoBehaviour {
                             if (_readingGoldItem)
                             {
                                 auxSpriteId = reader.GetAttribute("spriteId");
-                                auxGoldItm = new GoldItem(reader.GetAttribute("id"), auxSpriteId, XmlConvert.ToInt32(reader.GetAttribute("value")));
-                                Debug.Log("Loading sprite id- - - -" + auxSpriteId);
-                                auxGoldItm._Sprite = Resources.Load(auxSpriteId, typeof(Sprite)) as Sprite;
-                                _gameItemList.Add(auxGoldItm);
+                                //auxGoldItm = new GoldItem(reader.GetAttribute("id"), auxSpriteId, XmlConvert.ToInt32(reader.GetAttribute("value")));
+                                auxEquipItm = new EquipmentItem(reader.GetAttribute("id"), auxSpriteId, XmlConvert.ToInt32(reader.GetAttribute("value")));
+                                auxEquipItm._Sprite = Resources.Load(auxSpriteId, typeof(Sprite)) as Sprite;
+                                _gameItemList.Add(auxEquipItm/*auxGoldItm*/);
                             }
                             else
                             {
@@ -643,15 +643,16 @@ public class DataMgr : MonoBehaviour {
         //unlock next level
         if (lvlIndex < GameMgr.Instance._StageList[stageIndex].GetLevelList().Count - 1)
         {
-            //go to stage-level adn rewrite attribute data
+            //go to stage-level and rewrite attribute data
             foreach (XmlAttribute attr in stages[stageIndex].ChildNodes[lvlIndex + 1].Attributes)
             {
                 if (attr.Name.Equals("state"))
                     attr.Value = "unlocked";
             }
+            GameMgr.Instance._StageList[stageIndex].GetLevelList()[lvlIndex + 1].AvailabilitySt = Level.AVAILABILITY_STATE.UNLOCKED;
         }
-        //stage completed
-        else if (stageIndex < stages.Count-1)
+        //stage completed if last level completed
+        else if (lvlIndex == GameMgr.Instance._StageList[stageIndex].GetLevelList().Count - 1 && stageIndex < stages.Count-1)
         {
             //unlock next stage
             foreach (XmlAttribute attr in stages[stageIndex+1].Attributes)
@@ -659,29 +660,56 @@ public class DataMgr : MonoBehaviour {
                 if (attr.Name.Equals("state"))
                         attr.Value = "unlocked";
             }
-            //switch from unavaiable to unlocked
-            if (stageIndex < stages.Count - 2)
+            GameMgr.Instance._StageList[stageIndex + 1].State = Stage.STAGE_STATE.UNLOCKED;
+            //lock next stage levels but first which is unlocked - FILE
+            for (int i = 0; i < stages[stageIndex + 1].ChildNodes.Count; ++i)
             {
-                foreach (XmlAttribute attr in stages[stageIndex + 2].Attributes)
-                {
-                    if (attr.Name.Equals("state"))
-                        attr.Value = "locked";
-                }
-            }
-            //unlock levels
-            for (int i=0; i< stages[stageIndex+1].ChildNodes.Count; ++i)
-            {
-                foreach (XmlAttribute attr in stages[stageIndex+1].ChildNodes[i].Attributes)
+                foreach (XmlAttribute attr in stages[stageIndex + 1].ChildNodes[i].Attributes)
                 {
                     if (attr.Name.Equals("state"))
                     {
-                        if (i==0)
+                        if (i == 0)
                             attr.Value = "unlocked";
                         else
                             attr.Value = "locked";
                     }
                 }
             }
+            //lock next stage levels but first which is unlocked - DATA
+            for (int i = 0; i < GameMgr.Instance._StageList[stageIndex + 1].GetLevelList().Count; ++i)
+            {
+                if (i==0)
+                    GameMgr.Instance._StageList[stageIndex + 1].GetLevelList()[i].AvailabilitySt = Level.AVAILABILITY_STATE.UNLOCKED;
+                else
+                    GameMgr.Instance._StageList[stageIndex + 1].GetLevelList()[i].AvailabilitySt = Level.AVAILABILITY_STATE.LOCKED;
+
+            }
+            //switch stage state from unavailable to locked. Keep lvls with unavailable state
+            if (stageIndex < stages.Count - 2)
+            {
+                //FILE
+                foreach (XmlAttribute attr in stages[stageIndex + 2].Attributes)
+                {
+                    if (attr.Name.Equals("state"))
+                        attr.Value = "locked";
+                }
+                //DATA
+                GameMgr.Instance._StageList[stageIndex + 2].State = Stage.STAGE_STATE.LOCKED;
+                
+                //set stage+2 levels from unavailable to locked
+                /*for (int i = 0; i < stages[stageIndex + 2].ChildNodes.Count; ++i)
+                {
+                    foreach (XmlAttribute attr in stages[stageIndex + 1].ChildNodes[i].Attributes)
+                    {
+                        if (attr.Name.Equals("state"))
+                            attr.Value = "locked";
+                        
+                    }
+                }
+                foreach (Level lvl in GameMgr.Instance._StageList[stageIndex + 2].GetLevelList())
+                    lvl.AvailabilitySt = Level.AVAILABILITY_STATE.LOCKED;*/
+            }
+            
 
         }
         doc.Save(Application.persistentDataPath + _levelFileName);
@@ -716,10 +744,13 @@ public class DataMgr : MonoBehaviour {
         }*/
     }
 
+    /// <summary>
+    /// 
+    /// </summary>
     public void SaveGold()
     {
         Debug.Log("Saving gold__________");
-        PlayerPrefs.SetInt("Gold", DataMgr.Instance.Gold);
+        PlayerPrefs.SetInt("Gold", _gold);
     }
 
     /// <summary>
@@ -727,9 +758,9 @@ public class DataMgr : MonoBehaviour {
     /// </summary>
     public void SaveData()
     {
-        PlayerPrefs.SetInt("Gold", DataMgr.Instance.Gold);
+        PlayerPrefs.SetInt("Gold", _gold);
         PlayerPrefs.SetString("Lang", LocalizationService.Instance.Localization);
-        PlayerPrefs.SetInt("Vib", DataMgr.Instance.Vibration);
+        PlayerPrefs.SetInt("Vib", _vibration);
         SaveInventoryItems();
         SaveLevelData(GameMgr.Instance.StageIndex, GameMgr.Instance.LevelIndex);
         //TODO: levels score data
@@ -740,7 +771,7 @@ public class DataMgr : MonoBehaviour {
     /// </summary>
     public void LoadData()
     {
-        DataMgr.Instance.Gold = PlayerPrefs.GetInt("Gold");
+        _gold = PlayerPrefs.GetInt("Gold");
         Debug.Log("Loading language..." + PlayerPrefs.GetString("Lang"));
         //LocalizationService.Instance.Localization = PlayerPrefs.GetString("Lang");
         if (PlayerPrefs.GetString("Lang") =="")
@@ -748,7 +779,7 @@ public class DataMgr : MonoBehaviour {
         else
             LocalizationService.Instance.Localization = PlayerPrefs.GetString("Lang");
 
-        DataMgr.Instance.Vibration = PlayerPrefs.GetInt("Vib");
+        _vibration = PlayerPrefs.GetInt("Vib");
         LoadItemData();
         LoadInventoryItems();
         LoadLevelData();
@@ -769,6 +800,27 @@ public class DataMgr : MonoBehaviour {
     /// <summary>
     /// 
     /// </summary>
+    public void UnlockLevelData()
+    {
+        for (int i= 0; i < GameMgr.Instance._StageList.Count; ++i)
+        {
+            if (GameMgr.Instance._StageList[i].State == Stage.STAGE_STATE.LOCKED || GameMgr.Instance._StageList[i].State == Stage.STAGE_STATE.UNAVAILABLE)
+                GameMgr.Instance._StageList[i].State = Stage.STAGE_STATE.UNLOCKED;
+
+            for (int j = 0; j < GameMgr.Instance._StageList[i].GetLevelList().Count; ++j)
+            {
+                if (GameMgr.Instance._StageList[i].GetLevelList()[j].AvailabilitySt == Level.AVAILABILITY_STATE.UNAVAILABLE || GameMgr.Instance._StageList[i].GetLevelList()[j].AvailabilitySt == Level.AVAILABILITY_STATE.LOCKED)
+                    GameMgr.Instance._StageList[i].GetLevelList()[j].AvailabilitySt = Level.AVAILABILITY_STATE.UNLOCKED;
+                SaveLevelData(i,j);
+            }
+            
+        }
+        
+    }
+
+    /// <summary>
+    /// 
+    /// </summary>
     /// <param name="stage"></param>
     /// <param name="lvl"></param>
     /// <returns></returns>
@@ -778,7 +830,7 @@ public class DataMgr : MonoBehaviour {
 
     }
 
-    public List<ShopItem> GetGameItems()
+    public List<EquipmentItem> GetGameItems()
     {
         return _gameItemList;
     }
@@ -798,7 +850,11 @@ public class DataMgr : MonoBehaviour {
     /// <param name="saveToFile"></param>
     public void AddInventoryItem(EquipmentItem eI, bool saveToFile = true)
     {
-        _inventoryItems.Add(eI);
+        if (_inventoryItems.Contains(eI))
+            ++_inventoryItems.Find((e) => (e.IdName.CompareTo(eI.IdName) == 0)).Count;
+        else
+            _inventoryItems.Add(eI);
+        
         if (saveToFile)
             SaveInventoryItems();
     }
@@ -823,7 +879,7 @@ public class DataMgr : MonoBehaviour {
 	#region Private Non-serialized Fields
     //TODO: read from file
     [SerializeField]
-    private List<ShopItem> _gameItemList;
+    private List<EquipmentItem> _gameItemList;
     
     [SerializeField]
     private List<ShopItemTableEntry> _shopItemList;

@@ -106,8 +106,15 @@ public class CollectorMonkey : MonoBehaviour {
         }
 	}
 
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="col"></param>
     void OnTriggerEnter2D(Collider2D col)
     {
+        if (_gameMgr.GetCurrentLevel().GetLevelState() == Level.L_STATE.FINISHED)
+            return;
+
         if (col.CompareTag("Fruit"))
         {
             if (!_sack.TryToPushToSack(col.GetComponent<Fruit>()))

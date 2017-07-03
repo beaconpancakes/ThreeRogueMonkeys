@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <item_data>
-    <item id ="LargeSack" equipped ="false" new ="false" count="1"/>
-    <item id ="FastSack" equipped ="true" new ="false" count="1"/>
-    <item id ="WingedCrocs" equipped ="false" new ="false" count="1"/>
+    <item id ="Leather Sack" equipped ="false" new ="false" count="1"/>
+    <item id ="Quick Sack" equipped ="true" new ="false" count="1"/>
+    <item id ="Winged Crocs" equipped ="false" new ="false" count="1"/>
     <item id ="Sunglasses" equipped ="false" new ="true" count="2"/>
-    <item id ="FeatherCrocs" equipped ="false" new ="false" count="1"/>
-    <item id ="WealthGlasses" equipped ="false" new ="false" count="3"/>
-    <item id ="PrecisionTools" equipped ="false" new ="true" count="1"/>
-    <item id ="BigGloves" equipped ="false" new ="true" count="1"/>
+    <item id ="Jumping Boots" equipped ="false" new ="false" count="1"/>
+    <item id ="Wealth Glasses" equipped ="false" new ="false" count="3"/>
+    <item id ="Manipulation Gloves" equipped ="false" new ="true" count="1"/>
+    <item id ="Leather Gloves" equipped ="false" new ="true" count="1"/>
 </item_data>

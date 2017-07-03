@@ -143,7 +143,7 @@ public class ShopMenu : MonoBehaviour {
         List<DataMgr.ItemSizePair> auxList2 = new List<DataMgr.ItemSizePair>();
         List<DataMgr.QualityDistribution> auxDistr = null;
         
-        List<ShopItem> auxGameItems = null;
+        List<EquipmentItem> auxGameItems = null;
         List<ShopItem> auxItemListWithReqs = new List<ShopItem>();
 
         //TODO: fi magic numbers

@@ -17,6 +17,10 @@ public class EquipmentItem : ShopItem {
         _modValueList = modValList;
         _count = count;
     }
+    public EquipmentItem(string id, string spriteId, int value) : base(id, spriteId, value)
+    {
+
+    }
 
 	#region Public Data
     public enum SLOT_TYPE { COLLECTOR_A = 0, COLLECTOR_B, STRIKER_A, STRIKER_B, SHAKER_A, SHAKER_B }

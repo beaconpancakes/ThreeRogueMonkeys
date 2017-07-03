@@ -91,7 +91,7 @@ public class Level : MonoBehaviour {
                     UIHelper.Instance.SetLvlScreenTime(_levelTime - _timer);
                     if (_timer >= _levelTime)
                     {
-                        _fruitTree.Stop();
+                        _fruitTree.Stop(false);
                         _timer = 0f;
                         _state = L_STATE.WAITNG_FLYING_FRUITS;
 

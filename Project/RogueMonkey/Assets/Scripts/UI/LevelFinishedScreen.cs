@@ -27,12 +27,20 @@ public class LevelFinishedScreen : MonoBehaviour {
     public class FruitIndex
     {
         public Fruit.F_TYPE _Ftype;
+        public Fruit.RIPEN_STATE _Rstate;   //used to have different entries for Ripen type Fruit
         public int _Index;       //index in image list
         public int _Count;
 
         public FruitIndex(Fruit.F_TYPE t, int index)
         {
             _Ftype = t;
+            this._Index = index;
+            _Count = 1;
+        }
+        public FruitIndex(Fruit.F_TYPE t, Fruit.RIPEN_STATE s, int index)
+        {
+            _Ftype = t;
+            _Rstate = s;
             this._Index = index;
             _Count = 1;
         }
@@ -66,7 +74,13 @@ public class LevelFinishedScreen : MonoBehaviour {
                     {
                         _itemImageList[_collectedItemIndex].sprite = GameMgr.Instance.StageCollectedFruits[_collectedFruitIndex].GetFruitSprite();
                         _itemImageList[_collectedItemIndex].gameObject.SetActive(true);
-                        _tempGold += GameMgr.Instance.StageCollectedFruits[_collectedFruitIndex].GetGold();
+                        if (GameMgr.Instance.StageCollectedFruits[_collectedFruitIndex]._Ftype == Fruit.F_TYPE.GOLD_ITEM)
+                            _tempGold += GameMgr.Instance.StageCollectedFruits[_collectedFruitIndex].GetGold();
+                        else
+                        {
+                            //public EquipmentItem(string id, string spriteId, int value, SLOT_TYPE sT, List<MOD_TYPE> mtList, List<float> modValList, int count = -1) 
+                            DataMgr.Instance.AddInventoryItem(GameMgr.Instance.StageCollectedFruits[_collectedFruitIndex].EquipmentItem, false);
+                        }
                         _goldText.text = _tempGold.ToString();
                         ++_collectedItemIndex;
                         if (!_goldIcon.activeSelf)
@@ -75,12 +89,19 @@ public class LevelFinishedScreen : MonoBehaviour {
                     }
                     else//Fruit
                     {
-                        _temp = _fruitIndex.Find((fi) => (fi._Ftype == GameMgr.Instance.StageCollectedFruits[_collectedFruitIndex]._Ftype));
+                        //Search for fruit type on index and if its Ripen, Ripen state must be equal too
+                        if (GameMgr.Instance.StageCollectedFruits[_collectedFruitIndex]._Ftype == Fruit.F_TYPE.RIPEN)
+                            _temp = _fruitIndex.Find((fi) => (fi._Ftype == GameMgr.Instance.StageCollectedFruits[_collectedFruitIndex]._Ftype && fi._Rstate == GameMgr.Instance.StageCollectedFruits[_collectedFruitIndex]._RState));
+                        else
+                            _temp = _fruitIndex.Find((fi) => (fi._Ftype == GameMgr.Instance.StageCollectedFruits[_collectedFruitIndex]._Ftype));
 
                         //add this fruit as new list element
                         if (_temp == null)
                         {
-                            _fruitIndex.Add(new FruitIndex(GameMgr.Instance.StageCollectedFruits[_collectedFruitIndex]._Ftype, _maxFruitDisplayedIndex));
+                            if (GameMgr.Instance.StageCollectedFruits[_collectedFruitIndex]._Ftype == Fruit.F_TYPE.RIPEN)
+                                _fruitIndex.Add(new FruitIndex(GameMgr.Instance.StageCollectedFruits[_collectedFruitIndex]._Ftype, GameMgr.Instance.StageCollectedFruits[_collectedFruitIndex]._RState, _maxFruitDisplayedIndex));
+                            else
+                                _fruitIndex.Add(new FruitIndex(GameMgr.Instance.StageCollectedFruits[_collectedFruitIndex]._Ftype, _maxFruitDisplayedIndex));
 
                             _fruitImageList[_maxFruitDisplayedIndex].sprite = GameMgr.Instance.StageCollectedFruits[_collectedFruitIndex].GetFruitSprite();
                             _fruitTextCountList[_maxFruitDisplayedIndex].text = "1";
@@ -250,36 +271,42 @@ public class LevelFinishedScreen : MonoBehaviour {
             _rankLetterImg.sprite = _rankLetterSpriteList[0];
             _currentStamp = _rankStampSuccess;
             GameMgr.Instance.GetCurrentLevel().Rank = Level.RANK.S;
+            GameMgr.Instance.GetCurrentLevel().AvailabilitySt = Level.AVAILABILITY_STATE.COMPLETED;
         }
         else if (currentScoreRatio >= _rankARatio)
         {
             _rankLetterImg.sprite = _rankLetterSpriteList[1];
             _currentStamp = _rankStampSuccess;
             GameMgr.Instance.GetCurrentLevel().Rank = Level.RANK.A;
+            GameMgr.Instance.GetCurrentLevel().AvailabilitySt = Level.AVAILABILITY_STATE.COMPLETED;
         }
         else if (currentScoreRatio >= _rankBRatio)
         {
             _rankLetterImg.sprite = _rankLetterSpriteList[2];
             _currentStamp = _rankStampSuccess;
             GameMgr.Instance.GetCurrentLevel().Rank = Level.RANK.B;
+            GameMgr.Instance.GetCurrentLevel().AvailabilitySt = Level.AVAILABILITY_STATE.COMPLETED;
         }
         else if (currentScoreRatio >= _rankCRatio)
         {
             _rankLetterImg.sprite = _rankLetterSpriteList[3];
             _currentStamp = _rankStampSuccess;
             GameMgr.Instance.GetCurrentLevel().Rank = Level.RANK.C;
+            GameMgr.Instance.GetCurrentLevel().AvailabilitySt = Level.AVAILABILITY_STATE.COMPLETED;
         }
         else if (currentScoreRatio >= _rankDRatio)
         {
             _rankLetterImg.sprite = _rankLetterSpriteList[4];
             _currentStamp = _rankStampSuccess;
             GameMgr.Instance.GetCurrentLevel().Rank = Level.RANK.D;
+            GameMgr.Instance.GetCurrentLevel().AvailabilitySt = Level.AVAILABILITY_STATE.COMPLETED;
         }
         else if (currentScoreRatio >= _rankERatio)
         {
             _rankLetterImg.sprite = _rankLetterSpriteList[5];
             _currentStamp = _rankStampSuccess;
             GameMgr.Instance.GetCurrentLevel().Rank = Level.RANK.E;
+            GameMgr.Instance.GetCurrentLevel().AvailabilitySt = Level.AVAILABILITY_STATE.COMPLETED;
         }
         //if (currentScoreRatio >= _rankFRatio)
         //return _rankLetterSpriteList[6];
@@ -288,6 +315,7 @@ public class LevelFinishedScreen : MonoBehaviour {
             _rankLetterImg.sprite = _rankLetterSpriteList[6];
             _currentStamp = _rankStampFail;
             GameMgr.Instance.GetCurrentLevel().Rank = Level.RANK.F;
+            GameMgr.Instance.GetCurrentLevel().AvailabilitySt = Level.AVAILABILITY_STATE.FAILED;
         }
         _rankLetterImg.gameObject.SetActive(true);
         _currentStamp.gameObject.SetActive(true);

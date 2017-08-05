@@ -2551,6 +2551,7 @@ MonoBehaviour:
   _loseScreen: {fileID: 0}
   _guardPool: []
   _levelText: {fileID: 0}
+  _maxcomboTime: 4
 --- !u!114 &114047016849474028
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2603,13 +2604,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _sceneLayoutId: Jungle_0
-  _backgroundId: backgroundTest
-  _treeId: Vector-palm-tree-clip-art-palm-trees-clipart-mylocalguide-site
+  _backgroundId: jungle_bg_WIP
+  _treeId: trees_test
   _netSpriteId: brick-background-clipart-17
   _netSize: 0
-  _fSpawnTime: 1.6
+  _fSpawnTime: 1.7
   _fFallSpeed: 3.3
-  _fFlyTime: 1
+  _fFlyTime: 1.4
   _fruitPoolType:
   - FruitTypeIndex: 0
     SpawnRatio: 1
@@ -2624,7 +2625,7 @@ MonoBehaviour:
   _missedFruitAlarm: 25
   _alarmDepletion: 1
   _guardCount: 2
-  _guardDistribution: 0
+  _guardDistribution: 2
   _penaltyPerAlarmPt: 0.5
   _minRankSuperScore: 75
   _maxScore: 0
@@ -2641,13 +2642,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _sceneLayoutId: Jungle_0
-  _backgroundId: backgroundTest
-  _treeId: Vector-palm-tree-clip-art-palm-trees-clipart-mylocalguide-site
+  _backgroundId: jungle_bg_WIP
+  _treeId: trees_test
   _netSpriteId: brick-background-clipart-17
   _netSize: 0
-  _fSpawnTime: 0.9
-  _fFallSpeed: 2.5
-  _fFlyTime: 1
+  _fSpawnTime: 1.3
+  _fFallSpeed: 2.6
+  _fFlyTime: 1.2
   _fruitPoolType:
   - FruitTypeIndex: 0
     SpawnRatio: 0.6
@@ -2656,16 +2657,30 @@ MonoBehaviour:
   - FruitTypeIndex: 1
     SpawnRatio: 0.2
   _goldItemPoolType:
-  - Id: Ring
-    SpawnRatio: 1
-  _equipmentItemPoolType: []
+  - Id: Earrings
+    SpawnRatio: 0.34
+  - Id: Necklace
+    SpawnRatio: 0.33
+  - Id: Gold Nugget
+    SpawnRatio: 0.33
+  _equipmentItemPoolType:
+  - Id: Winged Crocs
+    SpawnRatio: 0.15
+  - Id: Working Glasses
+    SpawnRatio: 0.1
+  - Id: Light Sack
+    SpawnRatio: 0.25
+  - Id: Leather Gloves
+    SpawnRatio: 0.25
+  - Id: Manipulation Gloves
+    SpawnRatio: 0.25
   _goldItemSpawnChance: 0.025
-  _equipmentItemSpawnChance: 0
+  _equipmentItemSpawnChance: 0.006
   _levelTime: 50
   _maxAlarmLvl: 100
   _missedFruitAlarm: 20
   _alarmDepletion: 0.7
-  _guardCount: 2
+  _guardCount: 1
   _guardDistribution: 2
   _penaltyPerAlarmPt: 0
   _minRankSuperScore: 0
@@ -2837,13 +2852,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _sceneLayoutId: Jungle_0
-  _backgroundId: backgroundTest
-  _treeId: Vector-palm-tree-clip-art-palm-trees-clipart-mylocalguide-site
+  _backgroundId: jungle_bg_WIP
+  _treeId: trees_test
   _netSpriteId: brick-background-clipart-17
   _netSize: 0
-  _fSpawnTime: 0.9
-  _fFallSpeed: 2.6
-  _fFlyTime: 1
+  _fSpawnTime: 1.3
+  _fFallSpeed: 2.7
+  _fFlyTime: 1.2
   _fruitPoolType:
   - FruitTypeIndex: 0
     SpawnRatio: 0.65
@@ -2852,11 +2867,27 @@ MonoBehaviour:
   - FruitTypeIndex: 1
     SpawnRatio: 0.15
   _goldItemPoolType:
-  - Id: Ring
-    SpawnRatio: 1
-  _equipmentItemPoolType: []
+  - Id: Earrings
+    SpawnRatio: 0.34
+  - Id: Necklace
+    SpawnRatio: 0.33
+  - Id: Gold Nugget
+    SpawnRatio: 0.33
+  _equipmentItemPoolType:
+  - Id: Winged Crocs
+    SpawnRatio: 0.15
+  - Id: Working Glasses
+    SpawnRatio: 0.15
+  - Id: Fitness Gloves
+    SpawnRatio: 0.1
+  - Id: LightSack
+    SpawnRatio: 0.25
+  - Id: Leather Gloves
+    SpawnRatio: 0.2
+  - Id: Manipulation Gloves
+    SpawnRatio: 0.15
   _goldItemSpawnChance: 0.025
-  _equipmentItemSpawnChance: 0
+  _equipmentItemSpawnChance: 0.005
   _levelTime: 45
   _maxAlarmLvl: 100
   _missedFruitAlarm: 20
@@ -2955,13 +2986,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _sceneLayoutId: Jungle_0
-  _backgroundId: backgroundTest
-  _treeId: Vector-palm-tree-clip-art-palm-trees-clipart-mylocalguide-site
+  _backgroundId: jungle_bg_WIP
+  _treeId: trees_test
   _netSpriteId: brick-background-clipart-17
   _netSize: 0
-  _fSpawnTime: 1.5
+  _fSpawnTime: 1.6
   _fFallSpeed: 3.3
-  _fFlyTime: 1
+  _fFlyTime: 1.4
   _fruitPoolType:
   - FruitTypeIndex: 0
     SpawnRatio: 0.7
@@ -3140,13 +3171,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _sceneLayoutId: Jungle_0
-  _backgroundId: backgroundTest
-  _treeId: Vector-palm-tree-clip-art-palm-trees-clipart-mylocalguide-site
+  _backgroundId: jungle_bg_WIP
+  _treeId: trees_test
   _netSpriteId: brick-background-clipart-17
   _netSize: 0
-  _fSpawnTime: 1.4
+  _fSpawnTime: 1.6
   _fFallSpeed: 3.2
-  _fFlyTime: 1
+  _fFlyTime: 1.4
   _fruitPoolType:
   - FruitTypeIndex: 0
     SpawnRatio: 0.65
@@ -3158,7 +3189,7 @@ MonoBehaviour:
   - Id: Necklace
     SpawnRatio: 0.5
   _equipmentItemPoolType:
-  - Id: FastSack
+  - Id: Quick Sack
     SpawnRatio: 1
   _goldItemSpawnChance: 0.05
   _equipmentItemSpawnChance: 0.005
@@ -3224,30 +3255,46 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _sceneLayoutId: Jungle_0
-  _backgroundId: backgroundTest
-  _treeId: Vector-palm-tree-clip-art-palm-trees-clipart-mylocalguide-site
+  _backgroundId: jungle_bg_WIP
+  _treeId: trees_test
   _netSpriteId: brick-background-clipart-17
   _netSize: 0
-  _fSpawnTime: 0.9
-  _fFallSpeed: 2.1
-  _fFlyTime: 1
+  _fSpawnTime: 1.1
+  _fFallSpeed: 2.4
+  _fFlyTime: 1.1
   _fruitPoolType:
   - FruitTypeIndex: 0
     SpawnRatio: 0.25
   - FruitTypeIndex: 1
     SpawnRatio: 0.15
-  - FruitTypeIndex: 2
+  - FruitTypeIndex: 5
     SpawnRatio: 0.1
   - FruitTypeIndex: 7
     SpawnRatio: 0.25
   - FruitTypeIndex: 10
     SpawnRatio: 0.25
   _goldItemPoolType:
-  - Id: Ring
-    SpawnRatio: 1
-  _equipmentItemPoolType: []
+  - Id: Necklace
+    SpawnRatio: 0.34
+  - Id: Gold Nugget
+    SpawnRatio: 0.33
+  - Id: Medallion
+    SpawnRatio: 0.33
+  _equipmentItemPoolType:
+  - Id: Light Sack
+    SpawnRatio: 0.2
+  - Id: Leather Gloves
+    SpawnRatio: 0.1
+  - Id: Winged Boots
+    SpawnRatio: 0.2
+  - Id: Shiny Glasses
+    SpawnRatio: 0.2
+  - Id: Manipulation Gloves
+    SpawnRatio: 0.2
+  - Id: Silk Gloves
+    SpawnRatio: 0.1
   _goldItemSpawnChance: 0.04
-  _equipmentItemSpawnChance: 0
+  _equipmentItemSpawnChance: 0.008
   _levelTime: 55
   _maxAlarmLvl: 100
   _missedFruitAlarm: 20
@@ -3310,13 +3357,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _sceneLayoutId: Jungle_0
-  _backgroundId: backgroundTest
-  _treeId: Vector-palm-tree-clip-art-palm-trees-clipart-mylocalguide-site
+  _backgroundId: jungle_bg_WIP
+  _treeId: trees_test
   _netSpriteId: brick-background-clipart-17
   _netSize: 0
-  _fSpawnTime: 0.9
-  _fFallSpeed: 2.5
-  _fFlyTime: 1
+  _fSpawnTime: 1
+  _fFallSpeed: 2.6
+  _fFlyTime: 1.2
   _fruitPoolType:
   - FruitTypeIndex: 0
     SpawnRatio: 0.45
@@ -3327,11 +3374,25 @@ MonoBehaviour:
   - FruitTypeIndex: 10
     SpawnRatio: 0.25
   _goldItemPoolType:
-  - Id: Ring
-    SpawnRatio: 1
-  _equipmentItemPoolType: []
+  - Id: Earrings
+    SpawnRatio: 0.34
+  - Id: Necklace
+    SpawnRatio: 0.33
+  - Id: Gold Nugget
+    SpawnRatio: 0.33
+  _equipmentItemPoolType:
+  - Id: Light Sack
+    SpawnRatio: 0.2
+  - Id: Leather Gloves
+    SpawnRatio: 0.2
+  - Id: Winged Boots
+    SpawnRatio: 0.2
+  - Id: Shiny Glasses
+    SpawnRatio: 0.2
+  - Id: Manipulation Gloves
+    SpawnRatio: 0.2
   _goldItemSpawnChance: 0.025
-  _equipmentItemSpawnChance: 0
+  _equipmentItemSpawnChance: 0.006
   _levelTime: 50
   _maxAlarmLvl: 100
   _missedFruitAlarm: 20
@@ -3354,13 +3415,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _sceneLayoutId: Jungle_0
-  _backgroundId: backgroundTest
-  _treeId: Vector-palm-tree-clip-art-palm-trees-clipart-mylocalguide-site
+  _backgroundId: jungle_bg_WIP
+  _treeId: trees_test
   _netSpriteId: brick-background-clipart-17
   _netSize: 0
-  _fSpawnTime: 1.4
-  _fFallSpeed: 3.3
-  _fFlyTime: 1
+  _fSpawnTime: 1.5
+  _fFallSpeed: 3.1
+  _fFlyTime: 1.3
   _fruitPoolType:
   - FruitTypeIndex: 0
     SpawnRatio: 0.1
@@ -3372,8 +3433,10 @@ MonoBehaviour:
   - Id: Necklace
     SpawnRatio: 0.5
   _equipmentItemPoolType:
-  - Id: FastSack
-    SpawnRatio: 1
+  - Id: Quick Sack
+    SpawnRatio: 0.5
+  - Id: Jumping Crocs
+    SpawnRatio: 0.5
   _goldItemSpawnChance: 0.075
   _equipmentItemSpawnChance: 0.005
   _levelTime: 35
@@ -3381,7 +3444,7 @@ MonoBehaviour:
   _missedFruitAlarm: 25
   _alarmDepletion: 1
   _guardCount: 2
-  _guardDistribution: 0
+  _guardDistribution: 2
   _penaltyPerAlarmPt: 0.5
   _minRankSuperScore: 150
   _maxScore: 0
@@ -3398,13 +3461,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _sceneLayoutId: Jungle_0
-  _backgroundId: backgroundTest
-  _treeId: Vector-palm-tree-clip-art-palm-trees-clipart-mylocalguide-site
+  _backgroundId: jungle_bg_WIP
+  _treeId: trees_test
   _netSpriteId: brick-background-clipart-17
   _netSize: 0
   _fSpawnTime: 2
   _fFallSpeed: 3.5
-  _fFlyTime: 1
+  _fFlyTime: 1.4
   _fruitPoolType:
   - FruitTypeIndex: 0
     SpawnRatio: 1
@@ -3534,13 +3597,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _sceneLayoutId: Jungle_0
-  _backgroundId: backgroundTest
-  _treeId: Vector-palm-tree-clip-art-palm-trees-clipart-mylocalguide-site
+  _backgroundId: jungle_bg_WIP
+  _treeId: trees_test
   _netSpriteId: brick-background-clipart-17
   _netSize: 0
-  _fSpawnTime: 1.2
+  _fSpawnTime: 1.4
   _fFallSpeed: 2.9
-  _fFlyTime: 1
+  _fFlyTime: 1.3
   _fruitPoolType:
   - FruitTypeIndex: 0
     SpawnRatio: 0.5
@@ -3554,18 +3617,20 @@ MonoBehaviour:
   - Id: Necklace
     SpawnRatio: 0.5
   _equipmentItemPoolType:
-  - Id: FastSack
-    SpawnRatio: 0.1
-  - Id: WingedCrocs
-    SpawnRatio: 0.9
+  - Id: Quick Sack
+    SpawnRatio: 0.44
+  - Id: Jumping Crocs
+    SpawnRatio: 0.33
+  - Id: Leather Sack
+    SpawnRatio: 0.23
   _goldItemSpawnChance: 0.075
-  _equipmentItemSpawnChance: 0.02
+  _equipmentItemSpawnChance: 0.0075
   _levelTime: 40
   _maxAlarmLvl: 100
   _missedFruitAlarm: 25
   _alarmDepletion: 1
   _guardCount: 2
-  _guardDistribution: 0
+  _guardDistribution: 1
   _penaltyPerAlarmPt: 0.5
   _minRankSuperScore: 165
   _maxScore: 0
@@ -3582,36 +3647,52 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _sceneLayoutId: Jungle_0
-  _backgroundId: backgroundTest
-  _treeId: Vector-palm-tree-clip-art-palm-trees-clipart-mylocalguide-site
+  _backgroundId: jungle_bg_WIP
+  _treeId: trees_test
   _netSpriteId: brick-background-clipart-17
   _netSize: 0
-  _fSpawnTime: 0.9
-  _fFallSpeed: 2.1
-  _fFlyTime: 1
+  _fSpawnTime: 1
+  _fFallSpeed: 2.4
+  _fFlyTime: 1.1
   _fruitPoolType:
   - FruitTypeIndex: 0
     SpawnRatio: 0.2
   - FruitTypeIndex: 1
     SpawnRatio: 0.15
-  - FruitTypeIndex: 2
+  - FruitTypeIndex: 5
     SpawnRatio: 0.1
   - FruitTypeIndex: 7
     SpawnRatio: 0.3
   - FruitTypeIndex: 10
     SpawnRatio: 0.25
   _goldItemPoolType:
-  - Id: Ring
-    SpawnRatio: 1
-  _equipmentItemPoolType: []
+  - Id: Necklace
+    SpawnRatio: 0.34
+  - Id: Gold Nugget
+    SpawnRatio: 0.33
+  - Id: Medallion
+    SpawnRatio: 0.33
+  _equipmentItemPoolType:
+  - Id: Light Sack
+    SpawnRatio: 0.2
+  - Id: Leather Gloves
+    SpawnRatio: 0.05
+  - Id: Winged Boots
+    SpawnRatio: 0.2
+  - Id: Shiny Glasses
+    SpawnRatio: 0.2
+  - Id: Manipulation Gloves
+    SpawnRatio: 0.2
+  - Id: Silk Gloves
+    SpawnRatio: 0.15
   _goldItemSpawnChance: 0.04
-  _equipmentItemSpawnChance: 0
+  _equipmentItemSpawnChance: 0.008
   _levelTime: 55
   _maxAlarmLvl: 100
   _missedFruitAlarm: 20
   _alarmDepletion: 0.7
   _guardCount: 2
-  _guardDistribution: 2
+  _guardDistribution: 1
   _penaltyPerAlarmPt: 0
   _minRankSuperScore: 0
   _maxScore: 0
@@ -3668,13 +3749,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _sceneLayoutId: Jungle_0
-  _backgroundId: backgroundTest
-  _treeId: Vector-palm-tree-clip-art-palm-trees-clipart-mylocalguide-site
+  _backgroundId: jungle_bg_WIP
+  _treeId: trees_test
   _netSpriteId: brick-background-clipart-17
   _netSize: 0
-  _fSpawnTime: 1.3
+  _fSpawnTime: 1.5
   _fFallSpeed: 3.1
-  _fFlyTime: 1
+  _fFlyTime: 1.3
   _fruitPoolType:
   - FruitTypeIndex: 0
     SpawnRatio: 0.65
@@ -3688,10 +3769,12 @@ MonoBehaviour:
   - Id: Necklace
     SpawnRatio: 0.5
   _equipmentItemPoolType:
-  - Id: FastSack
-    SpawnRatio: 1
+  - Id: Quick Sack
+    SpawnRatio: 0.5
+  - Id: Jumping Crocs
+    SpawnRatio: 0.5
   _goldItemSpawnChance: 0.075
-  _equipmentItemSpawnChance: 0.015
+  _equipmentItemSpawnChance: 0.005
   _levelTime: 40
   _maxAlarmLvl: 100
   _missedFruitAlarm: 25
@@ -3714,13 +3797,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _sceneLayoutId: Jungle_0
-  _backgroundId: backgroundTest
-  _treeId: Vector-palm-tree-clip-art-palm-trees-clipart-mylocalguide-site
+  _backgroundId: jungle_bg_WIP
+  _treeId: trees_test
   _netSpriteId: brick-background-clipart-17
   _netSize: 0
   _fSpawnTime: 0.9
-  _fFallSpeed: 2.4
-  _fFlyTime: 1
+  _fFallSpeed: 2.5
+  _fFlyTime: 1.2
   _fruitPoolType:
   - FruitTypeIndex: 0
     SpawnRatio: 0.35
@@ -3731,11 +3814,25 @@ MonoBehaviour:
   - FruitTypeIndex: 10
     SpawnRatio: 0.3
   _goldItemPoolType:
-  - Id: Ring
-    SpawnRatio: 1
-  _equipmentItemPoolType: []
+  - Id: Necklace
+    SpawnRatio: 0.34
+  - Id: Gold Nugget
+    SpawnRatio: 0.33
+  - Id: Medallion
+    SpawnRatio: 0.33
+  _equipmentItemPoolType:
+  - Id: Light Sack
+    SpawnRatio: 0.2
+  - Id: Leather Gloves
+    SpawnRatio: 0.2
+  - Id: Winged Boots
+    SpawnRatio: 0.2
+  - Id: Shiny Glasses
+    SpawnRatio: 0.2
+  - Id: Manipulation Gloves
+    SpawnRatio: 0.2
   _goldItemSpawnChance: 0.04
-  _equipmentItemSpawnChance: 0
+  _equipmentItemSpawnChance: 0.007
   _levelTime: 50
   _maxAlarmLvl: 100
   _missedFruitAlarm: 20
@@ -3758,13 +3855,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _sceneLayoutId: Jungle_0
-  _backgroundId: backgroundTest
-  _treeId: Vector-palm-tree-clip-art-palm-trees-clipart-mylocalguide-site
+  _backgroundId: jungle_bg_WIP
+  _treeId: trees_test
   _netSpriteId: brick-background-clipart-17
   _netSize: 0
-  _fSpawnTime: 1.1
+  _fSpawnTime: 1.2
   _fFallSpeed: 2.7
-  _fFlyTime: 1
+  _fFlyTime: 1.2
   _fruitPoolType:
   - FruitTypeIndex: 0
     SpawnRatio: 0.35
@@ -3780,18 +3877,24 @@ MonoBehaviour:
   - Id: Earrings
     SpawnRatio: 0.25
   _equipmentItemPoolType:
-  - Id: FastSack
-    SpawnRatio: 0.1
-  - Id: WingedCrocs
-    SpawnRatio: 0.9
+  - Id: Jumping Crocs
+    SpawnRatio: 0.15
+  - Id: Leather Sack
+    SpawnRatio: 0.25
+  - Id: Winged Crocs
+    SpawnRatio: 0.25
+  - Id: Working Glasses
+    SpawnRatio: 0.25
+  - Id: Fitness Gloves
+    SpawnRatio: 0.15
   _goldItemSpawnChance: 0.08
-  _equipmentItemSpawnChance: 0.02
+  _equipmentItemSpawnChance: 0.0125
   _levelTime: 40
   _maxAlarmLvl: 100
   _missedFruitAlarm: 25
   _alarmDepletion: 1
   _guardCount: 2
-  _guardDistribution: 0
+  _guardDistribution: 2
   _penaltyPerAlarmPt: 0.5
   _minRankSuperScore: 200
   _maxScore: 0
@@ -3848,13 +3951,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _sceneLayoutId: Jungle_0
-  _backgroundId: backgroundTest
-  _treeId: Vector-palm-tree-clip-art-palm-trees-clipart-mylocalguide-site
+  _backgroundId: jungle_bg_WIP
+  _treeId: trees_test
   _netSpriteId: brick-background-clipart-17
   _netSize: 0
-  _fSpawnTime: 1.3
+  _fSpawnTime: 1.4
   _fFallSpeed: 3
-  _fFlyTime: 1
+  _fFlyTime: 1.3
   _fruitPoolType:
   - FruitTypeIndex: 0
     SpawnRatio: 0.55
@@ -3868,10 +3971,12 @@ MonoBehaviour:
   - Id: Necklace
     SpawnRatio: 0.5
   _equipmentItemPoolType:
-  - Id: FastSack
-    SpawnRatio: 1
+  - Id: Quick Sack
+    SpawnRatio: 0.5
+  - Id: Jumping Crocs
+    SpawnRatio: 0.5
   _goldItemSpawnChance: 0.075
-  _equipmentItemSpawnChance: 0.015
+  _equipmentItemSpawnChance: 0.0075
   _levelTime: 40
   _maxAlarmLvl: 100
   _missedFruitAlarm: 25
@@ -3894,30 +3999,46 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _sceneLayoutId: Jungle_0
-  _backgroundId: backgroundTest
-  _treeId: Vector-palm-tree-clip-art-palm-trees-clipart-mylocalguide-site
+  _backgroundId: jungle_bg_WIP
+  _treeId: trees_test
   _netSpriteId: brick-background-clipart-17
   _netSize: 0
-  _fSpawnTime: 0.9
-  _fFallSpeed: 2.1
-  _fFlyTime: 1
+  _fSpawnTime: 1.1
+  _fFallSpeed: 2.5
+  _fFlyTime: 1.1
   _fruitPoolType:
   - FruitTypeIndex: 0
     SpawnRatio: 0.25
   - FruitTypeIndex: 1
     SpawnRatio: 0.15
-  - FruitTypeIndex: 2
+  - FruitTypeIndex: 5
     SpawnRatio: 0.05
   - FruitTypeIndex: 7
     SpawnRatio: 0.25
   - FruitTypeIndex: 10
     SpawnRatio: 0.3
   _goldItemPoolType:
-  - Id: Ring
-    SpawnRatio: 1
-  _equipmentItemPoolType: []
+  - Id: Necklace
+    SpawnRatio: 0.34
+  - Id: Gold Nugget
+    SpawnRatio: 0.33
+  - Id: Medallion
+    SpawnRatio: 0.33
+  _equipmentItemPoolType:
+  - Id: Light Sack
+    SpawnRatio: 0.2
+  - Id: Leather Gloves
+    SpawnRatio: 0.15
+  - Id: Winged Boots
+    SpawnRatio: 0.2
+  - Id: Shiny Glasses
+    SpawnRatio: 0.2
+  - Id: Manipulation Gloves
+    SpawnRatio: 0.2
+  - Id: Silk Gloves
+    SpawnRatio: 0.05
   _goldItemSpawnChance: 0.04
-  _equipmentItemSpawnChance: 0
+  _equipmentItemSpawnChance: 0.008
   _levelTime: 55
   _maxAlarmLvl: 100
   _missedFruitAlarm: 20
@@ -3980,13 +4101,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _sceneLayoutId: Jungle_0
-  _backgroundId: backgroundTest
-  _treeId: Vector-palm-tree-clip-art-palm-trees-clipart-mylocalguide-site
+  _backgroundId: jungle_bg_WIP
+  _treeId: trees_test
   _netSpriteId: brick-background-clipart-17
   _netSize: 0
-  _fSpawnTime: 1.6
+  _fSpawnTime: 1.7
   _fFallSpeed: 3.3
-  _fFlyTime: 1
+  _fFlyTime: 1.4
   _fruitPoolType:
   - FruitTypeIndex: 0
     SpawnRatio: 0.75
@@ -4003,7 +4124,7 @@ MonoBehaviour:
   _missedFruitAlarm: 25
   _alarmDepletion: 1
   _guardCount: 1
-  _guardDistribution: 0
+  _guardDistribution: 1
   _penaltyPerAlarmPt: 0.5
   _minRankSuperScore: 90
   _maxScore: 0
@@ -4020,30 +4141,54 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _sceneLayoutId: Jungle_0
-  _backgroundId: backgroundTest
-  _treeId: Vector-palm-tree-clip-art-palm-trees-clipart-mylocalguide-site
+  _backgroundId: jungle_bg_WIP
+  _treeId: trees_test
   _netSpriteId: brick-background-clipart-17
   _netSize: 0
-  _fSpawnTime: 0.9
-  _fFallSpeed: 2.2
+  _fSpawnTime: 1
+  _fFallSpeed: 2.3
   _fFlyTime: 1
   _fruitPoolType:
   - FruitTypeIndex: 0
-    SpawnRatio: 0.5
+    SpawnRatio: 0.2
+  - FruitTypeIndex: 1
+    SpawnRatio: 0.15
+  - FruitTypeIndex: 5
+    SpawnRatio: 0.1
   - FruitTypeIndex: 7
-    SpawnRatio: 0.35
+    SpawnRatio: 0.3
+  - FruitTypeIndex: 10
+    SpawnRatio: 0.25
   _goldItemPoolType:
-  - Id: Ring
-    SpawnRatio: 1
-  _equipmentItemPoolType: []
+  - Id: Necklace
+    SpawnRatio: 0.34
+  - Id: Gold Nugget
+    SpawnRatio: 0.33
+  - Id: Medallion
+    SpawnRatio: 0.33
+  _equipmentItemPoolType:
+  - Id: Winged Boots
+    SpawnRatio: 0.2
+  - Id: Shiny Glasses
+    SpawnRatio: 0.2
+  - Id: Manipulation Gloves
+    SpawnRatio: 0.15
+  - Id: Silk Gloves
+    SpawnRatio: 0.2
+  - Id: Wool Gloves
+    SpawnRatio: 0.05
+  - Id: Jumping Boots
+    SpawnRatio: 0.15
+  - Id: Lucky Glasses
+    SpawnRatio: 0.05
   _goldItemSpawnChance: 0.05
-  _equipmentItemSpawnChance: 0
-  _levelTime: 20
+  _equipmentItemSpawnChance: 0.01
+  _levelTime: 55
   _maxAlarmLvl: 100
   _missedFruitAlarm: 20
   _alarmDepletion: 0.7
-  _guardCount: 0
-  _guardDistribution: 0
+  _guardCount: 2
+  _guardDistribution: 2
   _penaltyPerAlarmPt: 0
   _minRankSuperScore: 0
   _maxScore: 0
@@ -4089,13 +4234,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _sceneLayoutId: Jungle_0
-  _backgroundId: backgroundTest
-  _treeId: Vector-palm-tree-clip-art-palm-trees-clipart-mylocalguide-site
+  _backgroundId: jungle_bg_WIP
+  _treeId: trees_test
   _netSpriteId: brick-background-clipart-17
   _netSize: 0
-  _fSpawnTime: 0.9
-  _fFallSpeed: 2.5
-  _fFlyTime: 1
+  _fSpawnTime: 1
+  _fFallSpeed: 2.6
+  _fFlyTime: 1.2
   _fruitPoolType:
   - FruitTypeIndex: 0
     SpawnRatio: 0.5
@@ -4104,11 +4249,25 @@ MonoBehaviour:
   - FruitTypeIndex: 1
     SpawnRatio: 0.25
   _goldItemPoolType:
-  - Id: Ring
-    SpawnRatio: 1
-  _equipmentItemPoolType: []
+  - Id: Earrings
+    SpawnRatio: 0.34
+  - Id: Necklace
+    SpawnRatio: 0.33
+  - Id: Gold Nugget
+    SpawnRatio: 0.33
+  _equipmentItemPoolType:
+  - Id: Winged Crocs
+    SpawnRatio: 0.15
+  - Id: Working Glasses
+    SpawnRatio: 0.1
+  - Id: Light Sack
+    SpawnRatio: 0.25
+  - Id: Leather Gloves
+    SpawnRatio: 0.25
+  - Id: Manipulation Gloves
+    SpawnRatio: 0.25
   _goldItemSpawnChance: 0.025
-  _equipmentItemSpawnChance: 0
+  _equipmentItemSpawnChance: 0.006
   _levelTime: 50
   _maxAlarmLvl: 100
   _missedFruitAlarm: 20
@@ -4171,30 +4330,44 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _sceneLayoutId: Jungle_0
-  _backgroundId: backgroundTest
-  _treeId: Vector-palm-tree-clip-art-palm-trees-clipart-mylocalguide-site
+  _backgroundId: jungle_bg_WIP
+  _treeId: trees_test
   _netSpriteId: brick-background-clipart-17
   _netSize: 0
-  _fSpawnTime: 0.9
-  _fFallSpeed: 2.4
-  _fFlyTime: 1
+  _fSpawnTime: 1.1
+  _fFallSpeed: 2.5
+  _fFlyTime: 1.1
   _fruitPoolType:
   - FruitTypeIndex: 0
     SpawnRatio: 0.3
   - FruitTypeIndex: 1
     SpawnRatio: 0.15
-  - FruitTypeIndex: 2
+  - FruitTypeIndex: 5
     SpawnRatio: 0.05
   - FruitTypeIndex: 7
     SpawnRatio: 0.2
   - FruitTypeIndex: 10
     SpawnRatio: 0.3
   _goldItemPoolType:
-  - Id: Ring
-    SpawnRatio: 1
-  _equipmentItemPoolType: []
+  - Id: Necklace
+    SpawnRatio: 0.34
+  - Id: Gold Nugget
+    SpawnRatio: 0.33
+  - Id: Medallion
+    SpawnRatio: 0.33
+  _equipmentItemPoolType:
+  - Id: Light Sack
+    SpawnRatio: 0.2
+  - Id: Leather Gloves
+    SpawnRatio: 0.2
+  - Id: Winged Boots
+    SpawnRatio: 0.2
+  - Id: Shiny Glasses
+    SpawnRatio: 0.2
+  - Id: Manipulation Gloves
+    SpawnRatio: 0.2
   _goldItemSpawnChance: 0.04
-  _equipmentItemSpawnChance: 0
+  _equipmentItemSpawnChance: 0.007
   _levelTime: 55
   _maxAlarmLvl: 100
   _missedFruitAlarm: 20
@@ -4217,13 +4390,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _sceneLayoutId: Jungle_0
-  _backgroundId: backgroundTest
-  _treeId: Vector-palm-tree-clip-art-palm-trees-clipart-mylocalguide-site
+  _backgroundId: jungle_bg_WIP
+  _treeId: trees_test
   _netSpriteId: brick-background-clipart-17
   _netSize: 0
   _fSpawnTime: 0.9
-  _fFallSpeed: 2.4
-  _fFlyTime: 1
+  _fFallSpeed: 2.6
+  _fFlyTime: 1.2
   _fruitPoolType:
   - FruitTypeIndex: 0
     SpawnRatio: 0.4
@@ -4234,11 +4407,25 @@ MonoBehaviour:
   - FruitTypeIndex: 10
     SpawnRatio: 0.25
   _goldItemPoolType:
-  - Id: Ring
-    SpawnRatio: 1
-  _equipmentItemPoolType: []
+  - Id: Necklace
+    SpawnRatio: 0.34
+  - Id: Gold Nugget
+    SpawnRatio: 0.33
+  - Id: Medallion
+    SpawnRatio: 0.33
+  _equipmentItemPoolType:
+  - Id: Light Sack
+    SpawnRatio: 0.2
+  - Id: Leather Gloves
+    SpawnRatio: 0.2
+  - Id: Winged Boots
+    SpawnRatio: 0.2
+  - Id: Shiny Glasses
+    SpawnRatio: 0.2
+  - Id: Manipulation Gloves
+    SpawnRatio: 0.2
   _goldItemSpawnChance: 0.04
-  _equipmentItemSpawnChance: 0
+  _equipmentItemSpawnChance: 0.007
   _levelTime: 50
   _maxAlarmLvl: 100
   _missedFruitAlarm: 20
@@ -4377,24 +4564,42 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _sceneLayoutId: Jungle_0
-  _backgroundId: backgroundTest
-  _treeId: Vector-palm-tree-clip-art-palm-trees-clipart-mylocalguide-site
+  _backgroundId: jungle_bg_WIP
+  _treeId: trees_test
   _netSpriteId: brick-background-clipart-17
   _netSize: 0
-  _fSpawnTime: 1
-  _fFallSpeed: 2.7
-  _fFlyTime: 1
+  _fSpawnTime: 1.4
+  _fFallSpeed: 2.8
+  _fFlyTime: 1.2
   _fruitPoolType:
   - FruitTypeIndex: 0
     SpawnRatio: 0.8
   - FruitTypeIndex: 7
     SpawnRatio: 0.2
   _goldItemPoolType:
-  - Id: Ring
-    SpawnRatio: 1
-  _equipmentItemPoolType: []
+  - Id: Earrings
+    SpawnRatio: 0.34
+  - Id: Necklace
+    SpawnRatio: 0.33
+  - Id: Gold Nugget
+    SpawnRatio: 0.33
+  _equipmentItemPoolType:
+  - Id: Leather Sack
+    SpawnRatio: 0.15
+  - Id: Winged Crocs
+    SpawnRatio: 0.25
+  - Id: Working Glasses
+    SpawnRatio: 0.2
+  - Id: Fitness Gloves
+    SpawnRatio: 0.2
+  - Id: Light Sack
+    SpawnRatio: 0.15
+  - Id: Leather Gloves
+    SpawnRatio: 0.05
+  - Id: Manipulation Gloves
+    SpawnRatio: 0.05
   _goldItemSpawnChance: 0.025
-  _equipmentItemSpawnChance: 0
+  _equipmentItemSpawnChance: 0.005
   _levelTime: 45
   _maxAlarmLvl: 100
   _missedFruitAlarm: 20
@@ -4417,13 +4622,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _sceneLayoutId: Jungle_0
-  _backgroundId: backgroundTest
-  _treeId: Vector-palm-tree-clip-art-palm-trees-clipart-mylocalguide-site
+  _backgroundId: jungle_bg_WIP
+  _treeId: trees_test
   _netSpriteId: brick-background-clipart-17
   _netSize: 0
-  _fSpawnTime: 1.2
+  _fSpawnTime: 1.3
   _fFallSpeed: 2.9
-  _fFlyTime: 1
+  _fFlyTime: 1.3
   _fruitPoolType:
   - FruitTypeIndex: 0
     SpawnRatio: 0.45
@@ -4437,18 +4642,20 @@ MonoBehaviour:
   - Id: Necklace
     SpawnRatio: 0.5
   _equipmentItemPoolType:
-  - Id: FastSack
-    SpawnRatio: 0.1
-  - Id: WingedCrocs
-    SpawnRatio: 0.9
+  - Id: Quick Sack
+    SpawnRatio: 0.4
+  - Id: Jumping Crocs
+    SpawnRatio: 0.33
+  - Id: Leather Sack
+    SpawnRatio: 0.27
   _goldItemSpawnChance: 0.075
-  _equipmentItemSpawnChance: 0.02
+  _equipmentItemSpawnChance: 0.01
   _levelTime: 40
   _maxAlarmLvl: 100
   _missedFruitAlarm: 25
   _alarmDepletion: 1
   _guardCount: 2
-  _guardDistribution: 0
+  _guardDistribution: 2
   _penaltyPerAlarmPt: 0.5
   _minRankSuperScore: 165
   _maxScore: 0
@@ -4505,13 +4712,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _sceneLayoutId: Jungle_0
-  _backgroundId: backgroundTest
-  _treeId: Vector-palm-tree-clip-art-palm-trees-clipart-mylocalguide-site
+  _backgroundId: jungle_bg_WIP
+  _treeId: trees_test
   _netSpriteId: brick-background-clipart-17
   _netSize: 0
-  _fSpawnTime: 1.1
+  _fSpawnTime: 1.3
   _fFallSpeed: 2.8
-  _fFlyTime: 1
+  _fFlyTime: 1.2
   _fruitPoolType:
   - FruitTypeIndex: 0
     SpawnRatio: 0.4
@@ -4527,18 +4734,24 @@ MonoBehaviour:
   - Id: Earrings
     SpawnRatio: 0.25
   _equipmentItemPoolType:
-  - Id: FastSack
+  - Id: Jumping Crocs
+    SpawnRatio: 0.25
+  - Id: Leather Sack
+    SpawnRatio: 0.25
+  - Id: Winged Crocs
+    SpawnRatio: 0.2
+  - Id: Working Glasses
+    SpawnRatio: 0.2
+  - Id: Fitness Gloves
     SpawnRatio: 0.1
-  - Id: WingedCrocs
-    SpawnRatio: 0.9
   _goldItemSpawnChance: 0.08
-  _equipmentItemSpawnChance: 0.02
+  _equipmentItemSpawnChance: 0.01
   _levelTime: 40
   _maxAlarmLvl: 100
   _missedFruitAlarm: 25
   _alarmDepletion: 1
   _guardCount: 2
-  _guardDistribution: 0
+  _guardDistribution: 2
   _penaltyPerAlarmPt: 0.5
   _minRankSuperScore: 180
   _maxScore: 0
@@ -4633,13 +4846,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _sceneLayoutId: Jungle_0
-  _backgroundId: backgroundTest
-  _treeId: Vector-palm-tree-clip-art-palm-trees-clipart-mylocalguide-site
+  _backgroundId: jungle_bg_WIP
+  _treeId: trees_test
   _netSpriteId: brick-background-clipart-17
   _netSize: 0
-  _fSpawnTime: 1
+  _fSpawnTime: 1.1
   _fFallSpeed: 2.6
-  _fFlyTime: 1
+  _fFlyTime: 1.2
   _fruitPoolType:
   - FruitTypeIndex: 0
     SpawnRatio: 0.15
@@ -4655,18 +4868,24 @@ MonoBehaviour:
   - Id: Earrings
     SpawnRatio: 0.25
   _equipmentItemPoolType:
-  - Id: FastSack
-    SpawnRatio: 0.1
-  - Id: WingedCrocs
-    SpawnRatio: 0.9
+  - Id: Jumping Crocs
+    SpawnRatio: 0.05
+  - Id: Leather Sack
+    SpawnRatio: 0.25
+  - Id: Winged Crocs
+    SpawnRatio: 0.25
+  - Id: Working Glasses
+    SpawnRatio: 0.25
+  - Id: Fitness Gloves
+    SpawnRatio: 0.2
   _goldItemSpawnChance: 0.09
-  _equipmentItemSpawnChance: 0.025
+  _equipmentItemSpawnChance: 0.015
   _levelTime: 40
   _maxAlarmLvl: 100
   _missedFruitAlarm: 25
   _alarmDepletion: 1
   _guardCount: 2
-  _guardDistribution: 0
+  _guardDistribution: 2
   _penaltyPerAlarmPt: 0.5
   _minRankSuperScore: 220
   _maxScore: 0
@@ -4799,13 +5018,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _sceneLayoutId: Jungle_0
-  _backgroundId: backgroundTest
-  _treeId: Vector-palm-tree-clip-art-palm-trees-clipart-mylocalguide-site
+  _backgroundId: jungle_bg_WIP
+  _treeId: trees_test
   _netSpriteId: brick-background-clipart-17
   _netSize: 0
   _fSpawnTime: 1.8
   _fFallSpeed: 3.4
-  _fFlyTime: 1
+  _fFlyTime: 1.4
   _fruitPoolType:
   - FruitTypeIndex: 0
     SpawnRatio: 1
@@ -4820,7 +5039,7 @@ MonoBehaviour:
   _missedFruitAlarm: 25
   _alarmDepletion: 1
   _guardCount: 1
-  _guardDistribution: 0
+  _guardDistribution: 1
   _penaltyPerAlarmPt: 0.5
   _minRankSuperScore: 65
   _maxScore: 0
@@ -5062,33 +5281,47 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _sceneLayoutId: Jungle_0
-  _backgroundId: backgroundTest
-  _treeId: Vector-palm-tree-clip-art-palm-trees-clipart-mylocalguide-site
+  _backgroundId: jungle_bg_WIP
+  _treeId: trees_test
   _netSpriteId: brick-background-clipart-17
   _netSize: 0
-  _fSpawnTime: 1.5
-  _fFallSpeed: 2
-  _fFlyTime: 0
+  _fSpawnTime: 1.4
+  _fFallSpeed: 2.8
+  _fFlyTime: 1.2
   _fruitPoolType:
   - FruitTypeIndex: 0
     SpawnRatio: 0.5
-  - FruitTypeIndex: 1
-    SpawnRatio: 0.35
-  - FruitTypeIndex: 8
-    SpawnRatio: 0.15
+  - FruitTypeIndex: 11
+    SpawnRatio: 0.5
   _goldItemPoolType:
-  - Id: 
-    SpawnRatio: 0
-  - Id: 
-    SpawnRatio: 0
-  _equipmentItemPoolType: []
-  _goldItemSpawnChance: 0
-  _equipmentItemSpawnChance: 0
-  _levelTime: 20
+  - Id: Earrings
+    SpawnRatio: 0.34
+  - Id: Necklace
+    SpawnRatio: 0.33
+  - Id: Gold Nugget
+    SpawnRatio: 0.33
+  _equipmentItemPoolType:
+  - Id: Leather Sack
+    SpawnRatio: 0.15
+  - Id: Winged Crocs
+    SpawnRatio: 0.25
+  - Id: Working Glasses
+    SpawnRatio: 0.2
+  - Id: Fitness Gloves
+    SpawnRatio: 0.2
+  - Id: Light Sack
+    SpawnRatio: 0.15
+  - Id: Leather Gloves
+    SpawnRatio: 0.05
+  - Id: Manipulation Gloves
+    SpawnRatio: 0.05
+  _goldItemSpawnChance: 0.025
+  _equipmentItemSpawnChance: 0.005
+  _levelTime: 45
   _maxAlarmLvl: 100
-  _missedFruitAlarm: 0
-  _alarmDepletion: 0
-  _guardCount: 0
+  _missedFruitAlarm: 20
+  _alarmDepletion: 0.7
+  _guardCount: 1
   _guardDistribution: 0
   _penaltyPerAlarmPt: 0
   _minRankSuperScore: 0
@@ -5106,24 +5339,42 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _sceneLayoutId: Jungle_0
-  _backgroundId: backgroundTest
-  _treeId: Vector-palm-tree-clip-art-palm-trees-clipart-mylocalguide-site
+  _backgroundId: jungle_bg_WIP
+  _treeId: trees_test
   _netSpriteId: brick-background-clipart-17
   _netSize: 0
-  _fSpawnTime: 0.9
-  _fFallSpeed: 2.6
-  _fFlyTime: 1
+  _fSpawnTime: 1.3
+  _fFallSpeed: 2.7
+  _fFlyTime: 1.2
   _fruitPoolType:
   - FruitTypeIndex: 0
     SpawnRatio: 0.75
   - FruitTypeIndex: 7
     SpawnRatio: 0.25
   _goldItemPoolType:
-  - Id: Ring
-    SpawnRatio: 1
-  _equipmentItemPoolType: []
+  - Id: Earrings
+    SpawnRatio: 0.34
+  - Id: Necklace
+    SpawnRatio: 0.33
+  - Id: Gold Nugget
+    SpawnRatio: 0.33
+  _equipmentItemPoolType:
+  - Id: Leather Sack
+    SpawnRatio: 0.05
+  - Id: Winged Crocs
+    SpawnRatio: 0.2
+  - Id: Working Glasses
+    SpawnRatio: 0.2
+  - Id: Fitness Gloves
+    SpawnRatio: 0.15
+  - Id: Light Sack
+    SpawnRatio: 0.2
+  - Id: Leather Gloves
+    SpawnRatio: 0.1
+  - Id: Manipulation Gloves
+    SpawnRatio: 0.1
   _goldItemSpawnChance: 0.025
-  _equipmentItemSpawnChance: 0
+  _equipmentItemSpawnChance: 0.005
   _levelTime: 45
   _maxAlarmLvl: 100
   _missedFruitAlarm: 20
@@ -5146,30 +5397,54 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _sceneLayoutId: Jungle_0
-  _backgroundId: backgroundTest
-  _treeId: Vector-palm-tree-clip-art-palm-trees-clipart-mylocalguide-site
+  _backgroundId: jungle_bg_WIP
+  _treeId: trees_test
   _netSpriteId: brick-background-clipart-17
   _netSize: 0
-  _fSpawnTime: 0.9
-  _fFallSpeed: 2.2
+  _fSpawnTime: 1
+  _fFallSpeed: 2.3
   _fFlyTime: 1
   _fruitPoolType:
   - FruitTypeIndex: 0
-    SpawnRatio: 0.5
+    SpawnRatio: 0.2
+  - FruitTypeIndex: 1
+    SpawnRatio: 0.15
+  - FruitTypeIndex: 5
+    SpawnRatio: 0.1
   - FruitTypeIndex: 7
-    SpawnRatio: 0.35
+    SpawnRatio: 0.3
+  - FruitTypeIndex: 10
+    SpawnRatio: 0.25
   _goldItemPoolType:
-  - Id: Ring
-    SpawnRatio: 1
-  _equipmentItemPoolType: []
+  - Id: Necklace
+    SpawnRatio: 0.34
+  - Id: Gold Nugget
+    SpawnRatio: 0.33
+  - Id: Medallion
+    SpawnRatio: 0.33
+  _equipmentItemPoolType:
+  - Id: Winged Boots
+    SpawnRatio: 0.2
+  - Id: Shiny Glasses
+    SpawnRatio: 0.2
+  - Id: Manipulation Gloves
+    SpawnRatio: 0.15
+  - Id: Silk Gloves
+    SpawnRatio: 0.2
+  - Id: Wool Gloves
+    SpawnRatio: 0.05
+  - Id: Jumping Boots
+    SpawnRatio: 0.15
+  - Id: Lucky Glasses
+    SpawnRatio: 0.05
   _goldItemSpawnChance: 0.05
-  _equipmentItemSpawnChance: 0
-  _levelTime: 20
+  _equipmentItemSpawnChance: 0.009
+  _levelTime: 55
   _maxAlarmLvl: 100
   _missedFruitAlarm: 20
   _alarmDepletion: 0.7
-  _guardCount: 0
-  _guardDistribution: 0
+  _guardCount: 2
+  _guardDistribution: 2
   _penaltyPerAlarmPt: 0
   _minRankSuperScore: 0
   _maxScore: 0
@@ -5346,8 +5621,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _sceneLayoutId: Jungle_0
-  _backgroundId: backgroundTest
-  _treeId: Vector-palm-tree-clip-art-palm-trees-clipart-mylocalguide-site
+  _backgroundId: jungle_bg_WIP
+  _treeId: trees_test
   _netSpriteId: brick-background-clipart-17
   _netSize: 0
   _fSpawnTime: 0.9
@@ -5355,21 +5630,45 @@ MonoBehaviour:
   _fFlyTime: 1
   _fruitPoolType:
   - FruitTypeIndex: 0
-    SpawnRatio: 0.5
+    SpawnRatio: 0.2
+  - FruitTypeIndex: 1
+    SpawnRatio: 0.15
+  - FruitTypeIndex: 5
+    SpawnRatio: 0.1
   - FruitTypeIndex: 7
-    SpawnRatio: 0.35
+    SpawnRatio: 0.3
+  - FruitTypeIndex: 10
+    SpawnRatio: 0.25
   _goldItemPoolType:
-  - Id: Ring
-    SpawnRatio: 1
-  _equipmentItemPoolType: []
-  _goldItemSpawnChance: 0.75
-  _equipmentItemSpawnChance: 0
-  _levelTime: 20
+  - Id: Necklace
+    SpawnRatio: 0.34
+  - Id: Gold Nugget
+    SpawnRatio: 0.33
+  - Id: Medallion
+    SpawnRatio: 0.33
+  _equipmentItemPoolType:
+  - Id: Winged Boots
+    SpawnRatio: 0.2
+  - Id: Shiny Glasses
+    SpawnRatio: 0.2
+  - Id: Manipulation Gloves
+    SpawnRatio: 0.15
+  - Id: Silk Gloves
+    SpawnRatio: 0.2
+  - Id: Wool Gloves
+    SpawnRatio: 0.05
+  - Id: Jumping Boots
+    SpawnRatio: 0.15
+  - Id: Lucky Glasses
+    SpawnRatio: 0.05
+  _goldItemSpawnChance: 0.075
+  _equipmentItemSpawnChance: 0.12
+  _levelTime: 55
   _maxAlarmLvl: 100
   _missedFruitAlarm: 20
   _alarmDepletion: 0.7
-  _guardCount: 0
-  _guardDistribution: 0
+  _guardCount: 2
+  _guardDistribution: 2
   _penaltyPerAlarmPt: 0
   _minRankSuperScore: 0
   _maxScore: 0
@@ -5386,13 +5685,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _sceneLayoutId: Jungle_0
-  _backgroundId: backgroundTest
-  _treeId: Vector-palm-tree-clip-art-palm-trees-clipart-mylocalguide-site
+  _backgroundId: jungle_bg_WIP
+  _treeId: trees_test
   _netSpriteId: brick-background-clipart-17
   _netSize: 0
-  _fSpawnTime: 1.3
+  _fSpawnTime: 1.5
   _fFallSpeed: 3.1
-  _fFlyTime: 1
+  _fFlyTime: 1.3
   _fruitPoolType:
   - FruitTypeIndex: 0
     SpawnRatio: 0.6
@@ -5404,7 +5703,7 @@ MonoBehaviour:
   - Id: Necklace
     SpawnRatio: 0.5
   _equipmentItemPoolType:
-  - Id: FastSack
+  - Id: Quick Sack
     SpawnRatio: 1
   _goldItemSpawnChance: 0.075
   _equipmentItemSpawnChance: 0.005
@@ -5413,7 +5712,7 @@ MonoBehaviour:
   _missedFruitAlarm: 25
   _alarmDepletion: 1
   _guardCount: 1
-  _guardDistribution: 0
+  _guardDistribution: 2
   _penaltyPerAlarmPt: 0.5
   _minRankSuperScore: 130
   _maxScore: 0

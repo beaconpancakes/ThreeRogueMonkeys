@@ -12,7 +12,7 @@ using UnityEngine.UI;
 public class CollectorMonkey : MonoBehaviour {
 
 	#region Public Data
-    public enum C_STATE { IDLE = 0, MOVING, RELOADING, FLEE }
+    public enum C_STATE { IDLE = 0, MOVING, RELOADING, FLEE, STUN }
 	#endregion
 
 
@@ -24,6 +24,8 @@ public class CollectorMonkey : MonoBehaviour {
         _currentSpeed = _baseSpeed;
         _sack._Collector = this;
         _img = GetComponent<Image>();
+        _leftPupilCentre = _leftPupil.transform.localPosition;
+        _rightPupilCentre = _rightPupil.transform.localPosition;
         if (!_img)
             Debug.LogError("No image found!");
 	}
@@ -103,6 +105,28 @@ public class CollectorMonkey : MonoBehaviour {
                 }
                 transform.position -= Vector3.right * _fleeSpeed * Time.deltaTime;
                 break;
+
+            case C_STATE.STUN:
+                _frameTimer += Time.deltaTime;
+                _stunTimer += Time.deltaTime;
+                if (_frameTimer >= _gameMgr.FrameTime)
+                {
+                    _frameTimer = 0f;
+                    _frameIndex = (_frameIndex + 1) % _stunSpList.Count;
+                    _img.sprite = _stunSpList[_frameIndex];
+                }
+                if (_stunTimer >= _stunTime)
+                {
+                    SetIdle();
+                }
+                break;
+        }
+        //Pupils
+        if (_state != C_STATE.FLEE)
+        {
+            GetPupilPos();
+            _leftPupil.transform.localPosition = _leftPupilCentre + _pupilOffset;
+            _rightPupil.transform.localPosition = _rightPupilCentre + _pupilOffset;
         }
 	}
 
@@ -117,7 +141,7 @@ public class CollectorMonkey : MonoBehaviour {
 
         if (col.CompareTag("Fruit"))
         {
-            if (!_sack.TryToPushToSack(col.GetComponent<Fruit>()))
+            if (col.GetComponent<Fruit>()._FState == Fruit.FRUIT_ST.LAUNCHING && !_sack.TryToPushToSack(col.GetComponent<Fruit>()))
             {
                 col.GetComponent<Fruit>().Dissmiss();
             }
@@ -175,7 +199,7 @@ public class CollectorMonkey : MonoBehaviour {
     /// <param name="targetTouchPos"></param>
     public void Move(Touch targetTouchPos)
     {
-        if (_state == C_STATE.RELOADING)
+        if (_state == C_STATE.RELOADING || _state == C_STATE.STUN)
             return;
 
         _state = C_STATE.MOVING;
@@ -203,6 +227,9 @@ public class CollectorMonkey : MonoBehaviour {
         _img.sprite = _fleeSpList[0];
     }
 
+    /// <summary>
+    /// 
+    /// </summary>
     public void Reset()
     {
         _currentRawSpeed = _baseSpeed;
@@ -214,10 +241,26 @@ public class CollectorMonkey : MonoBehaviour {
         
         
     }
-	#endregion
+
+    /// <summary>
+    /// 
+    /// </summary>
+    public void Stun()
+    {
+        if (_gameMgr.RaiseAlarm())
+            GameMgr.Instance.WakeUpGuards();
+
+        _state = C_STATE.STUN;
+        _frameIndex = 0;
+        _frameTimer = 0f;
+        _stunTimer = 0f;
+
+        _sack.SackBroken();
+    }
+    #endregion
 
 
-	#region Private Methods
+    #region Private Methods
     /// <summary>
     /// 
     /// </summary>
@@ -248,14 +291,57 @@ public class CollectorMonkey : MonoBehaviour {
             }
         }
     }
+
+    /// <summary>
+    /// 
+    /// </summary>
+    private void GetPupilPos()
+    {
+        Vector2 minPos = Vector2.one * Mathf.Infinity;
+        float  tempDist;
+        Fruit closestFr = null;
+
+        _minPupilDist = Mathf.Infinity;
+        //Get closest fruit
+        foreach (GameObject fO in GameObject.FindGameObjectsWithTag("Fruit"))
+        {
+            if (fO.GetComponent<Fruit>()._FState == Fruit.FRUIT_ST.LAUNCHING)
+            {
+                tempDist = Vector2.Distance(_pupilCentreRef.position, fO.transform.position);
+                if (tempDist < _minPupilDist)
+                {
+                    _minPupilDist = tempDist;
+                    closestFr = fO.GetComponent<Fruit>();   
+                }
+            }
+        }
+        if (_minPupilDist != Mathf.Infinity)
+            _pupilOffset =  ((Vector2)closestFr.transform.position - (Vector2)_pupilCentreRef.position).normalized * _pupilRadius;
+        else
+            _pupilOffset = Vector2.zero;
+    }
+
+    /// <summary>
+    /// 
+    /// </summary>
+    private void SetIdle()
+    {
+        _frameIndex = 0;
+        _frameTimer = 0f;
+        _img.sprite = _idleSpList[0];
+        _state = C_STATE.IDLE;
+    }
+
 	#endregion
 
 
 	#region Properties
-    public float ReloadTime { get { return _reloadTime; } set { _reloadTime = value; } }
+    public float _ReloadTime { get { return _reloadTime; } set { _reloadTime = value; } }
+    public float _StunTime { get { return _stunTime; } set { _stunTime = value; } }
     public Sack _Sack { get { return _sack; } set { _sack = value; } }
     public EquipmentItem SlotA { get { return _slotA; } set { _slotA = value; } }
     public EquipmentItem SlotB { get { return _slotB; } set { _slotB = value; } }
+    public GameObject _CollectorSack { get { return _collectorSack; } set { _collectorSack = value; } }
 
 	#endregion
 
@@ -272,12 +358,27 @@ public class CollectorMonkey : MonoBehaviour {
     private List<Sprite> _idleSpList;
     [SerializeField]
     private List<Sprite> _fleeSpList;
+    [SerializeField]
+    private List<Sprite> _stunSpList;
 
     [SerializeField]
     private float _fleeSpeed;
-	#endregion
 
-	#region Private Non-serialized Fields
+    [SerializeField]
+    private GameObject _leftPupil, _rightPupil;
+    [SerializeField]
+    private float _pupilRadius, _pupilMovTime;
+    [SerializeField]
+    private Transform _pupilCentreRef;
+
+    [SerializeField]
+    private float _stunTime;
+
+    [SerializeField]
+    private GameObject _collectorSack;
+    #endregion
+
+    #region Private Non-serialized Fields
     private C_STATE _state;
     private GameMgr _gameMgr;
     private Image _img;
@@ -297,5 +398,11 @@ public class CollectorMonkey : MonoBehaviour {
     private int _currentCapacity;
     //Items
     private EquipmentItem _slotA, _slotB;
-	#endregion
+
+    private Vector2 _pupilOffset;
+    private float _minPupilDist;
+    private Vector2 _leftPupilCentre,_rightPupilCentre;
+
+    private float _stunTimer;
+    #endregion
 }

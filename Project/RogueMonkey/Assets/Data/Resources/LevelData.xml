@@ -34,8 +34,8 @@
     <level id ="13" score="0" state ="unlocked" rank="F"></level>
     <level id ="14" score="0" state ="unlocked" rank="F"></level>
   </stage>
-  <stage id ="2" state ="unavailable">
-    <level id ="0" score="0" state ="unavailable" rank="F"></level>
+  <stage id ="2" state ="unlocked">
+    <level id ="0" score="0" state ="unlocked" rank="F"></level>
     <level id ="1" score="0" state ="unavailable" rank="F"></level>
     <level id ="2" score="0" state ="unavailable" rank="F"></level>
     <level id ="3" score="0" state ="unavailable" rank="F"></level>

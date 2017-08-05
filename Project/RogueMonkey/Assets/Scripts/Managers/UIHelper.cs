@@ -218,15 +218,17 @@ public class UIHelper : MonoBehaviour {
         else
             _lvlFinishedScr.gameObject.SetActive(false);
     }
-	#endregion
 
 
-	#region Private Methods
-
-	#endregion
+    #endregion
 
 
-	#region Properties
+    #region Private Methods
+
+    #endregion
+
+
+    #region Properties
     public Text ScoreText { get { return _scoreText; } set { _scoreText = value; } }
     public bool _ShowLevelTime { get { return _showLevelTime; } set { _showLevelTime = value; } }
 	#endregion

@@ -16,6 +16,7 @@ TagManager:
   - Enemy
   - EnemyCollider
   - MainMenu
+  - SelectionMenu
   layers:
   - Default
   - TransparentFX

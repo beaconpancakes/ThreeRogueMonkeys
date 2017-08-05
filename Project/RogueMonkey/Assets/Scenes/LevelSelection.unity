@@ -27799,7 +27799,7 @@ GameObject:
   - component: {fileID: 1090400508}
   m_Layer: 5
   m_Name: UI_Canvas
-  m_TagString: Untagged
+  m_TagString: SelectionMenu
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27942,6 +27942,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: ab3110436b8923b42a54a03a38cd8a91, type: 3}
   - {fileID: 21300000, guid: 378423890eabe3d45908719bca828f25, type: 3}
   - {fileID: 21300000, guid: e405734a7d3de8542ba951454f6a5e78, type: 3}
+  - {fileID: 21300000, guid: dce6e71d11021c344bd5841804190d79, type: 3}
+  - {fileID: 21300000, guid: a4f8fb9aa67e2974c95571142312fd05, type: 3}
   _shopScreen: {fileID: 474744513}
   _invScreen: {fileID: 1381590923}
   _adPopup: {fileID: 308348008}
@@ -27958,6 +27960,30 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 94b410a093f342c48b3affe3758d6a32, type: 3}
   - {fileID: 21300000, guid: 268027876cb133c409aebe1b207e2bae, type: 3}
   _goldText: {fileID: 1126872504}
+  _goldFbCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 2
+      outSlope: 2
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 0.35304087
+      value: 1.0032046
+      inSlope: -0.23639366
+      outSlope: -0.23639366
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0.001045227
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!1 &1091125611
 GameObject:
   m_ObjectHideFlags: 0

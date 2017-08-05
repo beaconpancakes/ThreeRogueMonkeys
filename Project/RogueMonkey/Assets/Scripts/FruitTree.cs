@@ -89,6 +89,7 @@ public class FruitTree : MonoBehaviour {
         _currentPoolIndex = 0;
         _currentClusterPoolIndex = 0;
         _currentMultifruitPoolIndex = 0;
+        _currentEggPoolIndex = 0;
         _state = PT_STATE.IDLE;
     }
 
@@ -222,6 +223,9 @@ public class FruitTree : MonoBehaviour {
                 _clusterFruitPool.Add(temp);
             }
         }
+        else if (_clusterFruitPool != null)
+            _clusterFruitPool.Clear();
+
         //(4)Check if we need multifruit pool instantiating
         if (fruitSpawnTypeList.Find((fr) => (fr.FruitTypeIndex == (int)Fruit.F_TYPE.MULTI_SEED)) != null)
         {
@@ -238,6 +242,28 @@ public class FruitTree : MonoBehaviour {
                 _multiFruitPool.Add(temp);
             }
         }
+        else if (_multiFruitPool != null)
+            _multiFruitPool.Clear();
+
+        //(5)Check if we need egg pool instantiating
+        if (fruitSpawnTypeList.Find((fr) => (fr.FruitTypeIndex == (int)Fruit.F_TYPE.CHICKEN)) != null)
+        {
+            if (_eggFruitPool != null)
+                _eggFruitPool.Clear();
+            else
+                _eggFruitPool = new List<Fruit>();
+
+            for (int i = 0; i < _maxEggFruitPoolCount; ++i)
+            {
+                temp = (Fruit)Instantiate(_fruitPrefab, _fruitRoot).GetComponent<Fruit>();
+                temp.SetupFruit((int)Fruit.F_TYPE.EGG);
+                temp.gameObject.SetActive(false);
+                _eggFruitPool.Add(temp);
+            }
+            Debug.Log("Added chikencs: " + _eggFruitPool.Count);
+        }
+        else if (_eggFruitPool != null)
+            _eggFruitPool.Clear();
 
         Shuffle(_fruitList);
     }
@@ -325,6 +351,8 @@ public class FruitTree : MonoBehaviour {
                 _multiFruitPool[i].Pause(true);
             for (int i = 0; i < _currentClusterPoolIndex; ++i)
                 _clusterFruitPool[i].Pause(true);
+            for (int i = 0; i < _currentEggPoolIndex; ++i)
+                _eggFruitPool[i].Pause(true);
         }
         else if (!pause && _state == PT_STATE.IDLE)
         {
@@ -336,6 +364,8 @@ public class FruitTree : MonoBehaviour {
                 _multiFruitPool[i].Pause(false);
             for (int i = 0; i < _currentClusterPoolIndex; ++i)
                 _clusterFruitPool[i].Pause(false);
+            for (int i = 0; i < _currentEggPoolIndex; ++i)
+                _eggFruitPool[i].Pause(false);
         }
         
     }
@@ -382,6 +412,7 @@ public class FruitTree : MonoBehaviour {
         ++_currentClusterPoolIndex;
         return returnFr;
     }
+
     /// <summary>
     /// 
     /// </summary>
@@ -399,6 +430,26 @@ public class FruitTree : MonoBehaviour {
         Debug.Log("Get multi index_________________________: " + _currentMultifruitPoolIndex);
         return returnFr;
         
+    }
+
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="quality"></param>
+    /// <returns></returns>
+    public Fruit GetEggFruit(int quality)
+    {
+        if (_currentEggPoolIndex >= _eggFruitPool.Count)
+            Debug.LogError("Index out of range!");
+
+
+
+        Fruit returnFr = null;
+        returnFr = _eggFruitPool[_currentEggPoolIndex];
+        ++_currentEggPoolIndex;
+        returnFr.SetupFruitAsEgg(quality);
+        Debug.Log("Get egg index_________________________: " + _currentEggPoolIndex+" -- "+returnFr);
+        return returnFr;
     }
 
     /// <summary>
@@ -446,6 +497,27 @@ public class FruitTree : MonoBehaviour {
     /// <summary>
     /// 
     /// </summary>
+    /// <param name="egg"></param>
+    /// <param name="fruitMissed"></param>
+    public void DestroyEggFruit(Fruit egg, bool fruitMissed = false)
+    {
+
+        int fruitIndex = _eggFruitPool.FindIndex(((c) => c == egg));
+        //Debug.Log("Destroy multi unit" + fruitIndex);
+        //seek left and place at the end the current unit
+        for (int i = fruitIndex; i < _eggFruitPool.Count - 1; ++i)
+            _eggFruitPool[i] = _eggFruitPool[i + 1];
+
+        _eggFruitPool[_eggFruitPool.Count - 1] = egg;
+        if (fruitMissed)
+            GameMgr.Instance.FruitMissed(egg.transform.position.x);
+        egg.gameObject.SetActive(false);
+        --_currentEggPoolIndex;
+        Debug.Log("Index after destroying multi unit::___________________::" + _currentEggPoolIndex);
+    }
+    /// <summary>
+    /// 
+    /// </summary>
     /// <param name="fr"></param>
     public void DestroyFruit(Fruit fr, bool fruitMissed = false)
     {
@@ -456,6 +528,8 @@ public class FruitTree : MonoBehaviour {
             DestroyClusterUnit(fr, fruitMissed);
         else if (fr._Ftype == Fruit.F_TYPE.MULTI_UNIT)
             DestroyMultiUnit(fr, fruitMissed);
+        else if (fr._Ftype == Fruit.F_TYPE.EGG)
+            DestroyEggFruit(fr, fruitMissed);
         else
         {
             Debug.Log("Attepmting to destroy: "+fr._Ftype);
@@ -591,9 +665,11 @@ public class FruitTree : MonoBehaviour {
     public EquipmentItem SlotB { get { return _slotB; } set { _slotB = value; } }
     public float CurrentFallSpeed { get { return _currentFruitFallTime; } set { _currentFruitFallTime = value; } }
     public float CurrentFruitFlyTime { get { return _currentFruitFlyTime; } set { _currentFruitFlyTime = value; } }
-	#endregion
+    public List<Fruit> _FList { get { return _fruitList; } set { _fruitList = value; } }
+    public Transform FruitPoolRoot {  get { return _fruitRoot; } set { _fruitRoot = value; } }
+    #endregion
 
-	#region Private Serialized Fields
+    #region Private Serialized Fields
     [SerializeField]
     private GameObject _fruitPrefab;
     [SerializeField]
@@ -617,7 +693,7 @@ public class FruitTree : MonoBehaviour {
 
 
     [SerializeField]
-    private int _maxClusterPoolCount, _maxMultifruitPoolCount;
+    private int _maxClusterPoolCount, _maxMultifruitPoolCount, _maxEggFruitPoolCount;
 
     [SerializeField]
     private float _minTreeAudioTime, _maxTreeAudioTime;
@@ -633,15 +709,16 @@ public class FruitTree : MonoBehaviour {
     private List<Fruit> _clusterFruitPool; //pool used for instantiating cluster clones for cluster fruits on launch
     private List<Fruit> _multiFruitPool;    //pool used for instantiating multifruit clones for multifruit type on launch
     private List<Fruit.G_TYPE> _goldItemsTypePool;  //poll which stores different golditems type; used on fruitsetup if type==goldiItem
+    private List<Fruit> _eggFruitPool; //pool used for instantiating eggs spawned from any chicken on Sack
     private float _timer;
 
     private int _currentPoolIndex;
-    private int _currentClusterPoolIndex, _currentMultifruitPoolIndex;
+    private int _currentClusterPoolIndex, _currentMultifruitPoolIndex, _currentEggPoolIndex;
 
     private float _fallFruitTime;   //fall speed set by level stats
-private float _fruitFlyTime;
+    private float _fruitFlyTime;
     private float _currentFruitFallTime;   //final speed calculated after applying item mod
-private float _currentFruitFlyTime;
+    private float _currentFruitFlyTime;
     private float _goldSpawnChance, _equipmentSpawnChance;
     private float _currentGoldSpawnChance, _currentEquipmentSpawnChance;
 

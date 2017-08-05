@@ -68,7 +68,16 @@ public class GameMgr : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
-       
+     
+        /*if (Input.GetKeyDown(KeyCode.K))
+        {
+            if (_stageCollectedFruits == null)
+                _stageCollectedFruits = new List<Fruit>();
+            _stageCollectedFruits.Add(_fruitTree._FList[0]);
+            _stageCollectedFruits.Add(_fruitTree._FList[1]);
+            _fruitTree.DestroyFruit(_fruitTree._FList[0]);
+        }*/
+          
         switch (_gameState)
         {
             case GAME_STATE.IDLE:
@@ -172,7 +181,18 @@ public class GameMgr : MonoBehaviour {
                 _fleeTimer += Time.deltaTime;
                 if (_fleeTimer >= _monkeysFleeTime)
                 {
-                    Lose();
+                    //Check for remaining fruits on screen
+                    _flyngFruits = false;
+                    foreach (GameObject fO in GameObject.FindGameObjectsWithTag("Fruit"))
+                    {
+                        if (fO.GetComponent<Fruit>()._FState == Fruit.FRUIT_ST.FALLING_FROM_TREE || fO.GetComponent<Fruit>()._FState == Fruit.FRUIT_ST.LAUNCHING)
+                        {
+                            _flyngFruits = true;
+                            break;
+                        }
+                    }
+                    if (!_flyngFruits)
+                        Lose();
                     /*UIHelper.Instance.ShowLoseScreen(true);
                     _gameState = GAME_STATE.IDLE;*/
                     //ShowLoseScreen();
@@ -206,6 +226,9 @@ public class GameMgr : MonoBehaviour {
     public void AddGold(int gAmount)
     {
         _gold += gAmount;
+        if (UIHelper.Instance == null)
+            GameObject.FindGameObjectWithTag("SelectionMenu").GetComponent<MenuSelection>().UpdateMoney();
+
     }
 
     /// <summary>
@@ -215,6 +238,11 @@ public class GameMgr : MonoBehaviour {
     public void CollectFruit(Fruit fr)
     {
         _stageCollectedFruits.Add(fr);
+        ++_currentCollectedAudioIndex;
+        if (_currentCollectedAudioIndex > 4)
+            _currentCollectedAudioIndex = 4;    //TODO: magic numbers
+        AudioController.Play("aud_fr_collect_" + GameMgr.Instance.GetCollectedIndex());
+        //AudioController.Play("aud_fr_collect_0");
         if (fr._Ftype == Fruit.F_TYPE.GOLD_ITEM && !_goldCollected)
             _goldCollected = true;
         else if (fr._Ftype == Fruit.F_TYPE.EQUIPMENT && !_itemCollected)
@@ -264,6 +292,7 @@ public class GameMgr : MonoBehaviour {
         //_currentLevel = _stageList[_currentStageIndex].GetLevelList()[_currentLevelIndex];
         _levelLoaded = _currentLevel.SetupLevel();
         _gameState = GAME_STATE.LOADING_LEVEL;
+        _lastHitTime = Mathf.Infinity;
     }
 
     /// <summary>
@@ -448,9 +477,8 @@ public class GameMgr : MonoBehaviour {
     /// <param name="alarm"></param>
     /// <returns>if game is lost due to alarm lvl</returns>
     public bool RaiseAlarm(float alarm)
-    {
-        
-        _currentAlarmLvl += _alarmIncrease;
+    { 
+        _currentAlarmLvl += alarm;
         if (AlarmRaisedEvt != null)
             AlarmRaisedEvt();
         //_alarmText.text = _currentAlarmLvl + " / " + _maxAlarmLvl;
@@ -472,6 +500,15 @@ public class GameMgr : MonoBehaviour {
                 Vibration.Vibrate(_missFruitVibrationTime);
         }
         return false;
+    }
+
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <returns></returns>
+    public bool RaiseAlarm()
+    {
+        return RaiseAlarm(_alarmIncrease);
     }
 
     /// <summary>
@@ -530,11 +567,13 @@ public class GameMgr : MonoBehaviour {
     /// <param name="xPos"></param>
     public void FruitMissed(float xPos)
     {
+        ResetCombo();
         foreach (Guard g in _currentLevel.GuardList)
         {
             if (g.CheckAlarm(xPos))
                 return;
         }
+        
     }
 
     
@@ -544,7 +583,8 @@ public class GameMgr : MonoBehaviour {
     /// </summary>
     public void Retry()
     {
-        //SceneManager.LoadScene("Game");
+        //SceneManaetfrio
+        SceneManager.LoadScene("Game");
         StartCurrentLevel();
     }
 
@@ -593,6 +633,10 @@ public class GameMgr : MonoBehaviour {
 
     }
 
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="pause"></param>
     public void Pause(bool pause)
     {
         if (pause && _gameState != GAME_STATE.IDLE)
@@ -610,11 +654,58 @@ public class GameMgr : MonoBehaviour {
         _fruitTree.Pause(pause);
         
     }
-	#endregion
+
+    /// <summary>
+    /// 
+    /// </summary>
+    public void FruitHit()
+    {
+        if ((Time.time - _lastHitTime)  <= _maxcomboTime)
+        {
+            _lastHitTime = Time.time;
+            ++_currentLaunchAudioIndex;
+            if (_currentLaunchAudioIndex > 9)    //TODO: magic numbers!
+                _currentLaunchAudioIndex = 9;
+        }
+        else
+        {
+            _lastHitTime = Time.time;
+            _currentLaunchAudioIndex = 0;   //reset index if there's no combo
+        }
+    }
+
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <returns></returns>
+    public int GetLaunchAudioIndex()
+    {
+        return _currentLaunchAudioIndex;
+    }
+
+    /// <summary>
+    /// 
+    /// </summary>
+    public void ResetCombo()
+    {
+        _currentLaunchAudioIndex = 0;
+    }
+
+    public int GetCollectedIndex()
+    {
+        return _currentCollectedAudioIndex;
+    }
+
+    public void ResetCollectedIndex()
+    {
+        _currentCollectedAudioIndex = 0;
+    }
+
+    #endregion
 
 
-	#region Private Methods
-    
+    #region Private Methods
+
     private void GetLevelReferences()
     {
         _currentHRef = _currentLevel.NetHeightRef;
@@ -784,6 +875,12 @@ public class GameMgr : MonoBehaviour {
     [SerializeField]
     private Text _levelText;
 
+    [SerializeField]
+    private float _maxcomboTime;
+
+    [SerializeField]
+    private Fruit _fr1, _fr2;
+
     //Screens
     //[SerializeField]
     private ShopMenu _shopScreen;
@@ -822,6 +919,11 @@ public class GameMgr : MonoBehaviour {
     private EquipmentItem _shakerSlotA, _shakerSlotB, _collectorSlotA, _collectorSlotB, _strikerSlotA, _strikerSlotB;
 
     private bool _itemCollected, _goldCollected;
+    private bool _flyngFruits;
+
+    private int _currentLaunchAudioIndex;
+    private int _currentCollectedAudioIndex;
+    private float _lastHitTime;
     #endregion
 
 }

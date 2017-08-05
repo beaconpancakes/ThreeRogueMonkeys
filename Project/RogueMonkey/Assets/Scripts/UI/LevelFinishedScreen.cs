@@ -83,6 +83,14 @@ public class LevelFinishedScreen : MonoBehaviour {
                         }
                         _goldText.text = _tempGold.ToString();
                         ++_collectedItemIndex;
+                        //Overriden
+                        if (_overridenItemsCount != 0 || _collectedItemIndex == _itemImageList.Count)
+                        {
+                            ++_overridenItemsCount;
+                            if (_collectedItemIndex == _itemImageList.Count)
+                                _collectedItemIndex = 0;
+                            _overridenCountText.text = "+"+_overridenItemsCount.ToString();
+                        }
                         if (!_goldIcon.activeSelf)
                             _goldIcon.SetActive(true);
                         
@@ -192,6 +200,7 @@ public class LevelFinishedScreen : MonoBehaviour {
         _rankLetterImg.gameObject.SetActive(false);
         _rankStampSuccess.gameObject.SetActive(false);
         _rankStampFail.gameObject.SetActive(false);
+        
 
     }
 
@@ -220,6 +229,8 @@ public class LevelFinishedScreen : MonoBehaviour {
         _collectedFruitIndex = 0;
         _collectedItemIndex = 0;
         _countingTimePerFruit = _countingTime/GameMgr.Instance.StageCollectedFruits.Count;
+        _overridenItemsCount = 0;
+        _overridenCountText.text = "";
     }
 
 
@@ -381,10 +392,13 @@ public class LevelFinishedScreen : MonoBehaviour {
     [SerializeField]
     private List<Sprite> _rankLetterSpriteList;
     [SerializeField]
-    private GameObject _goldFeedback, _itemFeedback;
-	#endregion
+    private GameObject _goldFeedback;
 
-	#region Private Non-serialized Fields
+    [SerializeField]
+    private Text _overridenCountText;
+    #endregion
+
+    #region Private Non-serialized Fields
     private LF_MENU_STATE _state;
 
     private float _timer;
@@ -400,5 +414,7 @@ public class LevelFinishedScreen : MonoBehaviour {
 
     private Vector3 _rankStampInitScale;
     private Image _currentStamp;
+
+    private int _overridenItemsCount;
 	#endregion
 }

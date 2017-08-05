@@ -210,6 +210,7 @@ public class TapMonkey : MonoBehaviour {
         _frameTimer = 0f;
         _state = MONKEY_STATE.FLEE;
         _img.sprite = _fleeSpList[0];
+        transform.position = new Vector3(transform.position.x, _gameMgr.FloorYPos, transform.position.z);
     }
 
     /// <summary>

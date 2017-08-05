@@ -119,6 +119,9 @@ public class Guard : MonoBehaviour {
 
 
     #region Private Methods
+    /// <summary>
+    /// 
+    /// </summary>
     private void Alarm()
     {
         ShowAlarmFeedback();

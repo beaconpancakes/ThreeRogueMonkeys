@@ -151,12 +151,20 @@ MonoBehaviour:
   - {fileID: 21300000, guid: d6ed339e0df01e441a2b9939d60e0c9b, type: 3}
   - {fileID: 21300000, guid: d6ed339e0df01e441a2b9939d60e0c9b, type: 3}
   - {fileID: 21300000, guid: d6ed339e0df01e441a2b9939d60e0c9b, type: 3}
+  _qualityEggSpList:
+  - {fileID: 21300000, guid: 378423890eabe3d45908719bca828f25, type: 3}
+  - {fileID: 21300000, guid: 71204a5729c19994bb5afe52f729eae4, type: 3}
+  - {fileID: 21300000, guid: 9c3b6941625ab154186ff1664df06708, type: 3}
+  - {fileID: 21300000, guid: b015e9fb26f6d854697cf2044b277fb7, type: 3}
   _yellowBananaSp: {fileID: 21300000, guid: 9b8c6a046bbe34e489f8b5116192738d, type: 3}
   _mellowRipenSp: {fileID: 21300000, guid: 71204a5729c19994bb5afe52f729eae4, type: 3}
   _staleRipenSp: {fileID: 21300000, guid: 9c3b6941625ab154186ff1664df06708, type: 3}
+  _kiwiFallSp: {fileID: 0}
+  _kiwiLaunchSp: {fileID: 21300000, guid: dce6e71d11021c344bd5841804190d79, type: 3}
   _throwOutSpeed: {x: 800, y: 500}
   _throwOutHeight: 50
   _throwOutFallTime: 0.5
+  _eggSpawnTime: 1
 --- !u!222 &222625560842618802
 CanvasRenderer:
   m_ObjectHideFlags: 1

@@ -204,6 +204,16 @@ public class MenuSelection : MonoBehaviour {
         AdsMgr.Instance.ShowRewardAd();
         ShowAdRewardPopup(false);
     }
+
+    /// <summary>
+    /// 
+    /// </summary>
+    public void UpdateMoney()
+    {
+        _goldText.text = GameMgr.Instance.Gold.ToString("0");
+        AudioController.Play("aud_gold_coins");
+        LeanTween.scale(_goldText.gameObject, _goldText.transform.localScale * 1.2f, .5f).setEase(_goldFbCurve);//.setLoopPingPong(1);
+    }
 	#endregion
 
 
@@ -383,9 +393,11 @@ public class MenuSelection : MonoBehaviour {
     private List<Sprite> _rankLetterSpList;
     [SerializeField]
     private Text _goldText;
-	#endregion
+    [SerializeField]
+    private AnimationCurve _goldFbCurve;
+    #endregion
 
-	#region Private Non-serialized Fields
+    #region Private Non-serialized Fields
     private AsyncOperation _asyincOp;
     private MENU_STATE _state;
 

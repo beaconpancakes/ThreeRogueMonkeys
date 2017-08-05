@@ -105,10 +105,23 @@ public class Level : MonoBehaviour {
                 _timer += Time.deltaTime;
                 if (_timer >= _endDelayTime)
                 {
-                    _timer = 0f;
-                    //GameMgr.Instance.LevelEnded();
-                    GameMgr.Instance._CollectorMonkey._Sack.Reload();
-                    _state = L_STATE.RELOADING_SACK_END;
+                    //Check for remaining fruits on screen
+                    _flyngFruits = false;
+                    foreach (GameObject fO in GameObject.FindGameObjectsWithTag("Fruit"))
+                    {
+                        if (fO.GetComponent<Fruit>()._FState == Fruit.FRUIT_ST.FALLING_FROM_TREE || fO.GetComponent<Fruit>()._FState == Fruit.FRUIT_ST.LAUNCHING)
+                        {
+                            _flyngFruits = true;
+                            break;
+                        }
+                    }
+                    if (!_flyngFruits)
+                    {
+                        _timer = 0f;
+                        //GameMgr.Instance.LevelEnded();
+                        GameMgr.Instance._CollectorMonkey._Sack.Reload();
+                        _state = L_STATE.RELOADING_SACK_END;
+                    }
                 }
                 break;
 
@@ -456,6 +469,7 @@ public class Level : MonoBehaviour {
     private List<Guard> _guardList;
     private List<Transform> _auxGuardRightPosList, _auxGuardLeftPosList;
     private int _auxSelectedGuardPosIndex;
-    
+
+    private bool _flyngFruits;
 	#endregion
 }

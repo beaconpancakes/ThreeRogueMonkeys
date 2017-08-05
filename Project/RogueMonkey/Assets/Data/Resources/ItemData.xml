@@ -9,7 +9,7 @@
     <item id ="Golden Egg" spriteId ="Earrings" value ="15"/>
     <item id ="Medallion" spriteId ="Medallion" value ="15"/>
     <item id ="Pocket Watch" spriteId ="PocketWatch" value ="15"/>
-    <item id ="Maneki-neko" spriteId ="Maneki-neo" value ="15"/>
+    <item id ="Maneki-neko" spriteId ="Maneki-neko" value ="15"/>
     <item id ="Lingot" spriteId ="Lingot" value ="15"/>
     <item id ="Chalice" spriteId ="Chalice" value ="15"/>
     <item id ="Ankh" spriteId ="Anhk" value ="15"/>
@@ -170,7 +170,7 @@
         <mod modType ="GOLD_FIND_PROB" modVal ="0.2"/>
       </modList>
     </item>
-    <item id ="Shiny Glasees" spriteId ="Glasses" value ="5" slotType ="SHAKER_A" >
+    <item id ="Shiny Glasses" spriteId ="Glasses" value ="5" slotType ="SHAKER_A" >
       <modList>
         <mod modType ="GOLD_FIND_PROB" modVal ="0.35"/>
       </modList>
